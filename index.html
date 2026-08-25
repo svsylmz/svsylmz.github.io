@@ -131,6 +131,59 @@
       .shell{width:min(100% - 20px,1280px);padding-top:8px}.topbar{position:relative;grid-template-columns:1fr;gap:10px;padding:8px 0 4px;background:transparent;backdrop-filter:none}.brand{margin-bottom:2px}.brand-mark{width:41px;height:41px;border-radius:13px}.brand-copy strong{font-size:14px}.search{grid-column:1}.gps{display:none}.location-strip{align-items:flex-start;flex-direction:column;gap:5px;margin-top:10px}.coord{font-size:10px}.days{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}.day{padding:11px 8px;border-radius:14px;text-align:center}.day small{display:none}.day .mini-score{position:static;display:block;margin-top:4px}.hero{padding:19px;border-radius:25px}.hero-grid{grid-template-columns:1fr}.score-box{width:156px;height:156px;justify-self:center}.score-content strong{font-size:40px}h1{font-size:31px}.hero p{font-size:12px}.species-section{overflow:hidden}.species-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:5px;gap:8px}.species-card{min-width:155px;scroll-snap-align:start}.panel{padding:16px;border-radius:21px}.factors,.conditions{grid-template-columns:1fr 1fr}.best-time{grid-template-columns:1fr}.chart{height:110px}.map-wrap{height:235px}.map-overlay{flex-direction:column}.map-label{max-width:100%}.map-link{text-align:center}.footer{flex-direction:column;line-height:1.5}.suggestions{right:0}.btn.primary{padding:0 13px}}
     @media(max-width:430px){.factors,.conditions{grid-template-columns:1fr}.hero{padding:17px}.days .day strong{font-size:11px}.species-card{min-width:146px}.best-clock{font-size:25px}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  
+
+    .catch-share-panel{
+      position:relative;overflow:hidden;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:18px;
+      margin-top:14px;padding:20px 22px;border:1px solid rgba(78,230,220,.22);border-radius:24px;
+      background:linear-gradient(135deg,rgba(7,45,56,.9),rgba(5,27,40,.92));box-shadow:0 18px 52px rgba(0,0,0,.22)
+    }
+    .catch-share-panel::before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;right:-100px;top:-170px;background:radial-gradient(circle,rgba(78,230,220,.22),transparent 68%);pointer-events:none}
+    .catch-share-icon{position:relative;width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(145deg,rgba(78,230,220,.2),rgba(81,168,255,.13));border:1px solid rgba(159,247,241,.18);color:var(--sea);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+    .catch-share-icon svg{width:29px;height:29px}
+    .catch-share-copy{position:relative;min-width:0}
+    .catch-share-copy span{display:block;color:var(--sea);font-size:10px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px}
+    .catch-share-copy strong{display:block;font-size:17px;line-height:1.25}
+    .catch-share-copy p{margin:5px 0 0;color:var(--muted);font-size:12px;line-height:1.55}
+    .catch-share-open{position:relative;min-width:156px}
+
+    .catch-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:18px}
+    .catch-modal.open{display:flex}
+    .catch-backdrop{position:absolute;inset:0;border:0;background:rgba(0,7,11,.78);backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);cursor:default}
+    .catch-dialog{position:relative;width:min(1120px,100%);max-height:min(92vh,900px);display:flex;flex-direction:column;border:1px solid rgba(154,233,239,.18);border-radius:28px;background:linear-gradient(150deg,rgba(6,27,38,.99),rgba(2,15,23,.99));box-shadow:0 40px 120px rgba(0,0,0,.56);overflow:hidden}
+    .catch-dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px;border-bottom:1px solid var(--line)}
+    .catch-dialog-head span{display:block;color:var(--sea);font-size:10px;font-weight:850;letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px}
+    .catch-dialog-head h2{margin:0;font-size:22px;letter-spacing:-.02em}
+    .catch-dialog-head p{margin:6px 0 0;color:var(--muted);font-size:12px;line-height:1.5}
+    .catch-close{width:40px;height:40px;flex:none;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:23px;line-height:1}
+    .catch-dialog-body{min-height:0;overflow:auto;display:grid;grid-template-columns:minmax(330px,.85fr) minmax(360px,1.15fr);gap:20px;padding:20px 22px}
+    .catch-form{align-self:start}
+    .catch-fields{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+    .catch-field{display:flex;flex-direction:column;gap:6px;min-width:0}
+    .catch-field.wide{grid-column:1/-1}
+    .catch-field label{color:var(--muted);font-size:10px;font-weight:760;letter-spacing:.05em;text-transform:uppercase}
+    .catch-field input,.catch-field select{width:100%;height:44px;border:1px solid var(--line);border-radius:13px;background:rgba(4,20,29,.82);color:var(--text);padding:0 12px;outline:none;font:inherit;font-size:12px;color-scheme:dark}
+    .catch-field input:focus,.catch-field select:focus{border-color:rgba(78,230,220,.48);box-shadow:0 0 0 3px rgba(78,230,220,.07)}
+    .catch-field input::placeholder{color:var(--muted2)}
+    .catch-data-note{display:flex;align-items:flex-start;gap:8px;margin:13px 1px 0;color:var(--muted2);font-size:10px;line-height:1.55}
+    .catch-data-note svg{width:14px;flex:none;color:var(--sea);margin-top:1px}
+    .catch-preview-shell{position:relative;display:flex;justify-content:center;align-items:flex-start;min-width:0;padding:13px;border:1px solid var(--line);border-radius:20px;background:rgba(1,9,14,.62)}
+    #catchCanvas{display:block;width:min(100%,405px);height:auto;aspect-ratio:4/5;border-radius:16px;box-shadow:0 24px 56px rgba(0,0,0,.42);background:#03131c}
+    .catch-dialog-actions{display:flex;justify-content:flex-end;gap:9px;padding:15px 22px;border-top:1px solid var(--line);background:rgba(1,10,15,.4)}
+    .catch-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:142px}
+    .catch-action svg{width:16px;height:16px}
+    body.catch-modal-open{overflow:hidden}
+
+    @media(max-width:820px){
+      .catch-share-panel{grid-template-columns:auto 1fr}.catch-share-open{grid-column:1/-1;width:100%}
+      .catch-dialog{max-height:96vh;border-radius:23px}.catch-dialog-body{grid-template-columns:1fr}.catch-preview-shell{order:-1}.catch-form{order:2}
+    }
+    @media(max-width:560px){
+      .catch-share-panel{padding:17px;gap:13px;border-radius:21px}.catch-share-icon{width:48px;height:48px;border-radius:15px}.catch-share-copy strong{font-size:15px}.catch-share-copy p{font-size:11px}
+      .catch-modal{padding:0;align-items:flex-end}.catch-dialog{width:100%;max-height:96vh;border-radius:24px 24px 0 0;border-bottom:0}.catch-dialog-head{padding:17px}.catch-dialog-head h2{font-size:19px}.catch-dialog-body{padding:15px 17px;gap:14px}.catch-fields{grid-template-columns:1fr 1fr}.catch-field.wide{grid-column:1/-1}.catch-dialog-actions{padding:13px 17px;display:grid;grid-template-columns:1fr 1fr}.catch-action{min-width:0;width:100%}
+    }
+    @media(max-width:390px){.catch-fields{grid-template-columns:1fr}.catch-field.wide{grid-column:auto}.catch-dialog-actions{grid-template-columns:1fr}}
+
   </style>
 </head>
 <body>
@@ -198,6 +251,20 @@
       <div class="conditions" id="conditionsGrid"></div>
     </section>
 
+
+
+    <section class="catch-share-panel" id="catchShareModule">
+      <div class="catch-share-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c4.2-5 9.3-6 15-2.7L22 10v8l-3-2.3C13.3 19 8.2 18 4 15Z"/><circle cx="9" cy="14" r=".8" fill="currentColor" stroke="none"/><path d="M6 5h10M11 2l-3 3 3 3"/></svg>
+      </div>
+      <div class="catch-share-copy">
+        <span>Av günlüğü</span>
+        <strong>Balık aldıysan paylaşım kartını hazırla</strong>
+        <p id="catchModuleText">Türü ve av saatini gir; o saatin deniz, rüzgâr, basınç ve ay koşullarıyla WhatsApp’a uygun PNG oluştur.</p>
+      </div>
+      <button class="btn primary catch-share-open" id="openCatchCardBtn" type="button">Av kartı oluştur</button>
+    </section>
+
     <section class="map-panel">
       <div class="map-head"><div><strong>Seçilen konum</strong><span id="mapHint">Gelibolu Limanı çevresi</span></div><span>Harita konumla birlikte güncellenir</span></div>
       <div class="map-wrap"><iframe id="mapFrame" title="Seçilen konum haritası" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="map-overlay"><div class="map-label" id="mapLabel">Gelibolu Limanı</div><a class="map-link" id="mapLink" target="_blank" rel="noopener">Haritada aç</a></div></div>
@@ -215,8 +282,43 @@
         <p><a href="https://github.com/krumenja/currentcast" target="_blank" rel="noopener">CurrentCast (MIT, açık kaynak tahmin yaklaşımı)</a> · <a href="https://open-meteo.com/en/docs/marine-weather-api" target="_blank" rel="noopener">Open-Meteo Marine API</a> · <a href="https://doi.org/10.26028/cybium/2004-274-003" target="_blank" rel="noopener">Oblada melanura beslenme çalışması</a> · <a href="https://doi.org/10.1016/j.fishres.2011.11.025" target="_blank" rel="noopener">Diplodus vulgaris telemetri</a> · <a href="https://doi.org/10.1111/j.1439-0426.2012.01955.x" target="_blank" rel="noopener">Sciaena umbra telemetri</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/7488763/" target="_blank" rel="noopener">Dicentrarchus labrax ritim çalışması</a> · <a href="https://acta.izor.hr/ojs/index.php/acta/article/view/98" target="_blank" rel="noopener">Trachurus mediterraneus beslenme yoğunluğu</a>.</p>
       </div>
     </details>
-    <div class="footer"><span>Veri: Open-Meteo Weather + Marine · kıyı akıntı/deniz verileri model tabanlıdır ve seyir amacıyla kullanılmaz.</span><span>Gelibolu Balık Raporu · Model v2</span></div>
+    <div class="footer"><span>Veri: Open-Meteo Weather + Marine · kıyı akıntı/deniz verileri model tabanlıdır ve seyir amacıyla kullanılmaz.</span><span>Gelibolu Balık Raporu · Model v2.1</span></div>
   </div>
+
+
+  <div class="catch-modal" id="catchModal" aria-hidden="true">
+    <button class="catch-backdrop" type="button" data-catch-close aria-label="Pencereyi kapat"></button>
+    <section class="catch-dialog" role="dialog" aria-modal="true" aria-labelledby="catchDialogTitle">
+      <header class="catch-dialog-head">
+        <div>
+          <span>WhatsApp paylaşım kartı</span>
+          <h2 id="catchDialogTitle">Bugünkü avını kaydet</h2>
+          <p>Seçtiğin saat için modelde bulunan gerçek hava ve deniz verileri karta otomatik işlenir.</p>
+        </div>
+        <button class="catch-close" type="button" data-catch-close aria-label="Kapat">×</button>
+      </header>
+      <div class="catch-dialog-body">
+        <div class="catch-form">
+          <div class="catch-fields">
+            <div class="catch-field wide"><label for="catchSpecies">Aldığın balık</label><select id="catchSpecies"></select></div>
+            <div class="catch-field"><label for="catchDate">Av tarihi</label><input id="catchDate" type="date"></div>
+            <div class="catch-field"><label for="catchTime">Av saati</label><input id="catchTime" type="time" step="300"></div>
+            <div class="catch-field"><label for="catchCount">Adet</label><input id="catchCount" type="number" min="1" max="99" value="1" inputmode="numeric"></div>
+            <div class="catch-field"><label for="catchLength">Boy (isteğe bağlı)</label><input id="catchLength" type="number" min="1" max="250" step="0.5" placeholder="cm"></div>
+            <div class="catch-field wide"><label for="catchBait">Yem / takım (isteğe bağlı)</label><input id="catchBait" type="text" maxlength="42" placeholder="Örn. sülünez, 8 no iğne"></div>
+            <div class="catch-field wide"><label for="catchNote">Kısa not (isteğe bağlı)</label><input id="catchNote" type="text" maxlength="86" placeholder="Örn. Liman içinde dipte, ilk vuruş 07:40"></div>
+          </div>
+          <div class="catch-data-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg><span>Koşullar seçilen saate en yakın saatlik tahminden alınır. Kart, balığı senin aldığını kaydeder; model skorunu “yakalama yüzdesi” olarak göstermez.</span></div>
+        </div>
+        <div class="catch-preview-shell"><canvas id="catchCanvas" width="1080" height="1350" aria-label="Av paylaşım kartı önizlemesi"></canvas></div>
+      </div>
+      <footer class="catch-dialog-actions">
+        <button class="btn catch-action" id="downloadCatchCardBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>PNG indir</button>
+        <button class="btn primary catch-action" id="shareCatchCardBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"/></svg>Telefonda paylaş</button>
+      </footer>
+    </section>
+  </div>
+
   <div class="status" id="toast"></div>
 
 <script>
@@ -273,7 +375,7 @@ function hourlyScore(key,i,ctx){const p=SPECIES[key],mi=marineIndex(i),mh=state.
 function speciesDayResult(key,ctx){const rows=ctx.active.map(i=>({i,...hourlyScore(key,i,ctx)}));if(!rows.length)return{score:0,rows:[],best:null};let best=null;const windowLen=Math.min(3,rows.length);for(let n=0;n<=rows.length-windowLen;n++){const slice=rows.slice(n,n+windowLen);if(slice.length!==windowLen)continue;const val=avg(slice.map(x=>x.score));if(!best||val>best.value)best={start:n,end:n+slice.length-1,value:val,rows:slice}}const dayMedian=median(rows.map(x=>x.score))??50;let score=Math.round((best?.value??dayMedian)*.70+dayMedian*.30);const critical=best?.rows||rows.slice(0,1);if(score>=90){const mins=critical.map(r=>Math.min(r.parts.temp,r.parts.time,r.parts.current,r.parts.sea));if(Math.min(...mins)<78)score=89}return{score,rows,best}}
 function confidence(ctx){let n=0,total=5;if(state.weather?.hourly)n++;if(state.marine?.hourly?.sea_surface_temperature?.some(Number.isFinite))n++;if(state.marine?.hourly?.ocean_current_velocity?.some(Number.isFinite))n++;if(state.marine?.hourly?.wave_height?.some(Number.isFinite))n++;if(ctx.sunrise&&ctx.sunset)n++;return n>=5?'Yüksek':n>=4?'Orta-Yüksek':n>=3?'Orta':'Düşük'}
 function factorText(k,v,key,ctx){const p=SPECIES[key];if(k==='temp')return`Tercih aralığı ${p.temp[0]}–${p.temp[1]}°C`;if(k==='time')return p.note;if(k==='current')return`Hedef akıntı ~${p.current[2].toFixed(2)} km/sa`;if(k==='sea')return'Kıyı kullanılabilirliği ve dalga/rüzgâr dengesi';if(k==='light')return'Işık ve bulutluluk etkisi';if(k==='stability')return'Son saatlerde su sıcaklığı kararlılığı';if(k==='pressure')return'3 saatlik trend · düşük ağırlık';if(k==='moon')return'Ay evresi · çok düşük ağırlık';if(k==='rain')return'Yağış yoğunluğu ve olasılığı';return''}
-function render(){if(!state.weather?.hourly)return;const ctx=getDateContext();const results={};Object.keys(SPECIES).forEach(k=>results[k]=speciesDayResult(k,ctx));renderDays(ctx,results);renderSpecies(ctx,results);renderHero(ctx,results[state.species]);renderActivity(ctx,results[state.species]);renderFactors(ctx,results[state.species]);renderConditions(ctx);updateMap();}
+function render(){if(!state.weather?.hourly)return;const ctx=getDateContext();const results={};Object.keys(SPECIES).forEach(k=>results[k]=speciesDayResult(k,ctx));renderDays(ctx,results);renderSpecies(ctx,results);renderHero(ctx,results[state.species]);renderActivity(ctx,results[state.species]);renderFactors(ctx,results[state.species]);renderConditions(ctx);updateCatchModule(ctx,results[state.species]);updateMap();}
 function renderDays(ctx,results){const base=state.weather.current.time.slice(0,10);const labels=['Bugün','Yarın','+2 Gün','+3 Gün'];$('#dayTabs').innerHTML=labels.map((l,i)=>{const d=addDays(base,i);const tempState=state.dayOffset;state.dayOffset=i;const c=getDateContext();const r=speciesDayResult(state.species,c);state.dayOffset=tempState;return`<button class="day ${i===state.dayOffset?'active':''}" data-day="${i}"><strong>${l}</strong><small>${formatDate(d)}</small><span class="mini-score">${r.score}</span></button>`}).join('');$$('.day').forEach(b=>b.onclick=()=>{state.dayOffset=Number(b.dataset.day);render()})}
 function renderSpecies(ctx,results){$('#speciesGrid').innerHTML=Object.entries(SPECIES).map(([k,p])=>{const r=results[k],m=scoreMeta(r.score),t=r.best?.rows?.[0]?timeOnly(state.weather.hourly.time[r.best.rows[0].i]):'--:--';return`<button class="species-card ${k===state.species?'active':''}" data-species="${k}"><span class="window">${t}</span><div class="fish-icon">${FISH_SVG}</div><h3>${p.name}</h3><span class="latin">${p.latin}</span><div class="species-bottom"><strong style="color:${m[2]}">${r.score}</strong><span>${m[0]}</span></div></button>`}).join('');$$('.species-card').forEach(b=>b.onclick=()=>{state.species=b.dataset.species;localStorage.setItem('gbr-species',state.species);render()});$('#speciesHint').textContent=`${formatDate(ctx.date)} · ${SPECIES[state.species].name} seçili`}
 function renderHero(ctx,r){const p=SPECIES[state.species],m=scoreMeta(r.score);$('#heroEyebrow').textContent=`${formatDate(ctx.date)} · ${p.name}`;$('#heroTitle').textContent=m[1];const best=r.best?.rows||[];const start=best[0]?timeOnly(state.weather.hourly.time[best[0].i]):'--:--',end=best.length?`${pad((hourNum(state.weather.hourly.time[best[best.length-1].i])+1)%24)}:00`:'--:--';$('#heroSummary').textContent=`${p.name} için en güçlü kesintisiz pencere ${start}–${end}. Gün skoru, bu pencere ile günün genel medyanını birleştirir; tek bir iyi saat skoru şişiremez.`;$('#scoreValue').textContent=r.score;$('#scoreLabel').textContent=m[0];$('#scoreRing').style.setProperty('--score',r.score);$('#scoreRing').style.setProperty('--score-color',m[2]);$('.score-content').style.setProperty('--score-color',m[2]);$('#confidenceLabel').textContent=`Tahmin güveni: ${confidence(ctx)}`}
@@ -294,7 +396,81 @@ function closeSuggestions(){$('#suggestions').classList.remove('open')}
 function useGps(){if(!navigator.geolocation)return toast('Tarayıcı GPS desteklemiyor');navigator.geolocation.getCurrentPosition(p=>loadLocation({name:'Mevcut konum',admin1:'GPS',country:'',latitude:p.coords.latitude,longitude:p.coords.longitude}),()=>toast('Konum alınamadı. HTTPS üzerinden deneyin.'),{enableHighAccuracy:true,timeout:12000,maximumAge:300000})}
 function demoData(loc){const now=new Date(),today=dateKey(now),dates=[addDays(today,-1),today,addDays(today,1),addDays(today,2),addDays(today,3)],times=[];dates.forEach(d=>{for(let h=0;h<24;h++)times.push(`${d}T${pad(h)}:00`)});const cur=`${today}T${pad(now.getHours())}:00`,ci=Math.max(0,times.indexOf(cur));const arr=f=>times.map((t,i)=>f(hourNum(t),i));const temp=arr(h=>20+Math.sin((h-7)/24*Math.PI*2)*4),wind=arr(h=>9+Math.max(0,Math.sin((h-8)/24*Math.PI*2))*11),gust=wind.map(v=>v+8),pressure=arr((h,i)=>1014.5-Math.sin(i/8)*1.1),cloud=arr(h=>42+Math.sin(h/4)*25),rain=arr(h=>Math.max(0,35+Math.sin((h+2)/5)*30)),prec=rain.map(v=>v>65?.7:0),vis=arr(()=>12000),wdir=arr(h=>35+Math.sin(h/5)*28),weather={current:{time:cur,temperature_2m:temp[ci],relative_humidity_2m:70,weather_code:2,pressure_msl:pressure[ci],cloud_cover:cloud[ci],wind_speed_10m:wind[ci],wind_direction_10m:wdir[ci],wind_gusts_10m:gust[ci]},hourly:{time:times,temperature_2m:temp,relative_humidity_2m:arr(()=>70),precipitation_probability:rain,precipitation:prec,weather_code:arr(()=>2),pressure_msl:pressure,cloud_cover:cloud,visibility:vis,wind_speed_10m:wind,wind_direction_10m:wdir,wind_gusts_10m:gust},daily:{time:dates,weather_code:dates.map(()=>2),temperature_2m_max:dates.map(()=>26),temperature_2m_min:dates.map(()=>18),sunrise:dates.map(d=>`${d}T06:23`),sunset:dates.map(d=>`${d}T19:55`),precipitation_probability_max:dates.map(()=>50),precipitation_sum:dates.map(()=>.5),wind_speed_10m_max:dates.map(()=>21),wind_gusts_10m_max:dates.map(()=>31),wind_direction_10m_dominant:dates.map(()=>35)}};const seaT=arr(h=>22.7+Math.sin(h/9)*.25),wave=arr(h=>.32+Math.max(0,Math.sin((h-8)/8))*.32),curV=arr(h=>.52+Math.sin(h/4)*.18),marine={latitude:loc.latitude,longitude:loc.longitude,current:{time:cur,wave_height:wave[ci],wave_direction:40,wave_period:4.8,sea_surface_temperature:seaT[ci],ocean_current_velocity:curV[ci],ocean_current_direction:215,sea_level_height_msl:.1},hourly:{time:times,wave_height:wave,wave_direction:arr(()=>40),wave_period:arr(()=>4.8),sea_surface_temperature:seaT,ocean_current_velocity:curV,ocean_current_direction:arr(()=>215),sea_level_height_msl:arr((h,i)=>.08+Math.sin(i/4)*.08)}};return{weather,marine}}
 
-$('#searchBtn').onclick=()=>searchLocation($('#locationInput').value);$('#locationInput').onkeydown=e=>{if(e.key==='Enter')searchLocation(e.currentTarget.value);if(e.key==='Escape')closeSuggestions()};$('#locationInput').oninput=e=>{clearTimeout(searchLocation.t);const q=e.currentTarget.value.trim();if(q.length<3){closeSuggestions();return}searchLocation.t=setTimeout(()=>searchLocation(q),500)};$('#gpsBtn').onclick=useGps;document.addEventListener('click',e=>{if(!e.target.closest('.search'))closeSuggestions()});updateLocationHeader();loadLocation(state.location);
+
+
+function formatFullDate(s){return new Intl.DateTimeFormat('tr-TR',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(dateObj(s))}
+function dateContextFor(date){const dayIdx=Math.max(0,state.weather.daily.time.indexOf(date));const idxs=state.weather.hourly.time.map((t,i)=>t.startsWith(date)?i:-1).filter(i=>i>=0);return{date,dayIdx,idxs,active:idxs,ref:idxs[Math.floor(idxs.length/2)]??0,sunrise:state.weather.daily.sunrise?.[dayIdx]||`${date}T06:00`,sunset:state.weather.daily.sunset?.[dayIdx]||`${date}T20:00`}}
+function nearestWeatherIndex(date,time){const list=state.weather?.hourly?.time||[];const desired=`${date}T${time||'12:00'}`;const exactHour=`${date}T${(time||'12:00').slice(0,2)}:00`;let index=list.indexOf(exactHour);if(index>=0)return index;const target=new Date(desired).getTime();let best=-1,dist=Infinity;list.forEach((value,i)=>{const d=Math.abs(new Date(value).getTime()-target);if(d<dist){dist=d;best=i}});return best}
+function pressureTrendText(value){if(!Number.isFinite(value))return'--';if(value<=-1.5)return`Düşüyor ${value.toFixed(1)} hPa`;if(value>=1.5)return`Yükseliyor +${value.toFixed(1)} hPa`;return`${value>=0?'+':''}${value.toFixed(1)} hPa · stabil`}
+function catchCardData(){
+  if(!state.weather?.hourly)return null;
+  const speciesKey=$('#catchSpecies').value||state.species;
+  const date=$('#catchDate').value||getDateContext().date;
+  const time=$('#catchTime').value||'12:00';
+  const i=nearestWeatherIndex(date,time);
+  if(i<0||!state.weather.hourly.time[i]?.startsWith(date))return null;
+  const ctx=dateContextFor(date),mi=marineIndex(i),w=state.weather.hourly,m=state.marine?.hourly||{};
+  const press=w.pressure_msl?.[i],prev=w.pressure_msl?.[Math.max(0,i-3)],trend=Number.isFinite(press)&&Number.isFinite(prev)?press-prev:null;
+  const score=hourlyScore(speciesKey,i,ctx).score;
+  return{
+    speciesKey,species:SPECIES[speciesKey],date,time,count:clamp(Math.round(Number($('#catchCount').value)||1),1,99),
+    length:Number($('#catchLength').value)||null,bait:$('#catchBait').value.trim(),note:$('#catchNote').value.trim(),
+    location:[state.location.name,state.location.admin1].filter(Boolean).join(', '),score,scoreMeta:scoreMeta(score),confidence:confidence(ctx),
+    seaTemp:m.sea_surface_temperature?.[mi],current:m.ocean_current_velocity?.[mi],currentDir:m.ocean_current_direction?.[mi],
+    wind:w.wind_speed_10m?.[i],windDir:w.wind_direction_10m?.[i],gust:w.wind_gusts_10m?.[i],wave:m.wave_height?.[mi],period:m.wave_period?.[mi],
+    pressure:press,pressureTrend:trend,airTemp:w.temperature_2m?.[i],cloud:w.cloud_cover?.[i],rain:w.precipitation_probability?.[i],
+    moon:moonPhase(dateObj(date)),sourceTime:state.weather.hourly.time[i]
+  }
+}
+function roundedPath(c,x,y,w,h,r){const rr=Math.min(r,w/2,h/2);c.beginPath();c.moveTo(x+rr,y);c.arcTo(x+w,y,x+w,y+h,rr);c.arcTo(x+w,y+h,x,y+h,rr);c.arcTo(x,y+h,x,y,rr);c.arcTo(x,y,x+w,y,rr);c.closePath()}
+function fillRound(c,x,y,w,h,r,fill,stroke){roundedPath(c,x,y,w,h,r);if(fill){c.fillStyle=fill;c.fill()}if(stroke){c.strokeStyle=stroke;c.stroke()}}
+function wrapCanvasText(c,text,x,y,maxWidth,lineHeight,maxLines=2){const words=String(text||'').split(/\s+/);let line='',lines=[];for(const word of words){const test=line?`${line} ${word}`:word;if(c.measureText(test).width>maxWidth&&line){lines.push(line);line=word}else line=test}if(line)lines.push(line);if(lines.length>maxLines){lines=lines.slice(0,maxLines);let last=lines[maxLines-1];while(last.length&&c.measureText(`${last}…`).width>maxWidth)last=last.slice(0,-1);lines[maxLines-1]=`${last}…`}lines.forEach((line,i)=>c.fillText(line,x,y+i*lineHeight));return y+lines.length*lineHeight}
+function canvasValue(value,digits=0,suffix=''){return Number.isFinite(value)?`${value.toFixed(digits)}${suffix}`:'--'}
+function drawFishMark(c,x,y,scale=1){c.save();c.translate(x,y);c.scale(scale,scale);c.strokeStyle='#64efe3';c.fillStyle='rgba(78,230,220,.08)';c.lineWidth=2.2;c.beginPath();c.moveTo(0,18);c.bezierCurveTo(17,0,43,0,66,12);c.lineTo(86,0);c.lineTo(86,36);c.lineTo(66,24);c.bezierCurveTo(43,36,17,36,0,18);c.closePath();c.fill();c.stroke();c.beginPath();c.arc(25,15,2.2,0,Math.PI*2);c.fillStyle='#dffffb';c.fill();c.restore()}
+function renderCatchCard(){
+  const canvas=$('#catchCanvas');if(!canvas)return null;const d=catchCardData();if(!d)return null;
+  const c=canvas.getContext('2d'),W=canvas.width,H=canvas.height;c.clearRect(0,0,W,H);
+  const bg=c.createLinearGradient(0,0,W,H);bg.addColorStop(0,'#082b3a');bg.addColorStop(.48,'#041b29');bg.addColorStop(1,'#020d16');c.fillStyle=bg;c.fillRect(0,0,W,H);
+  const glow=c.createRadialGradient(910,90,20,910,90,520);glow.addColorStop(0,'rgba(78,230,220,.23)');glow.addColorStop(1,'rgba(78,230,220,0)');c.fillStyle=glow;c.fillRect(0,0,W,H);
+  const glow2=c.createRadialGradient(80,1150,10,80,1150,430);glow2.addColorStop(0,'rgba(81,168,255,.19)');glow2.addColorStop(1,'rgba(81,168,255,0)');c.fillStyle=glow2;c.fillRect(0,700,W,650);
+  c.save();c.globalAlpha=.15;c.strokeStyle='#8eeeed';c.lineWidth=2;for(let n=0;n<3;n++){c.beginPath();const yy=1190+n*42;c.moveTo(-40,yy);for(let x=0;x<=W+80;x+=80)c.quadraticCurveTo(x+40,yy-18+(n*4),x+80,yy);c.stroke()}c.restore();
+  [[930,175,6],[840,230,3],[965,280,4],[115,1020,4],[160,1080,7],[880,1110,5]].forEach(([x,y,r])=>{c.beginPath();c.arc(x,y,r,0,Math.PI*2);c.fillStyle='rgba(202,255,251,.28)';c.fill()});
+  drawFishMark(c,72,64,.62);c.fillStyle='#efffff';c.font='800 29px Inter, Arial, sans-serif';c.fillText('Gelibolu Balık Raporu',145,91);c.fillStyle='#78b7bf';c.font='600 17px Inter, Arial, sans-serif';c.fillText('AV GÜNLÜĞÜ · GERÇEK AV KAYDI',145,119);
+  fillRound(c,830,64,178,52,26,'rgba(78,230,220,.13)','rgba(116,244,234,.24)');c.fillStyle='#70efe5';c.font='800 17px Inter, Arial, sans-serif';c.textAlign='center';c.fillText('BALIK ALINDI',919,97);c.textAlign='left';
+  c.fillStyle='#82c1c8';c.font='700 21px Inter, Arial, sans-serif';c.fillText(formatFullDate(d.date).toLocaleUpperCase('tr-TR'),72,184);
+  c.fillStyle='#f7ffff';c.font='850 69px Inter, Arial, sans-serif';const titleBottom=wrapCanvasText(c,`${d.species.name} aldım!`,72,270,690,76,2);
+  c.fillStyle='#9fc2c8';c.font='600 23px Inter, Arial, sans-serif';wrapCanvasText(c,d.location,72,titleBottom+15,670,31,2);
+  const detailParts=[`${d.count} adet`,d.length?`${d.length.toFixed(d.length%1?1:0)} cm`:null,`Saat ${d.time}`].filter(Boolean);
+  fillRound(c,72,390,590,65,32,'rgba(255,255,255,.055)','rgba(154,233,239,.15)');c.fillStyle='#dcfbfa';c.font='750 24px Inter, Arial, sans-serif';c.fillText(detailParts.join('  ·  '),101,431);
+  const scoreColor=d.scoreMeta[2];c.beginPath();c.arc(868,348,104,0,Math.PI*2);c.strokeStyle='rgba(255,255,255,.08)';c.lineWidth=18;c.stroke();c.beginPath();c.arc(868,348,104,-Math.PI/2,-Math.PI/2+Math.PI*2*(d.score/100));c.strokeStyle=scoreColor;c.lineCap='round';c.stroke();c.fillStyle='#f8ffff';c.font='850 65px Inter, Arial, sans-serif';c.textAlign='center';c.fillText(String(d.score),868,365);c.fillStyle=scoreColor;c.font='800 17px Inter, Arial, sans-serif';c.fillText('SAATLİK SİNYAL',868,399);c.fillStyle='#789aa2';c.font='600 15px Inter, Arial, sans-serif';c.fillText(`Güven: ${d.confidence}`,868,425);c.textAlign='left';
+  fillRound(c,58,492,964,588,32,'rgba(2,15,23,.48)','rgba(154,233,239,.14)');c.fillStyle='#75eee5';c.font='800 18px Inter, Arial, sans-serif';c.fillText('O SAATİN DENİZ VE HAVA KOŞULLARI',88,535);
+  const conditions=[
+    ['Deniz suyu',canvasValue(d.seaTemp,1,'°C'),'Türe göre ana çevre verisi'],['Akıntı',canvasValue(d.current,2,' km/sa'),`${dirText(d.currentDir)} yönüne`],
+    ['Rüzgâr',canvasValue(d.wind,0,' km/sa'),`${windName(d.windDir)} · ${dirText(d.windDir)} · hamle ${canvasValue(d.gust,0,'')}`],['Dalga',canvasValue(d.wave,2,' m'),`Periyot ${canvasValue(d.period,1,' sn')}`],
+    ['Basınç',canvasValue(d.pressure,0,' hPa'),pressureTrendText(d.pressureTrend)],['Hava',canvasValue(d.airTemp,1,'°C'),`Bulut %${Number.isFinite(d.cloud)?Math.round(d.cloud):'--'}`],
+    ['Yağış ihtimali',Number.isFinite(d.rain)?`%${Math.round(d.rain)}`:'--','Saatlik tahmin'],['Ay',d.moon.name,`Aydınlık %${d.moon.illum}`]
+  ];
+  const gx=88,gy=568,cw=440,ch=112,gapX=20,gapY=16;
+  conditions.forEach((item,index)=>{const col=index%2,row=Math.floor(index/2),x=gx+col*(cw+gapX),y=gy+row*(ch+gapY);fillRound(c,x,y,cw,ch,20,'rgba(9,42,52,.66)','rgba(154,233,239,.105)');c.fillStyle='#79a9b0';c.font='700 16px Inter, Arial, sans-serif';c.fillText(item[0].toLocaleUpperCase('tr-TR'),x+20,y+27);c.fillStyle='#f3ffff';c.font=`800 ${item[1].length>18?25:31}px Inter, Arial, sans-serif`;c.fillText(item[1],x+20,y+64);c.fillStyle='#79a0a7';c.font='600 15px Inter, Arial, sans-serif';wrapCanvasText(c,item[2],x+20,y+90,cw-40,20,1)});
+  const hasExtras=d.bait||d.note;fillRound(c,58,1100,964,138,28,'rgba(6,31,42,.72)','rgba(154,233,239,.13)');c.fillStyle='#70e8df';c.font='800 16px Inter, Arial, sans-serif';c.fillText(hasExtras?'AV NOTU':'KAYIT BİLGİSİ',88,1137);c.fillStyle='#e9fcfb';c.font='700 21px Inter, Arial, sans-serif';let noteY=1174;if(d.bait){c.fillText(`Yem / takım: ${d.bait}`,88,noteY);noteY+=31}if(d.note){c.fillStyle='#a9c7cc';c.font='600 19px Inter, Arial, sans-serif';wrapCanvasText(c,d.note,88,noteY,875,26,2)}if(!hasExtras){c.fillStyle='#a9c7cc';c.font='600 20px Inter, Arial, sans-serif';c.fillText(`${d.species.name} · ${d.count} adet · ${d.time} saatinde kullanıcı tarafından kaydedildi.`,88,1182)}
+  c.fillStyle='#6e969e';c.font='600 15px Inter, Arial, sans-serif';c.fillText('Koşullar seçilen saate en yakın model tahminidir · Veri: Open-Meteo Weather + Marine',72,1293);c.fillStyle='#8ec5c8';c.font='700 15px Inter, Arial, sans-serif';c.textAlign='right';c.fillText('gelibolu-balik-raporu',1008,1293);c.textAlign='left';return d
+}
+function updateCatchModule(ctx,r){const species=SPECIES[state.species];$('#catchModuleText').textContent=`${formatDate(ctx.date)} · ${species.name} seçili. Av saatini girerek o ana ait koşulları 1080×1350 PNG karta dönüştürebilirsin.`;if($('#catchModal').classList.contains('open'))renderCatchCard()}
+function openCatchModal(){
+  if(!state.weather?.hourly)return toast('Önce hava verilerinin yüklenmesini bekleyin.');
+  const ctx=getDateContext(),result=speciesDayResult(state.species,ctx),bestTime=result.best?.rows?.[0]?timeOnly(state.weather.hourly.time[result.best.rows[0].i]):'12:00';
+  $('#catchSpecies').innerHTML=Object.entries(SPECIES).map(([key,p])=>`<option value="${key}">${p.name}</option>`).join('');$('#catchSpecies').value=state.species;
+  const dates=(state.weather.daily?.time||[]).filter(Boolean);$('#catchDate').min=dates[0]||'';$('#catchDate').max=dates[dates.length-1]||'';$('#catchDate').value=ctx.date;
+  $('#catchTime').value=state.dayOffset===0?(timeOnly(state.weather.current?.time)||bestTime):bestTime;$('#catchCount').value='1';$('#catchLength').value='';$('#catchBait').value='';$('#catchNote').value='';
+  $('#catchModal').classList.add('open');$('#catchModal').setAttribute('aria-hidden','false');document.body.classList.add('catch-modal-open');requestAnimationFrame(renderCatchCard)
+}
+function closeCatchModal(){$('#catchModal').classList.remove('open');$('#catchModal').setAttribute('aria-hidden','true');document.body.classList.remove('catch-modal-open')}
+function catchFilename(d){const fish=d.species.name.toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ı/g,'i').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');return`gelibolu-balik-raporu-${d.date}-${fish}.png`}
+function canvasBlob(canvas){return new Promise(resolve=>canvas.toBlob(resolve,'image/png',1))}
+async function downloadCatchCard(){const d=renderCatchCard();if(!d)return toast('Kart verileri hazırlanamadı.');const blob=await canvasBlob($('#catchCanvas'));if(!blob)return toast('PNG oluşturulamadı.');const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=catchFilename(d);document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1200);toast('Av kartı PNG olarak indirildi.')}
+async function shareCatchCard(){const d=renderCatchCard();if(!d)return toast('Kart verileri hazırlanamadı.');const blob=await canvasBlob($('#catchCanvas'));if(!blob)return toast('Paylaşım görseli oluşturulamadı.');const file=new File([blob],catchFilename(d),{type:'image/png'});try{if(navigator.share&&(!navigator.canShare||navigator.canShare({files:[file]}))){await navigator.share({title:'Gelibolu Balık Raporu',text:`${formatFullDate(d.date)} · ${d.species.name} · ${d.count} adet`,files:[file]});return}await downloadCatchCard();toast('Telefon paylaşım menüsü desteklenmedi; PNG indirildi.')}catch(error){if(error?.name!=='AbortError')toast('Paylaşım açılamadı; PNG indir butonunu kullanabilirsiniz.')}}
+
+$('#searchBtn').onclick=()=>searchLocation($('#locationInput').value);$('#locationInput').onkeydown=e=>{if(e.key==='Enter')searchLocation(e.currentTarget.value);if(e.key==='Escape')closeSuggestions()};$('#locationInput').oninput=e=>{clearTimeout(searchLocation.t);const q=e.currentTarget.value.trim();if(q.length<3){closeSuggestions();return}searchLocation.t=setTimeout(()=>searchLocation(q),500)};$('#gpsBtn').onclick=useGps;$('#openCatchCardBtn').onclick=openCatchModal;$('#downloadCatchCardBtn').onclick=downloadCatchCard;$('#shareCatchCardBtn').onclick=shareCatchCard;$$('[data-catch-close]').forEach(button=>button.onclick=closeCatchModal);['catchSpecies','catchDate','catchTime','catchCount','catchLength','catchBait','catchNote'].forEach(id=>$('#'+id).addEventListener('input',()=>{clearTimeout(renderCatchCard.t);renderCatchCard.t=setTimeout(renderCatchCard,80)}));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#catchModal').classList.contains('open'))closeCatchModal()});document.addEventListener('click',e=>{if(!e.target.closest('.search'))closeSuggestions()});updateLocationHeader();loadLocation(state.location);
 </script>
 </body>
 </html>
