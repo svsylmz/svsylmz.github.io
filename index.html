@@ -3,19 +3,68 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#08141b">
+<meta name="theme-color" content="#061f20">
 <meta name="description" content="Gelibolu için saatlik rüzgâr, hamle, basınç eğilimi, deniz tahmini, astronomik solunar saatleri ve araştırma kaynakları.">
 <title>Gelibolu Balık Raporu · Rüzgâr, basınç ve solunar</title>
 <style>
-:root{color-scheme:dark;--bg:#08141b;--panel:#101f29;--panel2:#142632;--line:#28404d;--text:#edf5f7;--muted:#a1b7c3;--sea:#67ffbd;--blue:#79bdf5;--amber:#f4cc82;--red:#ff9296;--radius:16px;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--text);font-size:14px;line-height:1.55}button,input,select,textarea{font:inherit}button,a,input,select,summary{touch-action:manipulation}button,select{cursor:pointer}button{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:9px;min-height:42px;padding:9px 15px;font-weight:600}button:hover{border-color:var(--sea)}button:disabled{opacity:.45;cursor:wait}a{color:var(--sea);text-underline-offset:3px}input,select,textarea{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;min-height:44px;padding:10px 12px;max-width:100%}input:focus,select:focus,button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--sea);outline-offset:3px}input[type=range]{padding:0;accent-color:var(--sea);min-height:26px;width:100%}input[type=checkbox]{min-height:18px;width:18px;accent-color:var(--sea)}p{margin:8px 0 14px}h1,h2,h3,h4{line-height:1.25;letter-spacing:-.03em;margin:0}h1{font-size:26px}h2{font-size:20px}h3{font-size:17px}small,.small{font-size:12px}.muted{color:var(--muted)}.good{color:var(--sea)}.amber{color:var(--amber)}.bad{color:var(--red)}.blue{color:var(--blue)}.mono,.value,.num{font-variant-numeric:tabular-nums}.wrap{max-width:1380px;margin:auto;padding:0 32px}.top{padding:30px 0 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line)}.brandline{display:flex;gap:10px;align-items:center;margin-bottom:7px;font-size:11px;letter-spacing:.13em;color:var(--sea);font-weight:700}.mark{width:23px;height:15px;border-top:2px solid var(--sea);border-bottom:2px solid var(--sea);transform:skew(-20deg)}.actions,.flex{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.actions{justify-content:flex-end}.primary{background:var(--sea);border-color:var(--sea);color:#082219}.ghost{background:transparent}.nav{display:flex;gap:24px;overflow-x:auto;border-bottom:1px solid var(--line);margin-bottom:24px}.nav button{flex-shrink:0;border:0;border-radius:0;background:none;padding:18px 0 13px;border-bottom:3px solid transparent;color:var(--muted)}.nav button[aria-selected=true]{color:var(--text);border-bottom-color:var(--sea)}.notice{padding:12px 16px;border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:8px;margin:12px 0;background:var(--panel);color:var(--muted)}.notice.warning{border-left-color:var(--amber);color:var(--amber)}.notice.danger{border-left-color:var(--red);color:var(--red)}[hidden]{display:none!important}.locationbar{display:flex;gap:16px;align-items:center;justify-content:space-between;margin:15px 0 18px}.location-title{display:flex;gap:12px;align-items:center}.location-title h2{font-size:26px}.location-title p{margin:3px 0 0}.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:6px;padding:4px 8px;white-space:nowrap;font-size:11px;font-weight:600;color:var(--muted)}.badge.dot:before{content:"";width:6px;height:6px;background:var(--sea);border-radius:50%}.searchbox{padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-bottom:18px}.searchbox form{display:flex;gap:8px}.searchbox input[type=search]{flex:1;min-width:0}.results{display:grid;gap:6px;margin-top:12px}.results button{text-align:left;background:var(--bg)}label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.settings{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:16px 0 8px}.settings input,.settings select{width:100%}.days{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;margin:16px 0}.day{background:var(--panel);text-align:left;padding:12px 14px;font-size:12px;color:var(--muted)}.day strong{display:block;color:var(--text);font-size:17px;font-weight:600;margin-top:4px}.day[aria-pressed=true]{border-color:var(--sea);background:#17352e;color:var(--sea)}.speciesbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 16px}.pills{display:flex;gap:7px;flex-wrap:wrap}.pills button{font-weight:500;font-size:12px;background:transparent;min-height:36px;padding:6px 12px;border-radius:20px}.pills button[aria-pressed=true]{color:var(--sea);border-color:var(--sea)}.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px;padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.eyebrow{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:650;margin-bottom:9px}.hero-time{font-size:43px;line-height:1.1;letter-spacing:-.045em;font-weight:600;margin:8px 0 10px}.hero-sub{font-size:12px;color:var(--muted);max-width:540px}.hero-right{border-left:1px solid var(--line);padding-left:24px}.hero-right h3{margin-bottom:10px}.hero-right p{font-size:13px;line-height:1.65;color:var(--muted)}.window-buttons{display:flex;gap:7px;margin-top:12px;flex-wrap:wrap}.window-buttons button{font-size:11px;padding:6px 10px;min-height:34px;background:var(--bg)}.hero-metrics{display:flex;gap:22px;font-size:13px;flex-wrap:wrap}.hero-metrics strong{display:block;font-size:18px;color:var(--text);margin-top:3px}.timeline-control{margin:24px 0 17px;background:var(--panel);border:1px solid var(--line);padding:16px 20px;border-radius:12px}.timeline-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}.timeline-head strong{font-size:18px}.timeline-head .flex{gap:14px}.hour-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:23px;min-width:0}.panelhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:20px}.panelhead p{font-size:12px;color:var(--muted);margin:5px 0 0}.panelhead select{font-size:11px;min-height:32px;padding:6px 8px}.metric-top{display:flex;gap:20px;justify-content:space-between;align-items:center;min-height:114px}.value{font-size:48px;font-weight:600;line-height:1.12;letter-spacing:-.045em}.value span{font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0}.subvalue{font-size:15px;color:var(--muted);margin-top:5px}.subvalue strong{color:var(--amber);font-weight:550}.compass{width:112px;height:112px;flex-shrink:0}.metric-details{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:14px 0 16px}.metric-details>div{padding:12px 8px 12px 0}.metric-details>div+div{padding-left:12px;border-left:1px solid var(--line)}.metric-details span{display:block;font-size:11px;color:var(--muted);margin-bottom:4px}.metric-details strong{font-size:19px;line-height:1.1;font-weight:550}.chart{width:100%;height:190px;display:block;overflow:visible}.chart text{font:11px Inter,-apple-system,sans-serif;fill:var(--muted)}.chart .gridline{stroke:var(--line);stroke-width:1}.chart-wrap{margin:12px -4px 0;position:relative}.chart-controls{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}.legend{display:flex;gap:15px;font-size:11px;color:var(--muted);align-items:center}.legend i{width:17px;display:inline-block;margin-right:5px;border-top:2px solid var(--sea);vertical-align:middle}.legend .gust{border-color:var(--amber);border-top-style:dashed}.legend .pressure{border-color:var(--blue)}.note{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.7}.note a{white-space:nowrap}.pressure-deltas{display:flex;gap:18px;padding-top:12px;font-size:12px;flex-wrap:wrap}.pressure-deltas b{font-weight:550;color:var(--text)}.press-change{min-width:125px;text-align:right}.press-change strong{font-size:19px;display:block}.pressure-bars{height:84px}.full{grid-column:1/-1}.astronomy{margin-top:18px}.astro-layout{display:grid;grid-template-columns:210px 1fr;gap:28px}.moonbox{display:flex;gap:18px;align-items:center}.moonface{width:58px;height:58px;flex-shrink:0}.moonbox h3{font-size:17px}.moonbox p{font-size:12px;color:var(--muted);margin:4px 0}.solar-times{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px;border-top:1px solid var(--line);padding-top:14px}.solar-times span{display:block;color:var(--muted);font-size:11px}.solar-times b{font-size:17px;font-weight:500}.astro-track{position:relative;min-width:0;padding-top:8px}.astro-svg{width:100%;height:108px;display:block}.astro-svg text{fill:var(--muted);font-size:11px}.event-list{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.event{background:var(--bg);padding:10px 12px;border-radius:8px;border:1px solid var(--line)}.event small{color:var(--muted);font-size:10px;display:block}.event b{display:block;font-size:18px;margin:4px 0;font-weight:550}.event.major b{color:var(--sea)}.event.minor b{color:var(--blue)}.event span{font-size:10px;color:var(--muted)}.marine{margin-top:18px}.marine-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.marine-grid>div{border-left:1px solid var(--line);padding-left:18px}.marine-grid>div:first-child{border-left:0;padding-left:0}.marine-value{font-size:28px;letter-spacing:-.03em;margin:4px 0}.marine-value small{color:var(--muted);font-size:12px}.marine-grid p{font-size:11px;color:var(--muted);margin:3px 0}.tablepanel{margin:18px 0}.table-scroll{overflow:auto;max-height:530px;overscroll-behavior:contain}table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap;text-align:left}th{color:var(--muted);font-size:11px;font-weight:500;background:var(--panel);position:sticky;top:0;z-index:1;padding:12px 13px;border-bottom:1px solid var(--line)}td{padding:11px 13px;border-bottom:1px solid #203440}tr.selected td{background:#1b3932}td button{min-height:32px;padding:4px 8px;background:none;font-size:12px;font-weight:500}tr.past{opacity:.65}td .badge{font-size:10px;padding:3px 6px}.smallhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 12px}.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:15px}.data-card{background:var(--panel);padding:16px;border:1px solid var(--line);border-radius:10px;font-size:12px}.data-card p{margin:6px 0;color:var(--muted)}details{border-top:1px solid var(--line);margin-top:16px;padding-top:14px}summary{cursor:pointer;font-weight:550;min-height:30px}#mapFrame{width:100%;height:300px;border:1px solid var(--line);margin-top:12px;border-radius:10px}.research{max-width:960px;padding:12px 0 50px}.research h2{font-size:26px;margin:36px 0 16px}.research h3{font-size:18px;margin:26px 0 12px}.research p{font-size:15px;line-height:1.85;color:#c5d5dd}.research .lead{font-size:20px;line-height:1.6;color:var(--text);margin-bottom:25px}.research table{white-space:normal;min-width:600px;line-height:1.65}.research th,.research td{padding:14px;vertical-align:top}.research td:first-child{font-weight:550;color:var(--text)}.research .evidence{border-left:3px solid var(--sea);padding:4px 0 4px 20px;margin:24px 0}.source-list{counter-reset:source}.source{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.7;scroll-margin-top:20px}.source a{font-weight:550}.source .srcnum{color:var(--text);font-weight:600;margin-right:8px}.methodcode{font-family:ui-monospace,SFMono-Regular,monospace;background:var(--panel);border:1px solid var(--line);padding:15px 18px;white-space:pre-wrap;border-radius:8px;font-size:13px;line-height:1.8}.journal-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}.journal-form input,.journal-form select{width:100%}.span2{grid-column:span 2}.journal-header{display:flex;gap:15px;justify-content:space-between;align-items:center;margin:22px 0}.journal-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}.journal-stat{padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}.journal-stat strong{display:block;font-size:30px;font-weight:550}.journal-stat small{color:var(--muted)}.footer{border-top:1px solid var(--line);margin:30px 0 0;padding:24px 0 34px;display:flex;gap:15px;justify-content:space-between;color:var(--muted);font-size:11px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);border-radius:10px;padding:12px 20px;z-index:50;max-width:calc(100% - 32px);box-shadow:0 5px 24px #0005}.empty{padding:25px 10px;text-align:center;color:var(--muted);font-size:13px}.loadingbar{height:2px;background:var(--sea);width:30%;animation:slide 1.3s ease-in-out infinite}.loadingtrack{height:2px;overflow:hidden;margin-top:-1px}.skip{position:absolute;left:20px;top:-70px;z-index:100;background:var(--text);color:var(--bg);padding:10px}.skip:focus{top:10px}@keyframes slide{from{transform:translateX(-110%)}to{transform:translateX(440%)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.loadingbar{animation:none;width:100%}}@media(max-width:1000px){.wrap{padding:0 22px}.value{font-size:40px}.panel{padding:19px}.event-list{grid-template-columns:repeat(2,1fr)}.hero-time{font-size:36px}.settings{grid-template-columns:repeat(2,1fr)}.astro-layout{grid-template-columns:190px 1fr}.days{gap:6px}.day{padding:10px}}@media(max-width:720px){.wrap{padding:0 16px}.top{padding:22px 0 18px;align-items:flex-start}.top h1{font-size:21px;max-width:215px}.brandline{font-size:9px}.top .actions button{font-size:11px;padding:7px 10px;min-height:36px}.top .actions .hide-mobile{display:none}.nav{gap:23px;margin-bottom:18px}.nav button{font-size:12px}.locationbar{align-items:flex-start;gap:10px}.location-title h2{font-size:23px}.location-title p{font-size:11px}.locationbar .flex{justify-content:flex-end}.locationbar .badge{display:none}.locationbar button{min-height:36px;font-size:11px;padding:7px 10px}.days{display:flex;overflow-x:auto;gap:7px;margin:18px 0}.day{min-width:85px;flex:1;padding:10px}.day strong{font-size:15px}.speciesbar{display:block;margin-top:18px}.pills{flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px}.pills button{white-space:nowrap}.speciesbar>select{width:100%;margin-top:7px;font-size:12px;min-height:38px}.hero{grid-template-columns:1fr;padding:20px;gap:20px}.hero-right{border-left:0;border-top:1px solid var(--line);padding:17px 0 0}.hero-time{font-size:38px}.hero-metrics{gap:23px}.hero-sub{font-size:11px}.grid{grid-template-columns:1fr}.panel{padding:20px 17px}.value{font-size:46px}.timeline-control{padding:14px 16px}.timeline-head{align-items:flex-start}.timeline-head strong{font-size:17px}.timeline-head .flex{gap:7px}.timeline-head button{font-size:11px;min-height:32px;padding:4px 8px}.timeline-head .small{font-size:10px}.astro-layout{grid-template-columns:1fr;gap:15px}.astro-left{display:flex;gap:10px;justify-content:space-between;align-items:center}.moonbox{gap:10px}.moonface{width:45px;height:45px}.moonbox h3{font-size:14px}.moonbox p{font-size:10px}.solar-times{border:0;margin:0;padding:0;gap:10px}.solar-times b{font-size:15px}.solar-times span{font-size:10px}.marine-grid{grid-template-columns:1fr 1fr;gap:22px 15px}.marine-grid>div:nth-child(3){border:0;padding-left:0}.marine-value{font-size:26px}.journal-form{grid-template-columns:1fr 1fr}.journal-header{align-items:flex-start;flex-direction:column}.journal-stats{gap:8px}.journal-stat{padding:13px}.journal-stat strong{font-size:25px}.journal-stat small{font-size:10px}.data-grid{grid-template-columns:1fr}.footer{flex-direction:column;gap:3px}.searchbox form{flex-wrap:wrap}.searchbox input[type=search]{flex-basis:100%}.research h2{font-size:23px}.research .lead{font-size:18px}.research p{font-size:14px}.chart{height:180px}.press-change{min-width:110px}.press-change strong{font-size:17px}}
+:root{color-scheme:dark;--bg:#061f20;--panel:#0c2b2c;--panel2:#123637;--line:#2a4e4f;--text:#fff0e4;--muted:#b4c6c2;--sea:#24b1b1;--blue:#96cddf;--amber:#ffe0c5;--red:#ffafa0;--radius:16px;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--text);font-size:14px;line-height:1.55}button,input,select,textarea{font:inherit}button,a,input,select,summary{touch-action:manipulation}button,select{cursor:pointer}button{border:1px solid var(--line);background:var(--panel2);color:var(--text);border-radius:9px;min-height:42px;padding:9px 15px;font-weight:600}button:hover{border-color:var(--sea)}button:disabled{opacity:.45;cursor:wait}a{color:var(--sea);text-underline-offset:3px}input,select,textarea{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;min-height:44px;padding:10px 12px;max-width:100%}input:focus,select:focus,button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--sea);outline-offset:3px}input[type=range]{padding:0;accent-color:var(--sea);min-height:26px;width:100%}input[type=checkbox]{min-height:18px;width:18px;accent-color:var(--sea)}p{margin:8px 0 14px}h1,h2,h3,h4{line-height:1.25;letter-spacing:-.03em;margin:0}h1{font-size:26px}h2{font-size:20px}h3{font-size:17px}small,.small{font-size:12px}.muted{color:var(--muted)}.good{color:var(--sea)}.amber{color:var(--amber)}.bad{color:var(--red)}.blue{color:var(--blue)}.mono,.value,.num{font-variant-numeric:tabular-nums}.wrap{max-width:1380px;margin:auto;padding:0 32px}.top{padding:30px 0 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line)}.brandline{display:flex;gap:10px;align-items:center;margin-bottom:7px;font-size:11px;letter-spacing:.13em;color:var(--sea);font-weight:700}.mark{width:23px;height:15px;border-top:2px solid var(--sea);border-bottom:2px solid var(--sea);transform:skew(-20deg)}.actions,.flex{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.actions{justify-content:flex-end}.primary{background:var(--sea);border-color:var(--sea);color:#082219}.ghost{background:transparent}.nav{display:flex;gap:24px;overflow-x:auto;border-bottom:1px solid var(--line);margin-bottom:24px}.nav button{flex-shrink:0;border:0;border-radius:0;background:none;padding:18px 0 13px;border-bottom:3px solid transparent;color:var(--muted)}.nav button[aria-selected=true]{color:var(--text);border-bottom-color:var(--sea)}.notice{padding:12px 16px;border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:8px;margin:12px 0;background:var(--panel);color:var(--muted)}.notice.warning{border-left-color:var(--amber);color:var(--amber)}.notice.danger{border-left-color:var(--red);color:var(--red)}[hidden]{display:none!important}.locationbar{display:flex;gap:16px;align-items:center;justify-content:space-between;margin:15px 0 18px}.location-title{display:flex;gap:12px;align-items:center}.location-title h2{font-size:26px}.location-title p{margin:3px 0 0}.badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:6px;padding:4px 8px;white-space:nowrap;font-size:11px;font-weight:600;color:var(--muted)}.badge.dot:before{content:"";width:6px;height:6px;background:var(--sea);border-radius:50%}.searchbox{padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);margin-bottom:18px}.searchbox form{display:flex;gap:8px}.searchbox input[type=search]{flex:1;min-width:0}.results{display:grid;gap:6px;margin-top:12px}.results button{text-align:left;background:var(--bg)}label{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.settings{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding:16px 0 8px}.settings input,.settings select{width:100%}.days{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;margin:16px 0}.day{background:var(--panel);text-align:left;padding:12px 14px;font-size:12px;color:var(--muted)}.day strong{display:block;color:var(--text);font-size:17px;font-weight:600;margin-top:4px}.day[aria-pressed=true]{border-color:var(--sea);background:var(--mint);color:var(--sea)}.speciesbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 16px}.pills{display:flex;gap:7px;flex-wrap:wrap}.pills button{font-weight:500;font-size:12px;background:transparent;min-height:36px;padding:6px 12px;border-radius:20px}.pills button[aria-pressed=true]{color:var(--sea);border-color:var(--sea)}.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px;padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel)}.eyebrow{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:650;margin-bottom:9px}.hero-time{font-size:43px;line-height:1.1;letter-spacing:-.045em;font-weight:600;margin:8px 0 10px}.hero-sub{font-size:12px;color:var(--muted);max-width:540px}.hero-right{border-left:1px solid var(--line);padding-left:24px}.hero-right h3{margin-bottom:10px}.hero-right p{font-size:13px;line-height:1.65;color:var(--muted)}.window-buttons{display:flex;gap:7px;margin-top:12px;flex-wrap:wrap}.window-buttons button{font-size:11px;padding:6px 10px;min-height:34px;background:var(--bg)}.hero-metrics{display:flex;gap:22px;font-size:13px;flex-wrap:wrap}.hero-metrics strong{display:block;font-size:18px;color:var(--text);margin-top:3px}.timeline-control{margin:24px 0 17px;background:var(--panel);border:1px solid var(--line);padding:16px 20px;border-radius:12px}.timeline-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}.timeline-head strong{font-size:18px}.timeline-head .flex{gap:14px}.hour-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:23px;min-width:0}.panelhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:20px}.panelhead p{font-size:12px;color:var(--muted);margin:5px 0 0}.panelhead select{font-size:11px;min-height:32px;padding:6px 8px}.metric-top{display:flex;gap:20px;justify-content:space-between;align-items:center;min-height:114px}.value{font-size:48px;font-weight:600;line-height:1.12;letter-spacing:-.045em}.value span{font-size:15px;font-weight:400;color:var(--muted);letter-spacing:0}.subvalue{font-size:15px;color:var(--muted);margin-top:5px}.subvalue strong{color:var(--amber);font-weight:550}.compass{width:112px;height:112px;flex-shrink:0}.metric-details{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:14px 0 16px}.metric-details>div{padding:12px 8px 12px 0}.metric-details>div+div{padding-left:12px;border-left:1px solid var(--line)}.metric-details span{display:block;font-size:11px;color:var(--muted);margin-bottom:4px}.metric-details strong{font-size:19px;line-height:1.1;font-weight:550}.chart{width:100%;height:190px;display:block;overflow:visible}.chart text{font:11px Inter,-apple-system,sans-serif;fill:var(--muted)}.chart .gridline{stroke:var(--line);stroke-width:1}.chart-wrap{margin:12px -4px 0;position:relative}.chart-controls{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}.legend{display:flex;gap:15px;font-size:11px;color:var(--muted);align-items:center}.legend i{width:17px;display:inline-block;margin-right:5px;border-top:2px solid var(--sea);vertical-align:middle}.legend .gust{border-color:var(--amber);border-top-style:dashed}.legend .pressure{border-color:var(--blue)}.note{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.7}.note a{white-space:nowrap}.pressure-deltas{display:flex;gap:18px;padding-top:12px;font-size:12px;flex-wrap:wrap}.pressure-deltas b{font-weight:550;color:var(--text)}.press-change{min-width:125px;text-align:right}.press-change strong{font-size:19px;display:block}.pressure-bars{height:84px}.full{grid-column:1/-1}.astronomy{margin-top:18px}.astro-layout{display:grid;grid-template-columns:210px 1fr;gap:28px}.moonbox{display:flex;gap:18px;align-items:center}.moonface{width:58px;height:58px;flex-shrink:0}.moonbox h3{font-size:17px}.moonbox p{font-size:12px;color:var(--muted);margin:4px 0}.solar-times{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px;border-top:1px solid var(--line);padding-top:14px}.solar-times span{display:block;color:var(--muted);font-size:11px}.solar-times b{font-size:17px;font-weight:500}.astro-track{position:relative;min-width:0;padding-top:8px}.astro-svg{width:100%;height:108px;display:block}.astro-svg text{fill:var(--muted);font-size:11px}.event-list{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.event{background:var(--bg);padding:10px 12px;border-radius:8px;border:1px solid var(--line)}.event small{color:var(--muted);font-size:10px;display:block}.event b{display:block;font-size:18px;margin:4px 0;font-weight:550}.event.major b{color:var(--sea)}.event.minor b{color:var(--blue)}.event span{font-size:10px;color:var(--muted)}.marine{margin-top:18px}.marine-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.marine-grid>div{border-left:1px solid var(--line);padding-left:18px}.marine-grid>div:first-child{border-left:0;padding-left:0}.marine-value{font-size:28px;letter-spacing:-.03em;margin:4px 0}.marine-value small{color:var(--muted);font-size:12px}.marine-grid p{font-size:11px;color:var(--muted);margin:3px 0}.tablepanel{margin:18px 0}.table-scroll{overflow:auto;max-height:530px;overscroll-behavior:contain}table{width:100%;border-collapse:collapse;font-size:12px;white-space:nowrap;text-align:left}th{color:var(--muted);font-size:11px;font-weight:500;background:var(--panel);position:sticky;top:0;z-index:1;padding:12px 13px;border-bottom:1px solid var(--line)}td{padding:11px 13px;border-bottom:1px solid var(--line)}tr.selected td{background:var(--mint)}td button{min-height:32px;padding:4px 8px;background:none;font-size:12px;font-weight:500}tr.past{opacity:.65}td .badge{font-size:10px;padding:3px 6px}.smallhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 12px}.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:15px}.data-card{background:var(--panel);padding:16px;border:1px solid var(--line);border-radius:10px;font-size:12px}.data-card p{margin:6px 0;color:var(--muted)}details{border-top:1px solid var(--line);margin-top:16px;padding-top:14px}summary{cursor:pointer;font-weight:550;min-height:30px}#mapFrame{width:100%;height:300px;border:1px solid var(--line);margin-top:12px;border-radius:10px}.research{max-width:960px;padding:12px 0 50px}.research h2{font-size:26px;margin:36px 0 16px}.research h3{font-size:18px;margin:26px 0 12px}.research p{font-size:15px;line-height:1.85;color:var(--text)}.research .lead{font-size:20px;line-height:1.6;color:var(--text);margin-bottom:25px}.research table{white-space:normal;min-width:600px;line-height:1.65}.research th,.research td{padding:14px;vertical-align:top}.research td:first-child{font-weight:550;color:var(--text)}.research .evidence{border-left:3px solid var(--sea);padding:4px 0 4px 20px;margin:24px 0}.source-list{counter-reset:source}.source{padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--muted);line-height:1.7;scroll-margin-top:20px}.source a{font-weight:550}.source .srcnum{color:var(--text);font-weight:600;margin-right:8px}.methodcode{font-family:ui-monospace,SFMono-Regular,monospace;background:var(--panel);border:1px solid var(--line);padding:15px 18px;white-space:pre-wrap;border-radius:8px;font-size:13px;line-height:1.8}.journal-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0}.journal-form input,.journal-form select{width:100%}.span2{grid-column:span 2}.journal-header{display:flex;gap:15px;justify-content:space-between;align-items:center;margin:22px 0}.journal-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}.journal-stat{padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}.journal-stat strong{display:block;font-size:30px;font-weight:550}.journal-stat small{color:var(--muted)}.footer{border-top:1px solid var(--line);margin:30px 0 0;padding:24px 0 34px;display:flex;gap:15px;justify-content:space-between;color:var(--muted);font-size:11px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);border-radius:10px;padding:12px 20px;z-index:50;max-width:calc(100% - 32px);box-shadow:0 5px 24px #0005}.empty{padding:25px 10px;text-align:center;color:var(--muted);font-size:13px}.loadingbar{height:2px;background:var(--sea);width:30%;animation:slide 1.3s ease-in-out infinite}.loadingtrack{height:2px;overflow:hidden;margin-top:-1px}.skip{position:absolute;left:20px;top:-70px;z-index:100;background:var(--text);color:var(--bg);padding:10px}.skip:focus{top:10px}@keyframes slide{from{transform:translateX(-110%)}to{transform:translateX(440%)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.loadingbar{animation:none;width:100%}}@media(max-width:1000px){.wrap{padding:0 22px}.value{font-size:40px}.panel{padding:19px}.event-list{grid-template-columns:repeat(2,1fr)}.hero-time{font-size:36px}.settings{grid-template-columns:repeat(2,1fr)}.astro-layout{grid-template-columns:190px 1fr}.days{gap:6px}.day{padding:10px}}@media(max-width:720px){.wrap{padding:0 16px}.top{padding:22px 0 18px;align-items:flex-start}.top h1{font-size:21px;max-width:215px}.brandline{font-size:9px}.top .actions button{font-size:11px;padding:7px 10px;min-height:36px}.top .actions .hide-mobile{display:none}.nav{gap:23px;margin-bottom:18px}.nav button{font-size:12px}.locationbar{align-items:flex-start;gap:10px}.location-title h2{font-size:23px}.location-title p{font-size:11px}.locationbar .flex{justify-content:flex-end}.locationbar .badge{display:none}.locationbar button{min-height:36px;font-size:11px;padding:7px 10px}.days{display:flex;overflow-x:auto;gap:7px;margin:18px 0}.day{min-width:85px;flex:1;padding:10px}.day strong{font-size:15px}.speciesbar{display:block;margin-top:18px}.pills{flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px}.pills button{white-space:nowrap}.speciesbar>select{width:100%;margin-top:7px;font-size:12px;min-height:38px}.hero{grid-template-columns:1fr;padding:20px;gap:20px}.hero-right{border-left:0;border-top:1px solid var(--line);padding:17px 0 0}.hero-time{font-size:38px}.hero-metrics{gap:23px}.hero-sub{font-size:11px}.grid{grid-template-columns:1fr}.panel{padding:20px 17px}.value{font-size:46px}.timeline-control{padding:14px 16px}.timeline-head{align-items:flex-start}.timeline-head strong{font-size:17px}.timeline-head .flex{gap:7px}.timeline-head button{font-size:11px;min-height:32px;padding:4px 8px}.timeline-head .small{font-size:10px}.astro-layout{grid-template-columns:1fr;gap:15px}.astro-left{display:flex;gap:10px;justify-content:space-between;align-items:center}.moonbox{gap:10px}.moonface{width:45px;height:45px}.moonbox h3{font-size:14px}.moonbox p{font-size:10px}.solar-times{border:0;margin:0;padding:0;gap:10px}.solar-times b{font-size:15px}.solar-times span{font-size:10px}.marine-grid{grid-template-columns:1fr 1fr;gap:22px 15px}.marine-grid>div:nth-child(3){border:0;padding-left:0}.marine-value{font-size:26px}.journal-form{grid-template-columns:1fr 1fr}.journal-header{align-items:flex-start;flex-direction:column}.journal-stats{gap:8px}.journal-stat{padding:13px}.journal-stat strong{font-size:25px}.journal-stat small{font-size:10px}.data-grid{grid-template-columns:1fr}.footer{flex-direction:column;gap:3px}.searchbox form{flex-wrap:wrap}.searchbox input[type=search]{flex-basis:100%}.research h2{font-size:23px}.research .lead{font-size:18px}.research p{font-size:14px}.chart{height:180px}.press-change{min-width:110px}.press-change strong{font-size:17px}}
 @media(max-width:720px){.panel[aria-labelledby="pressureHeading"] .metric-top{flex-wrap:wrap;gap:12px}.panel[aria-labelledby="pressureHeading"] .press-change{text-align:left}#pressureValue{white-space:nowrap}}
 @media print{body{background:#fff;color:#111}.wrap{max-width:100%;padding:0}.top,.nav,.actions,.footer,.toast,.skip,#forecastView,#journalView{display:none!important}#researchView{display:block!important}.research{max-width:none}.research p,.source{color:#222}.research a{color:#12634c}.research table{min-width:0}h2,h3{break-after:avoid}.source{break-inside:avoid}.methodcode{background:#eee;border-color:#ddd;color:#111}}
+
+:root{--brand:#007979;--warm-panel:#253333;--control-line:#54817e;--accent:#24b1b1;--peach:#ffe0c5;--mint:#103a3a;--warning-bg:#383127;--danger-bg:#3b292a}
+body{background:var(--bg)}.top{padding:25px 0 20px}.top h1{font-size:27px}.nav{margin-bottom:16px}.primary{background:var(--peach);border-color:var(--peach);color:var(--bg)}.primary:hover{background:var(--text);border-color:var(--text)}.day[aria-pressed=true]{background:var(--brand);color:var(--text)}.day[aria-pressed=true] strong{color:var(--text)}.pills button[aria-pressed=true]{background:var(--mint)}.notice.warning{background:var(--warning-bg)}.notice.danger{background:var(--danger-bg)}.notice{color:var(--text)}.eyebrow{letter-spacing:.035em;text-transform:none;font-size:12px}.research p{color:var(--text)}.research .evidence{background:var(--panel);padding:12px 20px}.research .source a{overflow-wrap:anywhere}.source-list{counter-reset:none}.chart text{font-size:11px}.day:focus-visible,.plan-period button:focus-visible{outline-color:var(--text)}
+.fish-plan{margin:20px 0 22px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.plan-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:16px}.plan-heading h2{font-size:25px}.plan-heading p{margin:5px 0 0;font-size:12px;color:var(--muted)}.plan-heading .badge{background:var(--bg)}
+.plan-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;margin:0 0 18px}.plan-period{display:flex;gap:5px;flex-wrap:wrap}.plan-period button{font-size:12px;min-height:36px;padding:7px 12px;background:var(--bg);border-radius:8px}.plan-period button[aria-pressed=true]{color:var(--text);background:var(--brand);border-color:var(--sea)}.plan-toolbar>a{font-size:12px}
+.fish-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.fish-card{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:16px;min-width:0;display:flex;flex-direction:column}.fish-card[data-active=true]{border-color:var(--sea);outline:1px solid var(--sea)}.fish-card-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}.fish-card-heading h3{font-size:19px}.fish-card-heading span{font-size:10px;color:var(--muted)}.fish-card .basis{font-size:11px;color:var(--muted);margin:5px 0 10px;min-height:17px}.fish-slot{display:block;width:100%;background:var(--mint);border-color:transparent;border-radius:8px;text-align:left;padding:9px 11px;margin:0 0 9px;color:var(--sea);min-height:70px}.fish-slot strong{display:block;font-size:27px;letter-spacing:-.045em;font-weight:650;line-height:1.18;white-space:nowrap}.fish-slot span{font-size:10px;display:block;margin-top:5px;font-weight:500;line-height:1.4}.fish-slot .nextday{display:inline;font-size:11px;margin:0}.fish-slot:hover{background:#154242;border-color:var(--sea)}.fish-empty{min-height:70px;background:var(--warning-bg);border-radius:8px;padding:11px;font-size:13px;font-weight:600;color:var(--amber);margin-bottom:9px}.fish-empty span{font-size:11px;display:block;font-weight:400;margin-top:4px}.fish-weather{display:flex;gap:7px;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted);flex-wrap:wrap;line-height:1.6}.fish-weather b{color:var(--text);font-weight:550}.fish-alternative{margin-top:8px;min-height:29px;font-size:11px;color:var(--muted)}.fish-alternative button{border:0;background:none;color:var(--sea);padding:3px 0;min-height:28px;font-size:11px;text-align:left}.fish-details{margin-top:8px;padding-top:9px}.fish-details summary{font-size:11px;color:var(--muted);min-height:22px}.fish-details p{font-size:12px;line-height:1.7;margin:10px 0}.fish-details select{width:100%;font-size:11px;padding:7px 9px;min-height:36px}.fish-details label{font-size:11px}.fish-details .latin{font-style:italic;font-size:11px;color:var(--muted)}.fish-details .source-links a{margin-right:5px}.fish-card .preference-label{display:inline-block;font-size:11px;color:var(--sea)}.plan-caption{font-size:11px;line-height:1.7;color:var(--muted);margin:14px 0 0}.plan-caption strong{color:var(--text);font-weight:550}.plan-status{background:var(--warning-bg);color:var(--amber);border-radius:8px;padding:10px 12px;font-size:12px;margin-bottom:14px}
+.plan-matrix{margin-top:15px}.plan-matrix summary{font-size:12px}.plan-matrix .table-scroll{margin-top:10px;max-height:none}.plan-matrix table{min-width:1050px;table-layout:fixed}.plan-matrix th,.plan-matrix td{padding:5px 3px;text-align:center;border-bottom:0}.plan-matrix th:first-child,.plan-matrix td:first-child{width:108px;position:sticky;left:0;z-index:2;background:var(--panel);text-align:left;padding-left:0}.plan-matrix th:first-child{z-index:3}.plan-matrix td>button{width:100%;border:1px solid var(--line);min-height:31px;padding:3px 0;font-size:11px;border-radius:5px}.slot-ok{background:var(--mint)!important;color:var(--sea)!important;border-color:#528a83!important}.slot-pick{background:var(--brand)!important;color:var(--text)!important;border-color:var(--sea)!important}.slot-blocked{background:var(--danger-bg)!important;color:var(--red)!important}.slot-missing{background:var(--warning-bg)!important;color:var(--amber)!important}.slot-past{color:var(--muted);opacity:.45}.slot-filtered{background:var(--bg)!important;color:var(--muted)!important}.matrix-legend{font-size:10px;display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);margin-top:8px}.matrix-legend b{font-size:14px;margin-right:3px}
+.wind-strip{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:15px;margin:16px 0 0;padding:15px 17px;background:var(--warm-panel);border-radius:10px;border:1px solid #5b5b4c}.wind-strip>div+div{border-left:1px solid #5b5b4c;padding-left:17px}.wind-strip small{display:block;font-size:10px;color:var(--muted)}.wind-strip strong{font-size:21px;display:block;margin:3px 0;line-height:1.2;letter-spacing:-.025em}.wind-strip span{font-size:11px;color:var(--muted)}.wind-strip .strip-name{color:var(--sea)}.named-wind{font-size:25px;color:var(--sea);font-weight:600;margin-bottom:4px;letter-spacing:-.025em}.wind-from-details{font-size:11px;font-weight:400;display:block;color:var(--muted);margin-top:4px}.wind-progress{display:flex;gap:7px;overflow-x:auto;margin:15px 0 5px;padding-bottom:5px}.wind-progress button{flex:1;min-width:91px;padding:9px;background:var(--bg);font-size:10px;font-weight:400;text-align:left;min-height:73px}.wind-progress b{display:block;font-size:12px;margin:4px 0;color:var(--sea)}.wind-progress small{display:block;font-size:10px;color:var(--muted)}.wind-names{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.wind-names>div{background:var(--bg);padding:8px 10px;border-radius:6px;font-size:11px}.wind-names b{display:block;color:var(--sea);font-weight:600}.wind-names span{display:block;color:var(--muted);font-size:10px}.wind-names [data-current=true]{background:var(--mint);outline:1px solid var(--sea)}
+@media(max-width:1100px){.fish-slot strong{font-size:24px}.fish-card{padding:13px}.fish-card-heading h3{font-size:18px}.plan-heading h2{font-size:23px}}
+@media(max-width:800px){.fish-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fish-slot strong{font-size:26px}.fish-plan{padding:18px}.wind-strip{gap:12px;padding:13px}.wind-strip strong{font-size:19px}.wind-strip>div+div{padding-left:12px}}
+@media(max-width:540px){.top h1{font-size:21px;max-width:205px}.top{padding:20px 0 16px}.fish-plan{padding:15px 12px;margin-top:16px}.plan-heading h2{font-size:22px}.plan-heading{gap:10px}.plan-heading .badge{font-size:9px;padding:4px 6px}.plan-heading p{font-size:11px}.plan-toolbar{gap:9px;margin-bottom:13px}.plan-period{display:grid;width:100%;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}.plan-period button{padding:7px 2px;min-height:37px;font-size:10px;white-space:nowrap}.plan-toolbar>a{font-size:11px}.fish-grid{gap:9px}.fish-card{padding:11px}.fish-card-heading h3{font-size:17px}.fish-card-heading span{display:none}.fish-card .basis{font-size:10px;margin-top:4px;margin-bottom:8px;min-height:16px}.fish-slot{padding:9px 8px;min-height:65px}.fish-slot strong{font-size:23px;letter-spacing:-.055em}.fish-slot span{font-size:9px}.fish-weather{font-size:10px;gap:2px 6px;display:block}.fish-weather span{display:block}.fish-alternative button{font-size:10px}.fish-details summary{font-size:10px}.fish-details p{font-size:11px}.fish-card .preference-label{font-size:10px}.wind-strip{grid-template-columns:1fr 1fr;padding:12px;gap:12px 10px}.wind-strip>div:nth-child(3){grid-column:1/-1;border-left:0;border-top:1px solid #5b5b4c;padding:9px 0 0}.wind-strip>div:nth-child(3) strong{display:inline-block;font-size:16px;margin-right:8px}.wind-strip>div:nth-child(3) small{display:inline-block;margin-right:6px}.wind-strip strong{font-size:20px}.wind-names{grid-template-columns:repeat(2,1fr)}.named-wind{font-size:23px}.plan-caption{font-size:10px}.panelhead h2{font-size:19px}}
+@media(max-width:359px){.fish-slot strong{font-size:20px}.fish-card{padding:9px}.wrap{padding:0 11px}.top h1{max-width:175px;font-size:19px}.plan-heading h2{font-size:20px}}
+@media print{.fish-plan{display:none}.research .evidence{background:white}.research p{color:#111}}
+.fish-gear-brief{border-top:1px solid var(--line);margin:8px 0 10px;padding-top:10px;display:flex;flex-direction:column;gap:5px}.fish-gear-brief strong{font-weight:550;font-size:12px;line-height:1.5;min-height:18px}.fish-gear-brief button{color:var(--sea);background:var(--bg);font-size:11px;font-weight:600;min-height:33px;padding:6px 9px;text-align:left;border-color:var(--line)}.gear-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:0;margin:18px 0 24px;scroll-margin-top:15px}.gear-panel>summary{padding:19px 22px;font-size:17px;color:var(--sea)}.gear-panel>summary small{font-size:12px;font-weight:400;margin-left:14px;color:var(--muted)}.gear-body{padding:0 22px 22px}.gear-species{padding-top:3px;margin-bottom:20px}.gear-title-row{display:flex;align-items:center;justify-content:space-between;gap:16px}.gear-title-row h2{font-size:23px}.gear-intro{max-width:950px;line-height:1.75;font-size:14px;margin:12px 0 16px}.gear-weather{padding:10px 14px;background:var(--mint);border:1px solid #3d726b;border-radius:7px;font-size:11px;color:var(--text);margin:12px 0 16px}.gear-weather strong{margin-right:8px}.gear-weather.risk{background:var(--danger-bg);border-color:#87544d;color:var(--red)}.gear-weather.unknown{background:var(--warning-bg);border-color:#7f6b50;color:var(--amber)}.gear-methods{display:flex;gap:9px;flex-wrap:wrap}.gear-methods button{background:var(--bg);padding:10px 16px;min-width:140px;text-align:left}.gear-methods b,.gear-methods small{display:block}.gear-methods small{font-size:10px;font-weight:400;margin-top:4px}.gear-methods [aria-pressed=true]{background:var(--brand);border-color:var(--sea);color:var(--text)}.gear-reason{font-size:12px;color:var(--muted);margin:10px 0 18px}.gear-observations{padding:15px 18px;background:var(--bg);border:1px solid var(--line);border-radius:9px;margin:18px 0}.gear-observation-head{display:flex;justify-content:space-between;align-items:center}.gear-observation-head h3{font-size:15px}.gear-observation-head button{font-size:11px;min-height:30px;padding:5px 9px}.gear-observations p{font-size:11px;color:var(--muted);margin:6px 0 12px}.gear-context{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.gear-context select{width:100%;font-size:12px;background:var(--panel)}.gear-context label{font-size:11px}.gear-habitat{background:var(--warm-panel);padding:13px 17px;border-radius:9px;margin:16px 0;font-size:12px}.gear-habitat b{font-size:12px}.gear-habitat p{margin:5px 0 0;line-height:1.7}.gear-method-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gear-cell{border:1px solid var(--line);border-radius:9px;padding:16px}.gear-cell h4{font-size:14px;color:var(--sea);margin-bottom:7px}.gear-cell p{margin:0;font-size:13px;line-height:1.8}.gear-adapt,.gear-evidence{border-top:1px solid var(--line);padding-top:17px;margin-top:20px}.gear-adapt h3,.gear-evidence h3{font-size:16px;margin-bottom:12px}.gear-adapt p{font-size:12px;line-height:1.8;padding-left:13px;border-left:2px solid var(--accent);margin:9px 0}.gear-evidence>div{display:grid;grid-template-columns:1fr 1fr;gap:16px}.gear-evidence h4{font-size:12px;color:var(--sea);margin-bottom:6px}.gear-evidence p{font-size:12px;line-height:1.8;margin:0}.gear-avoid{font-size:12px;margin:20px 0;background:var(--warning-bg);padding:13px 16px;border:1px solid #7f6b50;border-radius:8px}.gear-avoid p{margin:4px 0 0;line-height:1.7}.gear-technical summary{font-size:13px}.weight-check{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}.weight-check>div{max-width:200px;flex:1}.weight-check input{width:100%}.gear-footer{margin-top:20px;display:flex;align-items:center;gap:15px;flex-wrap:wrap}.gear-footer span{font-size:11px;color:var(--muted)}
+@media(max-width:800px){.gear-context{grid-template-columns:1fr 1fr}.gear-title-row{align-items:flex-start}.gear-title-row h2{font-size:21px}}
+@media(max-width:540px){.fish-gear-brief strong{font-size:10px;min-height:30px}.fish-gear-brief button{font-size:10px;padding:6px 7px}.gear-panel>summary{font-size:16px;padding:17px}.gear-panel>summary small{display:block;margin:7px 0 0 17px;font-size:11px}.gear-body{padding:0 15px 18px}.gear-title-row{display:block}.gear-title-row a{display:inline-block;margin-top:9px;font-size:11px}.gear-intro{font-size:13px}.gear-methods{gap:7px}.gear-methods button{min-width:0;flex:1;padding:9px 10px}.gear-methods b{font-size:12px}.gear-methods small{font-size:9px;line-height:1.5}.gear-context{gap:10px}.gear-context select{font-size:11px;padding:9px 6px}.gear-observations{padding:12px}.gear-method-grid{grid-template-columns:1fr}.gear-cell{padding:14px}.gear-cell p{font-size:12px}.gear-evidence>div{grid-template-columns:1fr}.gear-weather{font-size:10px}.gear-weather strong{display:block;margin-bottom:3px}.weight-check>div{max-width:none;min-width:100px}.gear-footer{gap:9px}}
+@media print{.gear-panel{display:none}}
+
+@media(min-width:1240px){.fish-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;align-items:start}.fish-card{padding:12px}.fish-card-heading h3{font-size:18px}.fish-card-heading span{display:none}.fish-card .basis{font-size:10px;min-height:31px;line-height:1.5;margin:5px 0 7px}.fish-slot{padding:9px 7px;min-height:63px}.fish-slot strong{font-size:23px;letter-spacing:-.055em}.fish-slot span{font-size:9px}.fish-weather{display:block;min-height:37px;font-size:10px}.fish-weather span{display:block}.fish-gear-brief{margin:8px 0 0;padding-top:8px}.fish-gear-brief strong{font-size:10px;min-height:31px}.fish-gear-brief button{font-size:10px;padding:6px;min-height:33px}.fish-details summary{font-size:10px;line-height:1.6;min-height:31px}.fish-details p{font-size:11px}.fish-details{padding-top:8px}.fish-card .preference-label{font-size:11px}.fish-alternative{margin-top:6px}.fish-alternative button{font-size:10px}}
+
+
+@media screen{
+  html{background:var(--bg);scrollbar-color:#54817e var(--bg)}
+  ::selection{background:var(--peach);color:var(--bg)}
+  input,select,textarea{border-color:var(--control-line)}
+  input::placeholder,textarea::placeholder{color:#9db5b0;opacity:1}
+  option,optgroup{background:var(--panel);color:var(--text)}
+  .badge{background:rgba(255,240,228,.025)}
+  .primary:focus-visible{outline-color:var(--text)}
+  .nav button[aria-selected=true]{border-bottom-color:var(--peach)}
+  .day[aria-pressed=true]{border-color:var(--sea)}
+  .fish-card[data-active=true]{background:#0d3031}
+  .fish-slot:hover{color:var(--text)}
+  .fish-card-heading h3,.gear-title-row h2{color:var(--text)}
+  .wind-strip .strip-name{color:var(--peach)}
+  .wind-strip strong,.gear-habitat b{color:var(--peach)}
+  .notice.warning{color:var(--amber)}
+  .notice.danger{color:var(--red)}
+  .gear-cell{background:rgba(255,240,228,.012)}
+  .chart .gridline{stroke:rgba(255,240,228,.11)}
+  .slot-filtered{border-color:var(--line)!important}
+  .source:target{background:var(--mint)}
+  .moonface circle{fill:#061f20}
+  .moonface polygon{fill:var(--peach)}
+}
+@media print{
+  :root{color-scheme:light;--bg:#fff;--panel:#fff;--panel2:#f5f5f5;--text:#111;--muted:#444;--line:#ccc;--sea:#007979;--blue:#276988;--amber:#975015;--red:#af3b35;--mint:#e4f3ee;--warning-bg:#fff0de;--danger-bg:#ffe8e0;--warm-panel:#fff0e4}
+}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">İçeriğe geç</a>
 <div class="wrap">
-<header class="top"><div><div class="brandline"><span class="mark" aria-hidden="true"></span>SAHADA KARAR, VERİYLE HAZIRLIK</div><h1>Gelibolu Balık Raporu</h1></div><div class="actions"><button class="ghost hide-mobile" id="shareBtn">Özeti kopyala</button><button id="refreshBtn" class="primary">Verileri yenile ↻</button></div></header>
+<header class="top"><div><h1>Gelibolu Balık Raporu</h1></div><div class="actions"><button class="ghost hide-mobile" id="shareBtn">Özeti kopyala</button><button id="refreshBtn" class="primary">Verileri yenile ↻</button></div></header>
 <div class="loadingtrack" id="loadingTrack" hidden><div class="loadingbar"></div></div>
 <nav class="nav" aria-label="Ana bölümler" role="tablist"><button role="tab" id="tab-forecast" data-view="forecast" aria-controls="forecastView" aria-selected="true">Hava &amp; deniz</button><button role="tab" id="tab-journal" data-view="journal" aria-controls="journalView" aria-selected="false">Av günlüğü</button><button role="tab" id="tab-research" data-view="research" aria-controls="researchView" aria-selected="false">Bilim &amp; yöntem</button></nav>
 <main id="main">
@@ -31,24 +80,60 @@
 <details><summary>Harita ve saat dilimi</summary><div class="flex" style="margin-top:10px"><label for="timezoneInput">Astronomi ve kayıt saat dilimi</label><input id="timezoneInput" value="Europe/Istanbul" aria-label="IANA saat dilimi"><button id="timezoneBtn">Uygula</button><button id="mapBtn">Haritayı yükle</button></div><p class="note">Canlı hava yanıtı konumun saat dilimini otomatik seçer. Yanıt alınamazsa burada görünen dilim geçerlidir. Harita yalnız bu düğmeyle OpenStreetMap sunucusuna bağlanır.</p><iframe id="mapFrame" title="Seçili konumun OpenStreetMap haritası" loading="lazy" referrerpolicy="no-referrer" hidden></iframe></details>
 </div>
 <div class="days" id="dayTabs" aria-label="Tahmin günü"></div>
+
+<section class="fish-plan" aria-labelledby="fishPlanHeading">
+<div class="plan-heading"><div><h2 id="fishPlanHeading">Hangi balık, hangi saat?</h2><p id="fishPlanDate">Seçili gün için iki saatlik plan aralıkları</p></div><span class="badge" id="planDataBadge">Veri bekleniyor</span></div>
+<div class="plan-toolbar"><div id="planPeriod" class="plan-period" role="group" aria-label="Av için zaman dilimi"></div><a href="#research-planner" class="research-link">Saatler nasıl seçiliyor?</a></div>
+<div id="planStatus" class="plan-status" role="status" hidden></div>
+<div class="fish-grid" id="fishCards"></div>
+<p class="plan-caption"><strong>Aralıklar av planıdır; yakalama olasılığı değildir.</strong> Türün saat ipucu ile kişisel hava eşiklerinin kesişimi gösterilir. Saat kanıtı zayıf türlerde hava koşulları belirleyicidir. Bir aralığa dokun; aşağıdaki veriler o saate geçsin.</p>
+<details class="plan-matrix"><summary>Günün tamamını tür–saat tablosunda gör</summary><div class="table-scroll" id="fishMatrix"></div><div class="matrix-legend"><span><b class="good">✓</b>Tercihe ve eşiklere uyuyor</span><span><b class="good">★</b>Seçilen iki aralıktan biri</span><span><b class="bad">!</b>Eşik aşımı</span><span><b class="amber">?</b>Veri eksik</span><span>· Tercih dışında / geçmiş</span></div><p class="note">Her hücre, o saatte başlayan iki saatlik aralıktır; tek saatin balık aktivitesi değildir. Tablo yatay kaydırılabilir.</p></details>
+<div class="wind-strip" id="planWeatherStrip" aria-label="Seçili saatin hava özeti"></div>
+</section>
+
+<details id="gearPanel" class="gear-panel">
+<summary><span>Takım, yem &amp; sahte rehberi</span><small id="gearSummarySpecies">Hedef türü seç</small></summary>
+<div class="gear-body">
+<div class="pills gear-species" id="gearSpeciesTabs" role="group" aria-label="Takım rehberi hedef türü"></div>
+<div class="gear-title-row"><h2 id="gearTitle" tabindex="-1"></h2><a href="#research-gear" class="research-link small">Araştırma ve sınırlar ↗</a></div>
+<p id="gearIntro" class="gear-intro"></p>
+<div class="gear-weather" id="gearWeather" role="status"></div>
+<div id="gearMethods" class="gear-methods" role="group" aria-label="Av yöntemi"></div>
+<p id="gearMethodReason" class="gear-reason"></p>
+<div class="gear-observations"><div class="gear-observation-head"><h3>Mera gözlemin</h3><button class="ghost" id="gearClearContext">Sıfırla</button></div><p>İsteğe bağlıdır. Bu alanlar hava modelinden tahmin edilmez; kayıtlı seçimi başka meraya geçtiğinde güncelle.</p><div id="gearContext" class="gear-context"></div></div>
+<div class="gear-habitat"><b>Nerede denenir?</b><p id="gearHabitat"></p></div>
+<div id="gearMethodGrid" class="gear-method-grid"></div>
+<p id="gearSources" class="note"></p>
+<div class="gear-adapt"><h3>Gözlemine göre uyarlama</h3><div id="gearContextNotes"></div></div>
+<div class="gear-evidence"><h3>Dayanağı ne?</h3><div id="gearEvidence"></div></div>
+<div class="gear-avoid"><b>Kaçınılacak varsayım</b><p id="gearAvoid"></p></div>
+<details class="gear-technical"><summary>Atar kontrolü, iğne tipi ve uygulama notları</summary>
+<p class="note">Yazılan çap / boy / gramajlar pratik başlangıç aralıklarıdır. Marka numaraları standart ölçü değildir. Toplam atış ağırlığına kurşun, kafa, sahte, yem ve diğer parçalar dahildir. Hafif kamışı ağır surf kurşunuyla zorlayarak atma.</p>
+<form id="weightCheckForm" class="weight-check"><div><label for="rigWeight">Toplam takım · gram</label><input id="rigWeight" type="number" min="0.1" max="2000" step="any" placeholder="Örn. 32"></div><div><label for="rodMax">Kamış üst atarı · gram</label><input id="rodMax" type="number" min="0.1" max="2000" step="any" placeholder="Örn. 60"></div><button type="submit">Karşılaştır</button></form><p id="weightResult" class="note" role="status"></p>
+<p class="note"><strong>Circle / C iğne:</strong> J iğneyle aynı vuruş tekniği değildir; uygun circle düzende ani sert tasmalama yerine hat geriliminin oluşmasına izin verilir. Bir çalışmanın iğne–yem sonucu bütün türlere ve kurulumlara aktarılmaz. <a href="#src-30" class="research-link">[30]</a> <a href="#src-21" class="research-link">[21]</a></p>
+<p class="note">Yasal boy, miktar, dönem, iğne sayısı, liman erişimi ve canlı yem / yem toplama koşullarını güncel resmî düzenlemeden kontrol et. Uygulama izin veya mevzuata uygunluk kararı vermez. Canlı yemi farklı su sistemlerine bırakma. <a href="#src-33" class="research-link">Resmî kaynak</a></p>
+</details>
+<div class="gear-footer"><button id="gearJournalBtn">Günlük alanlarına aktar</button><span>Kayıt oluşturmaz; yalnız tür, yöntem ve yem alanlarını doldurur.</span></div>
+</div></details>
+
 <div class="timeline-control"><div class="timeline-head"><div class="flex"><strong id="selectedTime">—</strong><span class="small muted" id="selectedDate"></span></div><button id="nowBtn" class="ghost">Şimdiki saate dön</button></div><label for="hourSlider" class="small muted">Saati değiştir; rüzgâr, basınç ve deniz panelleri birlikte güncellenir.</label><input id="hourSlider" type="range" min="0" max="23" value="12" step="1"><div class="hour-labels" id="hourLabels"></div></div>
 <div id="hazardNotice" class="notice warning" hidden></div>
 <div class="grid">
-<section class="panel" aria-labelledby="windHeading"><div class="panelhead"><div><h2 id="windHeading">Rüzgârı oku</h2><p>10 m rüzgârı ve hamle · seçili saat</p></div><select id="unitSelect" aria-label="Rüzgâr birimi"><option value="kmh">km/sa</option><option value="kn">knot</option><option value="ms">m/sn</option></select></div><div class="metric-top"><div><div class="value" id="windValue">—</div><div class="subvalue" id="windGust">Hamle —</div></div><div id="windCompass"></div></div><div class="metric-details"><div><span>Geldiği yön</span><strong id="windFrom">—</strong></div><div><span>Önceki 3 saate göre</span><strong id="windTurn">—</strong></div><div><span>Kıyıya göre</span><strong id="coastLabel" style="font-size:14px">Yön girilmedi</strong></div></div><div class="legend"><span><i></i>Rüzgâr</span><span><i class="gust"></i>Hamle</span><span id="windChartRange" class="muted">48 saat</span></div><div class="chart-wrap" id="windChart"></div><div class="note" id="windNote">Pusula oku rüzgârın gittiği yönü gösterir. Poyraz kuzeydoğudan gelir, güneybatıya eser. Hızlar model tahminidir. <a href="#src-11" class="research-link">[11]</a></div></section>
-<section class="panel" aria-labelledby="pressureHeading"><div class="panelhead"><div><h2 id="pressureHeading">Basınç değişimini izle</h2><p>Deniz seviyesine indirgenmiş basınç · MSL</p></div><span class="badge">hPa</span></div><div class="metric-top"><div><div class="value" id="pressureValue">—</div><div class="subvalue muted">Modelde seçili saatin değeri</div></div><div class="press-change"><strong id="pressureTrend">—</strong><span class="small muted">önceki 3 saate göre</span></div></div><div class="metric-details"><div><span>Önceki 3 saat</span><strong id="delta3">—</strong></div><div><span>Önceki 6 saat</span><strong id="delta6">—</strong></div><div><span>Önceki 24 saat</span><strong id="delta24">—</strong></div></div><div class="legend"><span><i class="pressure"></i>Basınç · hPa</span><span>Gri alan: geçmiş saatler*</span></div><div class="chart-wrap" id="pressureChart"></div><div class="pressure-deltas"><span>Sonraki 3 saat: <b id="next3">—</b></span><span>Sonraki 6 saat: <b id="next6">—</b></span></div><details><summary class="small">3 saatlik değişim çubuklarını göster</summary><div id="pressureBarChart" class="chart-wrap"></div></details><p class="note">Pozitif değer yükseliş, negatif değer düşüştür. Geçmiş saatler de model serisidir; barometre gözlemi değildir. “Düşüyor” otomatik olarak “iyi av” anlamına gelmez. <a href="#research-pressure" class="research-link">Yorumlama yöntemi</a></p></section>
+<section class="panel" aria-labelledby="windHeading"><div class="panelhead"><div><h2 id="windHeading">Rüzgâr</h2><p>10 m rüzgârı ve hamle · seçili saat</p></div><select id="unitSelect" aria-label="Rüzgâr birimi"><option value="kmh">km/sa</option><option value="kn">knot</option><option value="ms">m/sn</option></select></div><div class="metric-top"><div><div class="named-wind" id="windNameHeading">—</div><div class="value" id="windValue">—</div><div class="subvalue" id="windGust">Hamle —</div></div><div id="windCompass"></div></div><div class="metric-details"><div><span>Geldiği yön</span><strong id="windFrom">—</strong></div><div><span>Önceki 3 saate göre</span><strong id="windTurn">—</strong></div><div><span>Kıyıya göre</span><strong id="coastLabel" style="font-size:14px">Yön girilmedi</strong></div></div><div class="legend"><span><i></i>Rüzgâr</span><span><i class="gust"></i>Hamle</span><span id="windChartRange" class="muted">48 saat</span></div><div class="chart-wrap" id="windChart"></div><div class="wind-progress" id="windProgress" aria-label="Sonraki saatlerin rüzgâr adları"></div><details><summary class="small">Rüzgâr adları ve yönler</summary><div class="wind-names" id="windNames"></div><p class="note">Adlar rüzgârın geldiği yönü belirtir. En yakın sekiz ana yönden biri kullanılır; derece değeri aynen korunur. <a href="#src-17" class="research-link">Meteoroloji Genel Müdürlüğü [17]</a></p></details><div class="note" id="windNote">Pusula oku rüzgârın gittiği yönü gösterir. Poyraz kuzeydoğudan gelir, güneybatıya eser. Hızlar model tahminidir. <a href="#src-11" class="research-link">[11]</a></div></section>
+<section class="panel" aria-labelledby="pressureHeading"><div class="panelhead"><div><h2 id="pressureHeading">Basınç değişimi</h2><p>Deniz seviyesine indirgenmiş basınç · MSL</p></div><span class="badge">hPa</span></div><div class="metric-top"><div><div class="value" id="pressureValue">—</div><div class="subvalue muted">Modelde seçili saatin değeri</div></div><div class="press-change"><strong id="pressureTrend">—</strong><span class="small muted">önceki 3 saate göre</span></div></div><div class="metric-details"><div><span>Önceki 3 saat</span><strong id="delta3">—</strong></div><div><span>Önceki 6 saat</span><strong id="delta6">—</strong></div><div><span>Önceki 24 saat</span><strong id="delta24">—</strong></div></div><div class="legend"><span><i class="pressure"></i>Basınç · hPa</span><span>Gri alan: geçmiş saatler*</span></div><div class="chart-wrap" id="pressureChart"></div><div class="pressure-deltas"><span>Sonraki 3 saat: <b id="next3">—</b></span><span>Sonraki 6 saat: <b id="next6">—</b></span></div><details><summary class="small">3 saatlik değişim çubuklarını göster</summary><div id="pressureBarChart" class="chart-wrap"></div></details><p class="note">Pozitif değer yükseliş, negatif değer düşüştür. Geçmiş saatler de model serisidir; barometre gözlemi değildir. “Düşüyor” otomatik olarak “iyi av” anlamına gelmez. <a href="#research-pressure" class="research-link">Yorumlama yöntemi</a></p></section>
 </div>
 <div class="speciesbar"><div class="pills" id="speciesTabs" aria-label="Hedef tür"></div><select id="lightFilter" aria-label="Av için ışık filtresi"><option value="all">Tüm saatleri karşılaştır</option><option value="night">Yalnız gece / gün batımı sonrası</option><option value="twilight">Alacakaranlıkla kesişen</option><option value="day">Yalnız gündüz</option></select></div>
-<div class="hero"><div><div class="eyebrow">KARŞILAŞTIRMALI 3 SAATLİK PENCERE</div><div class="hero-time" id="bestTime">Veri bekleniyor</div><div class="hero-metrics" id="bestMetrics"></div><p class="hero-sub" id="bestReason">Eksiksiz rüzgâr, hamle, dalga, yağış ve hava kodu ile hesaplanır. Balık yakalama olasılığı değildir.</p><div class="window-buttons" id="otherWindows"></div></div><div class="hero-right"><div class="eyebrow">HEDEF TÜR · KANIT NOTU</div><h3 id="speciesTitle"></h3><p id="speciesNote"></p><div class="flex"><span class="badge" id="speciesEvidence"></span><a href="#research-species" class="small research-link">Araştırmayı oku ↗</a></div></div></div>
+<div class="hero"><div><div class="eyebrow">3 saatlik hava karşılaştırması</div><div class="hero-time" id="bestTime">Veri bekleniyor</div><div class="hero-metrics" id="bestMetrics"></div><p class="hero-sub" id="bestReason">Eksiksiz rüzgâr, hamle, dalga, yağış ve hava kodu ile hesaplanır. Balık yakalama olasılığı değildir.</p><div class="window-buttons" id="otherWindows"></div></div><div class="hero-right"><div class="eyebrow">Seçili türün araştırma notu</div><h3 id="speciesTitle"></h3><p id="speciesNote"></p><div class="flex"><span class="badge" id="speciesEvidence"></span><a href="#research-species" class="small research-link">Araştırmayı oku ↗</a></div></div></div>
 <section class="panel astronomy" aria-labelledby="astroHeading"><div class="panelhead"><div><h2 id="astroHeading">Ay, Güneş &amp; solunar saatleri</h2><p>Astronomik olaylar hesaplanır; balık aktivitesi bu saatlerden doğrulanmış olarak tahmin edilemez.</p></div><span class="badge">Yaklaşık saatler</span></div><div class="astro-layout"><div class="astro-left"><div class="moonbox"><div id="moonFace"></div><div><h3 id="moonPhase">—</h3><p id="moonLight">—</p></div></div><div class="solar-times" id="solarTimes"></div></div><div class="astro-track"><div id="astroTimeline"></div><div class="event-list" id="astroEvents"></div></div></div><p class="note" id="astroNote">Majör: Ay’ın üst / alt meridyen geçişi çevresi ±60 dakika. Minör: Ay doğuşu / batışı çevresi ±30 dakika. Bu bant genişlikleri gösterim tercihidir; kanıtlanmış yemlenme süresi değildir. Arazi, ufuk ve kırılma olay saatlerini değiştirebilir. <a href="#src-1" class="research-link">[1]</a> <a href="#src-13" class="research-link">[13]</a></p></section>
 <section class="panel marine" aria-labelledby="marineHeading"><div class="panelhead"><div><h2 id="marineHeading">Deniz katmanı</h2><p>Seçili saatin model verisi · yerel liman ölçümü değil</p></div><span class="badge" id="marineBadge">Veri bekleniyor</span></div><div class="marine-grid"><div><span class="small muted">Anlamlı dalga yüksekliği</span><div class="marine-value" id="waveValue">—</div><p id="wavePeriod">Periyot —</p></div><div><span class="small muted">Dalganın geldiği yön</span><div class="marine-value" id="waveDirection">—</div><p>Rüzgâr yönünden farklı olabilir.</p></div><div><span class="small muted">Yüzey akıntısı</span><div class="marine-value" id="currentValue">—</div><p id="currentDirection">Aktığı yön —</p></div><div><span class="small muted">Deniz yüzeyi sıcaklığı</span><div class="marine-value" id="sstValue">—</div><p>Dipteki veya yem derinliğindeki sıcaklık değil.</p></div></div><p class="note" id="marineNote">Akıntı/gelgit modeli yaklaşık 8 km çözünürlüktedir ve kıyıda sınırlıdır. Liman içi, kıyı kırılması ve Boğaz’ın katmanlı akışı bu hücreyle çözülemez. Seyir için kullanılmaz. <a href="#src-12" class="research-link">[12]</a></p></section>
 <section class="panel tablepanel"><div class="panelhead"><div><h2>Saat saat karşılaştır</h2><p>Bir saate dokunarak üst panelleri o saate getir.</p></div><button id="forecastCsv" class="ghost small">Tahmini CSV al</button></div><div class="table-scroll"><table><thead><tr><th>Saat</th><th>Rüzgâr / hamle</th><th>Geldiği yön</th><th>Basınç</th><th>Δ önceki 3 s</th><th>Dalga</th><th>Yağış</th><th>Solunar</th><th>Uyarı</th></tr></thead><tbody id="hourTable"></tbody></table></div></section>
-<details id="dataDetails"><summary>Veri kapsamı, güncellik ve hesaplama şeffaflığı</summary><div class="data-grid" id="dataDetailsContent"></div><p class="note">Basınç ve Ay puanı üretmiyoruz. Karşılaştırmalı pencere; rüzgâr, hamle, dalga ve yağışın kişisel eşiklere göre en kısıtlayıcı değerini kullanır. Tür seçimi yalnız araştırma notunu değiştirir; kalibre edilmemiş katsayılarla sıralamayı değiştirmez. <a href="#research-index" class="research-link">Formülü ve sınırlamaları gör</a>.</p></details>
+<details id="dataDetails"><summary>Veri kapsamı, güncellik ve hesaplama şeffaflığı</summary><div class="data-grid" id="dataDetailsContent"></div><p class="note">Basınç ve Ay puanı üretmiyoruz. Karşılaştırmalı pencere; rüzgâr, hamle, dalga ve yağışın kişisel eşiklere göre en kısıtlayıcı değerini kullanır. Bu genel üç saatlik karşılaştırmada tür seçimi yalnız araştırma notunu değiştirir. Üstteki iki saatlik tür planı ise ayrıca açıkça belirtilen ışık/saat tercihlerini uygular; biyolojik başarı puanı üretmez. <a href="#research-index" class="research-link">Formülü ve sınırlamaları gör</a>.</p></details>
 </section>
-<section id="journalView" role="tabpanel" aria-labelledby="tab-journal" hidden><div class="journal-header"><div><h2>Av günlüğü</h2><p class="muted">Sadece iyi avları değil, boş döndüğün seansları da kaydet.</p></div><div class="flex"><button id="exportLog">JSON yedeği</button><button id="importLog">Yedek yükle</button><button id="logCsv">CSV al</button><input id="importFile" type="file" accept="application/json,.json" hidden></div></div><div class="notice">Kayıtlar yalnız bu tarayıcıda saklanır; buluta gönderilmez. Süre başına av, basit bir izleme ölçüsüdür. Bu sürüm kayıtlarla kendiliğinden model eğitmez.</div><div class="journal-stats" id="journalStats"></div><section class="panel"><h3>Yeni seans</h3><form id="journalForm" class="journal-form"><div><label for="logDate">Yerel tarih</label><input id="logDate" type="date" required></div><div><label for="logTime">Başlangıç saati</label><input id="logTime" type="time" value="18:00" required></div><div><label for="logHours">Aktif av süresi · saat</label><input id="logHours" type="number" min=".1" max="48" step=".1" value="3" required></div><div><label for="logAnglers">Avcı sayısı</label><input id="logAnglers" type="number" min="1" max="30" step="1" value="1" required></div><div><label for="logSpecies">Hedef tür</label><select id="logSpecies"></select></div><div><label for="logCount">Hedef tür adedi · sıfır dahil</label><input id="logCount" type="number" min="0" max="10000" step="1" value="0" required></div><div><label for="logMethod">Yöntem</label><select id="logMethod"><option>Yemli / surf</option><option>Spin</option><option>LRF</option><option>Tekne / yemli</option><option>Çapari</option><option>Diğer</option></select></div><div><label for="logBait">Yem / sahte</label><input id="logBait" maxlength="120" placeholder="Örn. sardalya"></div><div class="span2"><label for="logPlace">Mera</label><input id="logPlace" maxlength="140" required></div><div class="span2"><label for="logNote">Not · derinlik, bulanıklık, akıntı gözlemi</label><input id="logNote" maxlength="500"></div><div class="span2"><button type="submit" class="primary">Seansı kaydet</button></div></form><p class="note" id="logTimezone"></p></section><div class="smallhead"><h3>Seanslar</h3><span class="small muted">Ölçü: balık / avcı-saat</span></div><div class="table-scroll"><table><thead><tr><th>Tarih / saat</th><th>Mera</th><th>Tür</th><th>Süre × kişi</th><th>Adet</th><th>Balık / avcı-saat</th><th>İşlem</th></tr></thead><tbody id="journalTable"></tbody></table></div></section>
+<section id="journalView" role="tabpanel" aria-labelledby="tab-journal" hidden><div class="journal-header"><div><h2>Av günlüğü</h2><p class="muted">Sadece iyi avları değil, boş döndüğün seansları da kaydet.</p></div><div class="flex"><button id="exportLog">JSON yedeği</button><button id="importLog">Yedek yükle</button><button id="logCsv">CSV al</button><input id="importFile" type="file" accept="application/json,.json" hidden></div></div><div class="notice">Kayıtlar yalnız bu tarayıcıda saklanır; buluta gönderilmez. Süre başına av, basit bir izleme ölçüsüdür. Bu sürüm kayıtlarla kendiliğinden model eğitmez.</div><div class="journal-stats" id="journalStats"></div><section class="panel"><h3>Yeni seans</h3><form id="journalForm" class="journal-form"><div><label for="logDate">Yerel tarih</label><input id="logDate" type="date" required></div><div><label for="logTime">Başlangıç saati</label><input id="logTime" type="time" value="18:00" required></div><div><label for="logHours">Aktif av süresi · saat</label><input id="logHours" type="number" min=".1" max="48" step=".1" value="3" required></div><div><label for="logAnglers">Avcı sayısı</label><input id="logAnglers" type="number" min="1" max="30" step="1" value="1" required></div><div><label for="logSpecies">Hedef tür</label><select id="logSpecies"></select></div><div><label for="logCount">Hedef tür adedi · sıfır dahil</label><input id="logCount" type="number" min="0" max="10000" step="1" value="0" required></div><div><label for="logMethod">Yöntem</label><select id="logMethod"><option>Yemli / surf</option><option>Spin</option><option>LRF</option><option>Tekne / yemli</option><option>Çapari</option><option>Şamandıralı / yemli</option><option>Diğer</option></select></div><div><label for="logBait">Yem / sahte</label><input id="logBait" maxlength="120" placeholder="Örn. sardalya"></div><div class="span2"><label for="logPlace">Mera</label><input id="logPlace" maxlength="140" required></div><div class="span2"><label for="logNote">Not · derinlik, bulanıklık, akıntı gözlemi</label><input id="logNote" maxlength="500"></div><div class="span2"><button type="submit" class="primary">Seansı kaydet</button></div></form><p class="note" id="logTimezone"></p></section><div class="smallhead"><h3>Seanslar</h3><span class="small muted">Ölçü: balık / avcı-saat</span></div><div class="table-scroll"><table><thead><tr><th>Tarih / saat</th><th>Mera</th><th>Tür</th><th>Süre × kişi</th><th>Adet</th><th>Balık / avcı-saat</th><th>İşlem</th></tr></thead><tbody id="journalTable"></tbody></table></div></section>
 <section id="researchView" role="tabpanel" aria-labelledby="tab-research" class="research" hidden><h2 style="margin-top:8px">Solunar, hava ve av başarısı</h2>
 <p class="lead">Astronomik olayları doğru hesaplamak ile balığın ne zaman oltaya geleceğini doğru tahmin etmek iki ayrı problemdir.</p>
-<p>Bu raporun sonucu, Ay bilgisini kaldırmak değil; <strong>Ay takvimini, atmosfer değişimini, deniz koşullarını ve gerçek av kayıtlarını ayrı katmanlarda sunmaktır.</strong> Araştırmalar farklı türleri, habitatları ve ölçümleri kapsar. Bunlardan Gelibolu’nun altı türü için tek bir doğrulanmış başarı yüzdesi çıkarmak desteklenmiyor. Aşağıdaki uygulama kararları, belirtilen bulgulardan yapılan tasarım çıkarımlarıdır; yayınlanmış bir biyolojik tahmin modelinin kopyası değildir. <a href="#src-1">[1]</a> <a href="#src-2">[2]</a> <a href="#src-5">[5]</a></p>
-<div class="flex"><a href="#research-solunar">Solunar kanıtı</a><span class="muted">·</span><a href="#research-pressure">Basınç ve rüzgâr</a><span class="muted">·</span><a href="#research-species">Türler</a><span class="muted">·</span><a href="#research-index">Hesaplamalar</a><span class="muted">·</span><a href="#sources">Kaynakça</a></div>
+<p>Bu raporun sonucu, Ay bilgisini kaldırmak değil; <strong>Ay takvimini, atmosfer değişimini, deniz koşullarını ve gerçek av kayıtlarını ayrı katmanlarda sunmaktır.</strong> Araştırmalar farklı türleri, habitatları ve ölçümleri kapsar. Bunlardan Gelibolu için izlenen altı tür için tek bir doğrulanmış başarı yüzdesi çıkarmak desteklenmiyor. Aşağıdaki uygulama kararları, belirtilen bulgulardan yapılan tasarım çıkarımlarıdır; yayınlanmış bir biyolojik tahmin modelinin kopyası değildir. <a href="#src-1">[1]</a> <a href="#src-2">[2]</a> <a href="#src-5">[5]</a></p>
+<div class="flex"><a href="#research-solunar">Solunar kanıtı</a><span class="muted">·</span><a href="#research-pressure">Basınç ve rüzgâr</a><span class="muted">·</span><a href="#research-species">Türler</a><span class="muted">·</span><a href="#research-index">Hesaplamalar</a><span class="muted">·</span><a href="#research-planner">Tür–saat planı</a><span class="muted">·</span><a href="#research-gear">Takım &amp; yem</a><span class="muted">·</span><a href="#research-github">GitHub</a><span class="muted">·</span><a href="#sources">Kaynakça</a></div>
 <h2 id="research-solunar">1. Solunar teorisinin desteklenen ve desteklenmeyen tarafı</h2>
 <p>Solunar tablolarının majör olayları Ay’ın üst ve alt meridyenden geçişidir; minör olayları Ay doğuşu ve batışıdır. Yeniay ve dolunay ise aylık evre döngüsüne aittir. Dolayısıyla yalnız evreyi hesaplayıp yeniay/dolunayda puan ekleyen bir sistem, günlük majör/minör saatleri hesaplayan bir sistem değildir. Üst meridyen geçişi, Ay’ın mutlaka başın tam üzerinde, yani zenitte olduğu anlamına da gelmez. <a href="#src-1">[1]</a> <a href="#src-13">[13]</a></p>
 <p><strong>Doğrudan solunar testi:</strong> Quigley ve arkadaşları (2023), yedi popüler solunar hizmetini 361 alabalık av seansıyla karşılaştırdı. İncelenen tablolar daha yüksek av verimini tutarlı biçimde öngöremedi. Bu, test edilen tatlı su avlarına ilişkin negatif bulgudur; denizdeki bütün türlerde Ay etkisinin yokluğunun kanıtı değildir. Ancak bir balıkçılık uygulamasının solunar bantlarını “kanıtlanmış yüksek aktivite saati” diye sunması için de dayanak sağlamaz. <a href="#src-1">[1]</a></p>
@@ -73,7 +158,7 @@ Birim: hPa; tüm P değerleri deniz seviyesine indirgenmiş basınçtır.</div>
 <p>Open-Meteo deniz dokümantasyonu akıntı/gelgit ürünlerinin yaklaşık 0,08° ölçeğini ve kıyı doğruluğu sınırını açıklar; bunlar seyir için uygun değildir. Dalga modellerinin çözünürlükleri ise ürüne göre değişir. Deniz seviyesi alanı saf astronomik gelgit değildir; başka bileşenler de içerir. Bu sürüm bu alanı “gelgit yüksekliği” adıyla göstermeyi özellikle tercih etmez. <a href="#src-12">[12]</a></p>
 <div class="evidence"><p><strong>Uygulama kararı:</strong> Dalga, periyot, yüzey akıntısı ve deniz yüzeyi sıcaklığı ayrı gösterilir. İstenen koordinat ile dönen model hücresinin uzaklığı açıklanır. “Liman içinde tam olarak bu dalga var” veya “dip akıntısı şu yöne gidiyor” sonucu üretilmez. Dalga/akıntı hizmeti hata verirse hava ve astronomi çalışmaya devam eder.</p></div>
 <h2 id="research-species">4. Altı hedef tür için kanıt sınırı</h2>
-<p>Tür kartları karşılaştırmalı biyolojik notlardır. Buradaki “beslenme”, “telemetri” ve “kontrollü ortam” etiketleri farklı veri türlerini açıklar; uygulamanın başarı derecesini ifade etmez. Aynı tür için bile mevsim, habitat ve örnekleme tasarımı değiştiğinde sonuç değişebilir. Tür seçmek konfor penceresini gizlice yeniden puanlamaz.</p>
+<p>Tür kartları karşılaştırmalı biyolojik notlardır. Buradaki “beslenme”, “telemetri” ve “kontrollü ortam” etiketleri farklı veri türlerini açıklar; uygulamanın başarı derecesini ifade etmez. Aynı tür için bile mevsim, habitat ve örnekleme tasarımı değiştiğinde sonuç değişebilir. Tür seçmek eski üç saatlik konfor penceresini yeniden puanlamaz. Yeni üst kartlarda kullanılan açık saat tercihleri 9. bölümde açıklanır.</p>
 <div class="table-scroll"><table><thead><tr><th>Tür ve yayın</th><th>Gözlenen bulgu</th><th>HTML’de yapılan / yapılmayan</th></tr></thead><tbody>
 <tr><td>Çipura · Thambithurai ve ark., 2026</td><td>222 bireyin Kuzeybatı Akdeniz telemetrisi mevsimsel göç ve bireysel farkları ortaya koyuyor. <a href="#src-5">[5]</a></td><td>Mevsim ve mera bağlamı korunur. Bu bölgesel sonuç Gelibolu için kesin göç takvimine veya saatlik av yüzdesine çevrilmez.</td></tr>
 <tr><td>Levrek · Azzaydi ve ark., 2007</td><td>Kontrollü dış ortamda, kısıtlı besleme düzeni altında günlük beslenme ritmi mevsimle değişebiliyor. <a href="#src-6">[6]</a></td><td>Gece/gündüz tercihi kullanıcı filtresidir. Kafesteki ritim, yabani levrekte bütün yıl geçerli sabit saat bonusu sayılmaz.</td></tr>
@@ -112,10 +197,62 @@ pencere = üç ardışık saatin konfor ortalaması</div>
 <p>Bir sonraki araştırma aşaması için önerilen ölçü <strong>hedef balık adedi / aktif avcı-saat</strong> oranıdır. Örneğin iki kişinin üçer saat avlanıp toplam altı hedef balık alması 1 balık/avcı-saat eder. Sıfır yakalanan seanslar silinirse sonuç sistematik olarak iyimserleşir. Aynı seansı birden fazla hedef tür için tekrar kaydetmek toplam çabayı iki kez sayabilir; bu sürümde tek seans, tek ana hedef tür yaklaşımı tercih edilmelidir. Tüm türleri karıştıran toplam oran yalnız betimleyici özettir.</p>
 <p>Yeni günlük başlangıç tarihini, yerel saati, süreyi, avcı sayısını, ana hedef türü, yöntemi, yemi ve mera notunu tutar. Eski bir av kaydına o anda ekranda görünen bugünkü hava otomatik bağlanmaz. JSON yedeği düzenli alınmalı; CSV verisi farklı araçlarla analiz edilebilir. Örnek modunda girilen seanslar ayrı etiketlenir ve gerçek seans özetine dahil edilmez.</p>
 <p>Önerilen araştırma tasarımı; önceden tanımlı hipotezler, mevsim/mera/yöntem ayrımı ve gelecekteki seanslarda sınamadır. Basit bir yalnız-saat/mevsim modeliyle hava eklenmiş model, ardından Ay eklenmiş model karşılaştırılabilir. Eğitim ve testte aynı gecenin birbirine çok benzer kayıtlarını iki tarafa dağıtmak başarıyı şişirebilir. Bu öneriler burada uygulanmış bir eğitilmiş model değildir; yeni veri biriktiğinde izlenebilecek doğrulama planıdır. Karıştırıcı değişkenleri hesaba katma gerekçesi ilgili rekreasyonel av çalışmasının yöntem tartışmasıyla uyumludur. <a href="#src-15">[15]</a></p>
-<h2>8. Test, kullanım ve açık sınırlar</h2>
-<p>Astronomi çekirdeği altı konum ve altı tarihten oluşan 36 durumda, Swiss Ephemeris 2.10.03 / Moshier referansı ile karşılaştırıldı. Güneş doğuş/batışı ve Ay doğuş/batış/iki meridyen olayı için mevcut 202 eşleşmede en büyük fark <strong>0,975 dakika</strong> oldu; bu test kümesinde olay varlığı uyuşmazlığı görülmedi. Deniz seviyesi, 1013,25 hPa ve 10°C referans varsayımları kullanıldı. Bu bir saha ufku testi veya bütün tarihler için hata garantisi değildir. Ham sonuçlar pakette bulunur.</p>
-<p>Basınç farkları, eksik veri, yönün 0° sınırından geçişi, birim dönüşümü, eşik filtresi ve yaz saati geçişleri dahil 30 çekirdek testi geçti. Altı kontrollü API senaryo grubu; kısmi hata, önbellek, konum değişimi ve günlük doğrulamasını kapsadı. Chromium’da 1440 piksel masaüstü ve 390 piksel mobil görünüm kontrol edildi; sayfa düzeyinde yatay taşma veya JavaScript hatası görülmedi. Bu tarayıcı kontrolleri örnek veriler ve kontrollü API yanıtlarıyla yapıldı. <strong>Gerçek Open-Meteo sunucularına tarayıcıdan uçtan uca erişim bu teslim ortamında doğrulanamadı.</strong> Bu nedenle hata durumları görünür tutulmuştur; yayına geçişte canlı yanıtın ayrıca kontrol edilmesi gerekir.</p>
+<h2>8. v3 çekirdeğinin test kaydı ve kullanım sınırları</h2>
+<p>Önceki v3 teslimindeki astronomi çekirdeği altı konum ve altı tarihten oluşan 36 durumda, Swiss Ephemeris 2.10.03 / Moshier referansı ile karşılaştırıldı. Güneş doğuş/batışı ve Ay doğuş/batış/iki meridyen olayı için mevcut 202 eşleşmede en büyük fark <strong>0,975 dakika</strong> oldu; bu test kümesinde olay varlığı uyuşmazlığı görülmedi. Deniz seviyesi, 1013,25 hPa ve 10°C referans varsayımları kullanıldı. Bu bir saha ufku testi veya bütün tarihler için hata garantisi değildir. Ham sonuçlar pakette bulunur.</p>
+<p>Önceki v3 tesliminde basınç farkları, eksik veri, yönün 0° sınırından geçişi, birim dönüşümü, eşik filtresi ve yaz saati geçişleri dahil 30 çekirdek testi geçti. Altı kontrollü API senaryo grubu; kısmi hata, önbellek, konum değişimi ve günlük doğrulamasını kapsadı. Chromium’da 1440 piksel masaüstü ve 390 piksel mobil görünüm kontrol edildi; sayfa düzeyinde yatay taşma veya JavaScript hatası görülmedi. Bu tarayıcı kontrolleri örnek veriler ve kontrollü API yanıtlarıyla yapıldı. <strong>Gerçek Open-Meteo sunucularına tarayıcıdan uçtan uca erişim bu teslim ortamında doğrulanamadı.</strong> Bu nedenle hata durumları görünür tutulmuştur; yayına geçişte canlı yanıtın ayrıca kontrol edilmesi gerekir.</p>
 <p>Günlük yerel tarayıcı saklamasını kullanır; sunucuya günlük yükleme, hesap sistemi veya cihazlar arası senkronizasyon yoktur. Hava talebi için seçilen koordinatlar Open-Meteo’ya; harita açılırsa konum OpenStreetMap’e gider. Open-Meteo’nun ücretsiz uçları ticari olmayan kullanım içindir; reklam veya ücretli üyelik eklenmesi kullanım koşullarının yeniden değerlendirilmesini gerektirir. API anahtarları herkese açık HTML içine konmamalıdır. <a href="#src-16">[16]</a></p>
+
+<h2 id="research-planner">9. Tür–saat planlayıcısının yöntemi</h2>
+<p>Üst bölümün sorusu “bu koşullarda hangi tür için hangi aralığı incelemeliyim?”dir. Yanıt bir <strong>planlama aralığıdır</strong>, yakalanacak balık adedi veya olasılığı değildir. Saat seçimi iki aşamalıdır: önce türün açıkça belirtilen zaman tercihi, sonra o aralıkların hava / deniz kısıtları. Mevcut üç saatlik genel konfor penceresi aynen korunur; yeni tür kartları iki saatlik plan aralıkları kullanır. Bu iki sürenin farklılığı biyolojik yemlenme süresine ilişkin bir iddia taşımaz.</p>
+<div class="table-scroll"><table><thead><tr><th>Tür</th><th>Varsayılan saat yaklaşımı</th><th>Kanıtın sınırı</th></tr></thead><tbody>
+<tr><td>Çipura</td><td>Gün içinde saat ayrımı yok</td><td>Lagün telemetrisinde gündüz ve gece aktif bireyler birlikte görüldüğünden sabit gece üstünlüğü verilmez. <a href="#src-18">[18]</a></td></tr>
+<tr><td>Levrek</td><td>Sabah / akşam suyu; değiştirilebilir başlangıç tercihi</td><td>Alacakaranlık seçimi bu uygulamanın pratik tercihi. Yabani levrek gündüz ve gece tespit edilmiş; kontrollü beslenme ritmi de mevsimle değişebiliyor. <a href="#src-6">[6]</a> <a href="#src-20">[20]</a></td></tr>
+<tr><td>Eşkina</td><td>Gece; dolaylı davranış ipucu</td><td>Gece alan kullanımının genişlemesi oltaya daha çok vuruşla eşit değil. Yeni telemetri yerleşiklik ve bireysel farkların önemini destekliyor. <a href="#src-9">[9]</a> <a href="#src-19">[19]</a></td></tr>
+<tr><td>Karagöz</td><td>Saat ayrımı yok</td><td>D. vulgaris çalışması belirgin günlük tespit örüntüsü vermiyor. <a href="#src-8">[8]</a></td></tr>
+<tr><td>Melanur</td><td>Saat ayrımı yok</td><td>Diyet ve mevsim bilgisi dar saat penceresi doğrulamıyor. <a href="#src-7">[7]</a> <a href="#src-25">[25]</a></td></tr>
+<tr><td>İstavrit</td><td>Gece / erken sabah</td><td>T. mediterraneus için bölgesel mide içeriği bulgusuna dayanır; Gelibolu’da av çabasına göre doğrulanmış bir üstünlük değildir. <a href="#src-10">[10]</a></td></tr>
+</tbody></table></div>
+<p>Tür tercihleri açılabilir kartlarda değiştirilebilir. Örneğin yalnız akşam avlanan biri çipura kartını “akşam / gece” olarak kişiselleştirebilir. Bu tercih bir araştırma sonucuna dönüşmez; kart “kişisel tercih” olarak etiketlenir. Birkaç türde aynı saatin çıkması hata değildir: biyolojik saat kanıtı zayıf türler aynı hava kısıtları altında aynı aralığı seçebilir. Hangi türün o merada bulunduğunu belirleyecek sürü, yapı ve yem gözlemi bu servislerden gelmez.</p>
+<h3>Aday pencere, filtre ve sıralama</h3>
+<p>Seçili yerel gün içinde her saat başlangıcından iki saatlik aday oluşturulur. Başlamış adaylar yeni öneriye alınmaz. Başlangıç ve takip eden saatte rüzgâr, hamle, dalga, yağış ve hava kodu gerekir. Bir alan eksikse sıfır veya ortalama varsayılmaz. Dikkat eşiklerinin aşılması veya gök gürültülü kod, adayı plan dışına çıkarır. Gece yarısı aşılırsa “+1” yazılır. Öneriler birbiriyle çakışmayan en fazla iki aralıktır.</p>
+<div class="methodcode">Her aday için:
+  1. Başlamamış mı? Veriler tam mı? Kişisel eşikler aşılmıyor mu?
+  2. Kullanıcının genel zaman filtresi VE tür tercihi karşılanıyor mu?
+  3. Maruziyet = iki saat içindeki en büyük değer:
+     rüzgâr/eşik, hamle/eşik, dalga/eşik, yağış/3
+  4. Küçük maruziyet önce gelir.
+     Eşitlikte ortalama konfor, ardından erken başlangıç kullanılır.
+  5. En iyi aday ve onunla çakışmayan sonraki aday gösterilir.
+Ay ve basınç bu sıralamaya av puanı eklemez.</div>
+<p>Alacakaranlık filtresi, Güneş doğuşu veya batışının çevresindeki ±1 saatlik banda adayın en az bir saat temas etmesidir. Sabah filtresinde doğuş çevresi ±1,5 saat kullanılır. Akşam / gece filtresi seçili gündeki batıştan bir saat önce başlayan bölümden yerel gece yarısına kadar aday başlangıçlarını kapsar; seçili günün sabaha karşı saatleri “akşam” diye alınmaz. Gece kontrolünde aday içinden dört Güneş yükseklik örneğinin en az yarısı −0,833° altında olmalıdır. Bu mühendislik seçimleri değiştirilebilir; ölçülmüş balık beslenme eşikleri değildir.</p>
+<p>Saatlik meteorolojik veriler aday içinde ani hamlenin tam anını göstermez. Yeni bölüm de eski veri katmanının çözünürlüğü ve kıyı model sınırlamalarıyla çalışır. Takvim ve saat dilimi değişiminde yerel günün 23 veya 25 saat olması desteklenir; saatlik gerçek zaman damgaları korunur. <a href="#src-11">[11]</a> <a href="#src-12">[12]</a></p>
+<h2 id="research-gear">10. Tür, takım, yem ve sahte seçimi</h2>
+<p>İncelenen yayınlar “bu altı türde aynı merada ve aynı av çabasıyla LRF–spin–yemli yöntemlerinden hangisi daha çok yakalar?” sorusuna ortak bir karşılaştırma sunmuyor. Bu yüzden rehber <strong>başlangıç seçimi, alternatif ve koşula bağlı deneme</strong> ayrımını kullanır. Sıralama; araştırmadaki habitat / diyet bilgisi, uygun sunum ve teknik kullanılabilirlikten yapılan uygulama sentezidir. Yayındaki paragat, kıyıdaki elde tutulan tek olta ile eşdeğer sayılmaz.</p>
+<h3>Deneysel kanıt ve çelişkiyi ayırmak</h3>
+<p><strong>Çipura için iğne–yem etkileşimi:</strong> Soykan ve arkadaşları, 12 tekrar ve 4.800 iğnede sardalya / sülünez ile J / C iğne kombinasyonlarını karşılaştırdı. Toplam avda sülünez öne çıkarken, hedef tür çipura için C–sardalya kombinasyonu en iyi sonuç veren kombinasyondu. Toplam av sıralaması ile tek tür sıralamasının farklı olması, “sülünez her balıkta daha iyidir” sonucunu engeller. Rehber sardalyayı güçlü bir deneme adayı sayar; çalışmanın oranlarını kıyı avının başarı ihtimaline dönüştürmez. <a href="#src-21">[21]</a></p>
+<p><strong>Mamun ve dayanıklılık:</strong> Aydın’ın deneyinde canlı mamun, test edilen kaplanmış / yapay yemlerden toplam av açısından daha başarılıydı. İğnede daha uzun kalmak ile daha çok balık yakalamak aynı ölçü değildir. Ayrıca o deneyin yapay yemi modern aktif sunulan LRF silikonlarının temsilcisi değildir. Uygulama mamunu doğal yem alternatifi olarak tutar; kaplama tarifini veya yapay yemlere genel bir ceza katsayısını aktarmaz. <a href="#src-22">[22]</a></p>
+<p><strong>Çanakkale’de levrek:</strong> Yerel paragat çalışmasında test edilen canlı yemler arasında Spicara maena öne çıktı. Düzenler gün batımında kurulup sabah toplandı; eşlenmiş gündüz deneyi yoktu. Dolayısıyla “gece daha iyi” ve “canlı yem spinden daha iyi” bu çalışmanın sonucu değildir. Rehber doğal yem alternatifini yerel çalışma ile ilişkilendirir; küçük yem için paragattaki iğne boylarını otomatik kopyalamaz. <a href="#src-23">[23]</a></p>
+<p><strong>Circle iğne herkese tek cevap değil:</strong> 42 çalışmayı birleştiren pelajik paragat meta-analizi, iğne etkisinin türe ve kullanılan ölçüte göre değiştiğini gösterir. Bu, kıyı çipurasına özgü bir etkinlik oranı sağlamaz. Circle kullanımında yerleşme mekanizması ve tasmalama davranışı J iğneden ayrı ele alınır; üretici açıklaması teknik kaynak, av verimi kanıtı değildir. <a href="#src-34">[34]</a> <a href="#src-30">[30]</a></p>
+<h3>Diyeti sahteye dönüştürürken</h3>
+<p>Eşkinadaki kabuklu beslenme bulgusu karides / kabuklu profilli sunumu mantıklı bir deneme yapar; karidesin tüm diğer yemleri yendiğini kanıtlamaz. Melanurda boy ve habitatla değişen besin grupları küçük planktonik profil ile balık profilinin aynı evrensel reçeteye indirgenmemesi gerektiğini gösterir. İstavritin beslenme zamanı ve küçük av grupları, katman arama ve küçük profil yaklaşımına biyolojik bağlam sağlar; jighead gramı ve silikon rengini belirlemez. <a href="#src-24">[24]</a> <a href="#src-7">[7]</a> <a href="#src-25">[25]</a> <a href="#src-10">[10]</a></p>
+<p>Rehberdeki lider çapları, iğne örnekleri, sahte boyları ve gramajlar <strong>teknik kaynaklarla sınırlandırılmış başlangıç önerileridir</strong>. Bunlar makaleden fit edilmiş optimum değerler değildir. Örneğin “8–12 cm minnow” denenebilir bir küçük kutu seçimini anlatır; levreğin bu boyu bütün yıl tercih ettiğini söylemez. Üretici kaynakları marka / ticari nitelikleriyle etiketlenmiştir; ürün sıralaması ve satış bağlantısı yerine kurulum prensibi kullanılmıştır. <a href="#src-26">[26]</a> <a href="#src-27">[27]</a> <a href="#src-28">[28]</a> <a href="#src-29">[29]</a></p>
+<h3>Gözlemi veriyle karıştırmamak</h3>
+<p>Yeni takım paneli zemin, derinlik, berraklık ve yerel akıntıyı kullanıcı gözlemi olarak alır. Başlangıç değeri her birinde “bilinmiyor”dur. Kayalık seçildiğinde aşınma ve takılma; derin veya kuvvetli akıntı seçildiğinde hafif jighead kontrolü; sığ spin seçildiğinde sahtenin dalış derinliği hatırlatılır. Seçim başka meraya geçince otomatik keşif yapılmış gibi yenilenmez; kayıtlı gözlemin güncellenmesi gerektiği açıkça yazılır.</p>
+<p>Hafif bulanık suda kontrast, berrak suda doğal profil önerisi A/B deneme hipotezidir. “Kırmızı geceleri %20 iyi” gibi katsayı yoktur. Aynı şekilde Poyraz belirli bir balığı otomatik olarak yükseltmez; kıyının denize bakan yönü girilirse yalnız geometrik esiş ilişkisi hesaplanır. Rüzgâr adı tek başına dip akıntısı, kurşun gramı veya balık bolluğu değildir.</p>
+<p>Atar kontrolü girilen toplam ağırlık ile kamışın üst atarını karşılaştırır. Altında olmak güvenli atış garantisi değildir; alt atar, hat / düğüm, kamışın durumu ve dinamik atış yükü bu iki sayıdan bilinemez. İğne boyu marka / modele göre değişir. Günlük aktarımı yalnız formdaki tür, yöntem ve yem alanını doldurur; gerçekleşmemiş avı kaydetmez, model verisini gerçek avın ölçümü gibi bağlamaz.</p>
+<h3>Uygulanabilir yerel karşılaştırma</h3>
+<p>Aynı merada, aynı gün aralığında ve benzer sürelerle önce iki yem veya iki sunum karşılaştır. Aynı seferde iğne, yem, nokta, süre ve saat değişirse sonucun hangi etkiden geldiği ayrışmaz. İlk denemede önceden “balık / avcı-saat” ölçüsünü belirle; boş geçen denemeyi de tut. Bir sonraki sefer yem sırasını ters çevirmek saat sırasının etkisini azaltmaya yardımcı bir tasarım tercihidir. Az sayıdaki yerel seansla güçlü başarı yüzdeleri yayınlanmamalıdır.</p>
+<p>Bu sürüm kayıt biriktirir ama katsayı öğrenmez. Daha sonra yeterli ve dengeli veri toplanırsa, mera / mevsim / yöntem bazında deneme planı hazırlanabilir. Balık bulunurluğu, erişim ve hava nedeniyle boş kalan günler dahil tutulmalıdır. Türleri veya farklı takımların av çabalarını tek toplam sayı altında karıştırmak, yöntemin gerçek farkı varmış izlenimi verebilir. <a href="#src-15">[15]</a></p>
+<h2 id="research-github">11. GitHub incelemesinin uygulama kararı</h2>
+<p><strong>benpaternostro/bite-times:</strong> Proje README’si Güneş / Ay olaylarıyla birlikte bir 0–5 gün puanı sunuyor ve bu puanı açıkça sezgisel olarak tanımlıyor. Ay evresi, uzaklık ve alacakaranlık çakışması puana giriyor. Saat dilimi davranışına ait tarayıcı / Node ayrımı da dokümante edilmiş. Bu projeden puan veya kod alınmadı: okunabilir zaman aralıkları yararlı bir arayüz fikri olsa da balık verimi kanıtının yerini tutmuyor. <a href="#src-31">[31]</a></p>
+<p><strong>mourner/suncalc:</strong> Güneş ve Ay konum / olay API’leri sağlayan küçük bir JavaScript astronomi kütüphanesi. Bir astronomi aracının doğru çalışması, ondan türetilmiş solunar av puanının doğrulanması değildir. Mevcut tek dosyalı uygulamanın test edilmiş astronomi çekirdeği korunmuş, yeni bağımlılık yüklenmemiştir. Bu değerlendirme proje dokümantasyonuna dayanır; üçüncü taraf paketler çalıştırılıp güvenlik denetiminden geçirilmiş gibi sunulmaz. <a href="#src-32">[32]</a></p>
+<p>Geliştirme temeli teslim edilmiş v3 HTML ve paketidir. Canlı GitHub deposunun son commit’iyle satır satır eşitlik veya son sürüm denetimi iddia edilmez. Depoya yazma yapılmaz. JSON günlük şeması 3 olarak kalır; iki yeni tercih alanı ayrı anahtarlarla saklanır. Mevcut basınç / rüzgâr formülleri, hava API alanları, astronomi çekirdeği ve eski üç saatlik karşılaştırma korunur.</p>
+<h2 id="research-wind-names">12. Rüzgâr adları ve kaynak sınırı</h2>
+<p>Yıldız, Poyraz, Gündoğusu, Keşişleme, Kıble, Lodos, Günbatısı ve Karayel eşleştirmesi MGM’nin yön adları tablosuyla uyumludur. Model derecesi en yakın 45° ana / ara yöne yuvarlanır; ham derece ayrıca tutulur. Ad rüzgârın geldiği yönü, pusula oku gittiği yönü gösterir. 3 km/sa altındaki “zayıf” etiketi yalnız okunabilirlik tercihidir, resmî bir Beaufort sınıfı değildir. <a href="#src-17">[17]</a> <a href="#src-11">[11]</a></p>
+<p>Kaynakça, doğrudan deneyleri, diyet / telemetri çalışmalarını, teknik rehberleri ve proje dokümantasyonunu ayrı açıklar. Soyut veya dolaylı bir bulgudan dar saat, sabit kurşun gramı ya da yakalama yüzdesi üretilmez. Resmî balıkçılık duyurusu yalnız mevzuatın değişebildiğini ve son metnin kontrol edilmesi gerektiğini destekler; bu uygulama güncel tür boyu / kota / bölge yasaklarını doğrulayan bir mevzuat motoru değildir. <a href="#src-33">[33]</a></p>
+<h2 id="research-v31-tests">13. v3.1 doğrulaması</h2>
+<p id="v31-test-summary">Bu teslimde 30 mevcut çekirdek testi ve 33 yeni tür–saat / takım testi olmak üzere 63 otomatik test geçti. Altı kontrollü API senaryo grubu ve 13 yeni arayüz senaryo grubu tamamlandı. 1440, 768, 390 ve 320 piksel genişlikte açık takım rehberi ve saat matrisi dahil sayfa düzeyinde yatay taşma / JavaScript hatası görülmedi. Astronomi regresyonunda 36 durum ve 202 olay eşleşmesindeki en büyük fark 0,975 dakika oldu. Gerçek Open-Meteo istekleri bu ortamda zaman aşımına uğradı; canlı GitHub Pages yayını uçtan uca doğrulanmadı. Arayüz örnek veri ve kontrollü yanıtlarla test edildi; servis hata verince sentetik veriye sessiz geçiş yapılmadığı ayrıca kontrol edildi. Bunlar balık yakalama doğruluğunun testi değildir. Ham testler ve sonuçları pakettedir.</p>
+
 <h2 id="sources">Kaynaklar</h2>
 <p>Kaynak türü ve erişim kapsamı aşağıda belirtilmiştir. “Tam metin” derginin HTML metnini; “özet” yayıncı veya birincil kurumsal kaydı ifade eder. Yayıncıdaki DOI yılı ile yayının gerçek yılı farklı olabildiğinden, yıl bilgisi yayın künyesine göre yazılmıştır.</p>
 <div class="source-list">
@@ -135,10 +272,28 @@ pencere = üç ardışık saatin konfor ortalaması</div>
 <div class="source" id="src-14"><span class="srcnum">[14]</span>Book, J. W. ve ark. (2014). <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1002/2013JC009480" target="_blank" rel="noopener noreferrer">The oceanic response of the Turkish Straits System to an extreme drop in atmospheric pressure.</a> Journal of Geophysical Research: Oceans. DOI: 10.1002/2013JC009480. Hakemli araştırma; yayıncı özet/sonuç erişimi. Kullanım: aşırı atmosfer olayı ve hidrodinamik tepki.</div>
 <div class="source" id="src-15"><span class="srcnum">[15]</span>Stevenson, B. C. &amp; Millar, R. B. (2013). <a href="https://research-portal.st-andrews.ac.uk/en/publications/promising-the-moon-evaluation-of-indigenous-and-lunar-fishing-cal/" target="_blank" rel="noopener noreferrer">Promising the moon? Evaluation of indigenous and lunar fishing calendars using semiparametric generalized mixed models of recreational catch data.</a> Environmental and Ecological Statistics, 20(4), 591–608. DOI: 10.1007/s10651-013-0236-5. Hakemli araştırma; yazarın kurumsal künyesi/kısmi özeti. Kullanım yalnız yöntem gerekçesi; tam sonuç analizi değildir.</div>
 <div class="source" id="src-16"><span class="srcnum">[16]</span>Open-Meteo. <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">Terms &amp; Privacy.</a> Resmi kullanım koşulları; 10 Eylül 2026’da incelendi. Ücretsiz servis ticari olmayan kullanımla sınırlıdır; atıf ve kullanım koşulları geçerlidir. Ticari kullanımda uygun abonelik/uç nokta gerekir.</div>
+<div class="source" id="src-17"><span class="srcnum">[17]</span>Meteoroloji Genel Müdürlüğü (Tarihsiz; erişim 10 Eylül 2026). <a href="https://www.mgm.gov.tr/genel/sss.aspx?s=denizicilikteruzgarisimleri" target="_blank" rel="noopener noreferrer">Denizcilikte Kullanılan Rüzgâr Yön İsimleri Nelerdir?</a> Resmî tablo. Sekiz Türkçe rüzgâr adı ve yön karşılığı; biyolojik av kanıtı değildir.</div>
+<div class="source" id="src-18"><span class="srcnum">[18]</span>Abecasis, D. &amp; Erzini, K. (2008). <a href="https://sapientia.ualg.pt/entities/publication/b1e5e4cf-79f0-4709-9f44-0c1b514b4030" target="_blank" rel="noopener noreferrer">Site fidelity and movements of gilthead sea bream (Sparus aurata) in a coastal lagoon (Ria Formosa, Portugal).</a> Estuarine, Coastal and Shelf Science 79(4), 758–763. DOI: 10.1016/j.ecss.2008.06.019. Yazarın kurumsal kaydı / özeti. Bireysel gündüz–gece farklılığı; kıyı oltası verimi ölçülmüyor.</div>
+<div class="source" id="src-19"><span class="srcnum">[19]</span>Marques ve ark. (2024). <a href="https://www.nature.com/articles/s41598-023-50194-1" target="_blank" rel="noopener noreferrer">Movements and spatial distribution of an endangered fish (Sciaena umbra) within a marine protected area.</a> Scientific Reports 14, 3103. DOI: 10.1038/s41598-023-50194-1. Yayıncı tam HTML. Eşkinada alan kullanımı, yerleşiklik ve bireysel / mevsimsel farklılıklar. DOI içindeki 2023, yayın yılı değildir.</div>
+<div class="source" id="src-20"><span class="srcnum">[20]</span>Pita, P. &amp; Freire, J. (2011). <a href="https://scientiamarina.revistas.csic.es/index.php/scientiamarina/article/view/1298/0" target="_blank" rel="noopener noreferrer">Movements of three large coastal predatory fishes in the northeast Atlantic: a preliminary telemetry study.</a> Scientia Marina 75(4), 759–770. DOI: 10.3989/scimar.2011.75n4759. Yayıncı ve yazarın kurumsal özeti. Levrek gündüz ve gece tespitleri. Aynı makaledeki diğer türlerin davranışı levreğe taşınmıyor.</div>
+<div class="source" id="src-21"><span class="srcnum">[21]</span>Soykan, O., Sağlam, C., Aydın, İ. &amp; Kınacıgil, H. T. (2021). <a href="https://www.egejfas.org/tr/pub/article/765730" target="_blank" rel="noopener noreferrer">Effect of hook and bait type on catch per unit effort in the Aegean Sea demersal longline fishery.</a> Ege Journal of Fisheries and Aquatic Sciences 38(2), 181–188. DOI: 10.12714/egejfas.38.2.07. Yayıncı Türkçe / İngilizce özeti. Sardalya–sülünez ve C–J karşılaştırması; tür bazındaki sonucu toplam avdan ayırmak için.</div>
+<div class="source" id="src-22"><span class="srcnum">[22]</span>Aydın, C. (2020). <a href="https://www.egejfas.org/tr/pub/article/679049" target="_blank" rel="noopener noreferrer">Paraketa balıkçılığında kullanılan farklı yemlerin avcılık performansı ve olta iğnesinde kalma oranı.</a> Ege Journal of Fisheries and Aquatic Sciences 37(3), 293–302. DOI: 10.12714/egejfas.37.3.12. Yayıncı özeti. Canlı mamun ve test edilen kaplanmış / yapay yemler. Modern aktif LRF silikonlarıyla eşdeğer karşılaştırma değildir.</div>
+<div class="source" id="src-23"><span class="srcnum">[23]</span>Uysal, Ö. S. &amp; Öztekin, A. (2021). <a href="https://dergipark.org.tr/en/pub/jmsf/article/947007" target="_blank" rel="noopener noreferrer">Paragat ile Levrek, Dicentrarchus labrax (L.,1758) Avcılığında Canlı Yem Tipi ve İğne Büyüklüğünün Birim Av Verimi ve Av Kompozisyonu Üzerine Etkisi.</a> Çanakkale Onsekiz Mart University Journal of Marine Sciences and Fisheries 4(1), 63–70. DOI: 10.46384/jmsf.947007. Yayıncı Türkçe / İngilizce özeti. Yerel canlı yem / paragat deneyi; spin veya saatler arası deney değil.</div>
+<div class="source" id="src-24"><span class="srcnum">[24]</span>Aydın, M. &amp; Bengil, E. G. T. (2020). <a href="https://dergipark.org.tr/en/pub/actaquatr/article/714094" target="_blank" rel="noopener noreferrer">Feeding Habit and Length-Weight Relationship, Sciaena umbra Linnaeus, 1758 from Southeastern Black Sea.</a> Acta Aquatica Turcica 16(4), 479–486. DOI: 10.22392/actaquatr.714094. Yayıncı özeti. Kabuklu besin grubu; diyet bulgusu yem performansı deneyi olarak sunulmuyor.</div>
+<div class="source" id="src-25"><span class="srcnum">[25]</span>Castriota, L., Esposito, V., Falautano, M., Battaglia, P. &amp; Andaloro, F. (2018). <a href="https://www.sfi-cybium.fr/en/observations-diet-adult-oblada-melanura-sparidae-strait-sicily-central-mediterranean" target="_blank" rel="noopener noreferrer">Observations on the diet of adult Oblada melanura (Sparidae) in the Strait of Sicily (central Mediterranean).</a> Cybium 42(3), 293–296. DOI: 10.26028/cybium/2018-423-006. Yayıncı özeti; yetişkinlerde diyet ve habitat bağlamı. PDF tam metni üzerinden bir analiz yapılmadı.</div>
+<div class="source" id="src-26"><span class="srcnum">[26]</span>Decathlon / Caperlan (Tarihsiz; erişim 10 Eylül 2026). <a href="https://conseilsport.decathlon.fr/pose-quel-equipement-pour-debuter-la-peche-au-buscle" target="_blank" rel="noopener noreferrer">Quel équipement pour débuter la pêche au buscle?</a> Birincil üretici teknik rehberi, ticari kaynak. Gezer kurşun, lider ve yemle uyumlu iğne yaklaşımı; balık yakalama olasılığı vermez. Şamandıra uyarlamaları uygulama sentezidir.</div>
+<div class="source" id="src-27"><span class="srcnum">[27]</span>Decathlon / Caperlan (Tarihsiz; erişim 10 Eylül 2026). <a href="https://conseilsport.decathlon.fr/rockfishing-une-technique-de-peche-en-mer-facile-et-rapide" target="_blank" rel="noopener noreferrer">Rockfishing : une technique de pêche en mer facile et rapide.</a> Birincil üretici teknik rehberi, ticari kaynak. Küçük silikon ve hafif jighead kurulumları. Tür bazında hakemli LRF etkinlik deneyi değildir.</div>
+<div class="source" id="src-28"><span class="srcnum">[28]</span>Decathlon / Caperlan (Tarihsiz; erişim 10 Eylül 2026). <a href="https://conseilsport.decathlon.fr/leurre-comment-bien-debuter-la-peche-du-bar-aux-leurres" target="_blank" rel="noopener noreferrer">Comment bien débuter la pêche du bar aux leurres?</a> Birincil üretici teknik rehberi, ticari kaynak. Levrek için sahte tipi, katman ve lider yaklaşımı. Rehberdeki renk / boy başlangıçları optimum diye etiketlenmiyor.</div>
+<div class="source" id="src-29"><span class="srcnum">[29]</span>Decathlon / Caperlan (Tarihsiz; erişim 10 Eylül 2026). <a href="https://conseilsport.decathlon.fr/pose-le-montage-pour-pecher-la-daurade-au-pose" target="_blank" rel="noopener noreferrer">Le montage pour pêcher la daurade au posé.</a> Birincil üretici teknik rehberi, ticari kaynak. Çipura için dip sunumu ve alternatif doğal yemler. Kurşun kamış kapasitesinden bağımsız önerilmez.</div>
+<div class="source" id="src-30"><span class="srcnum">[30]</span>Mustad (Tarihsiz; erişim 10 Eylül 2026). <a href="https://mustad-fishing.com/us/products/se39950np" target="_blank" rel="noopener noreferrer">SE39950NP circle hook — kullanım açıklaması.</a> Birincil üretici açıklaması, ticari kaynak. Yalnız circle iğnenin gerilimle yerleşmesi / ani tasmalama ayrımı kullanıldı. Sayfadaki ürün boyları kıyı çipurasına önerilmedi; ürün satın alma tavsiyesi değil.</div>
+<div class="source" id="src-31"><span class="srcnum">[31]</span>Paternostro, B. / benpaternostro (GitHub README; erişim 10 Eylül 2026). <a href="https://github.com/benpaternostro/bite-times" target="_blank" rel="noopener noreferrer">bite-times: Solunar bite times calculator for fishing.</a> Birincil proje README’si. Astronomik dönemler, sezgisel 0–5 puanı, saat dilimi sınırları. Çalıştırılmış kod denetimi veya biyolojik doğrulama değil; bağımlılık / kod kopyası eklenmedi.</div>
+<div class="source" id="src-32"><span class="srcnum">[32]</span>Agafonkin, V. / mourner (GitHub README; erişim 10 Eylül 2026). <a href="https://github.com/mourner/suncalc" target="_blank" rel="noopener noreferrer">SunCalc.</a> Birincil proje dokümantasyonu. JavaScript Güneş / Ay konum ve zaman API’leri; astronomi ile av puanı arasındaki sınır. Mevcut çekirdek yerine yüklenmedi.</div>
+<div class="source" id="src-33"><span class="srcnum">[33]</span>Tarım ve Orman Bakanlığı / BSGM (17 Nisan 2025). <a href="https://www.tarimorman.gov.tr/BSGM/Haber/332/" target="_blank" rel="noopener noreferrer">Su Ürünleri Avcılığını Düzenleyen Ticari ve Amatör Tebliğlerde Yapılan Önemli Değişiklikler.</a> Resmî değişiklik duyurusu; 6/2 için mevzuatın değişebildiğini gösterir. Bu kayıt güncel konsolide mevzuatın tamamı değildir. İl / ilçe kısıtları ve yürürlükteki son metin ayrıca kontrol edilmelidir.</div>
+<div class="source" id="src-34"><span class="srcnum">[34]</span>Reinhardt, J. F., Weaver, J., Latham, P. J. ve ark. (2018; çevrimiçi ilk yayın 15 Aralık 2017). <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/faf.12260" target="_blank" rel="noopener noreferrer">Catch rate and at-vessel mortality of circle hooks versus J-hooks in pelagic longline fisheries: A global meta-analysis.</a> Fish and Fisheries 19(3), 413–430. DOI: 10.1111/faf.12260. Yayıncı özeti. 42 çalışmanın özgün meta-analizi; tür ve ölçüt bağımlılığı. Kıyı çipurası için doğrudan deney değildir.</div>
 </div>
 </section>
 </main>
-<footer class="footer"><span>Gelibolu Balık Raporu · v3.0 · Araştırma kesimi: 10 Eylül 2026</span><span>Hava: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> · Deniz: Open-Meteo / DWD ve kaynak modeller · <a href="#src-12" class="research-link">Atıf &amp; lisans</a></span></footer>
+<footer class="footer"><span>Gelibolu Balık Raporu · v3.1 · Araştırma kesimi: 10 Eylül 2026</span><span>Hava: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> · Deniz: Open-Meteo / DWD ve kaynak modeller · <a href="#src-12" class="research-link">Atıf &amp; lisans</a></span></footer>
 </div>
 <div id="toast" class="toast" role="status" hidden></div>
 <script id="gbr-core">(function(root){
@@ -250,6 +405,526 @@ const api={H,DAY,finite,clamp,wrap,angleDiff,parts,dateKey,nextDate,wallTime,bou
 if(typeof module==='object'&&module.exports)module.exports=api;else root.GBRCore=api;
 })(typeof globalThis!=='undefined'?globalThis:this);
 </script>
+<script id="gbr-planner">(function(root){
+'use strict';
+const C=typeof module==='object'&&module.exports?require('./core.js'):root.GBRCore;
+const H=C.H;
+const PROFILES=Object.freeze({
+ cipura:Object.freeze({name:'Çipura',preference:'all',label:'Saat esnek',basis:'Hava öncelikli',sources:[18,5,21],note:'Saha telemetrisinde gündüz ve gece aktif bireyler birlikte görülüyor. Bu kart saate biyolojik üstünlük vermeden koşulları karşılaştırır.',field:'Aynı merayı, yemi ve av süresini kaydet; gündüz ve gece sonuçlarını ayrı karşılaştır.'}),
+ levrek:Object.freeze({name:'Levrek',preference:'twilight',label:'Sabah / akşam suyu',basis:'Planlama tercihi',sources:[6,20],note:'Yabani levrek hem gündüz hem gece tespit edilmiş. Alacakaranlık burada başlangıç tercihidir; araştırmayla doğrulanmış tek en iyi saat değildir.',field:'Yerel gözlemin farklıysa saat tercihini değiştir. Bu tercih basınç veya Ay bonusuyla büyütülmez.'}),
+ eskina:Object.freeze({name:'Eşkina',preference:'night',label:'Geceyi incele',basis:'Dolaylı saat ipucu',sources:[9,19],note:'Telemetri gece alan kullanımı için ipucu veriyor; örüntü mevsime ve bireye göre değişebiliyor. Hareket, oltaya vuruş değildir.',field:'Gece önceliği esnek bir çalışma varsayımıdır. Yerel kayıt olmadan gündüz avını dışlamaz.'}),
+ karagoz:Object.freeze({name:'Karagöz',preference:'all',label:'Saat esnek',basis:'Hava öncelikli',sources:[8],note:'İncelenen telemetride belirgin günlük tespit örüntüsü bulunmadı. Bu kart gündüz veya geceye otomatik üstünlük vermez.',field:'Mera ve takım değişimini kaydet. Aynı halk adıyla anılan farklı Diplodus türlerini karıştırma.'}),
+ melanur:Object.freeze({name:'Melanur',preference:'all',label:'Saat esnek',basis:'Hava öncelikli',sources:[7],note:'Diyet çalışması mevsimsel bilgi sağlıyor, dar bir saat üstünlüğü göstermiyor. Önerilen aralık hava karşılaştırmasından gelir.',field:'Sürü görülmesi ve yem tepkisi gibi doğrudan gözlemleri günlüğe yaz; tahmin bunları ölçmez.'}),
+ istavrit:Object.freeze({name:'İstavrit',preference:'nightMorning',label:'Gece / erken sabah',basis:'Bölgesel beslenme verisi',sources:[10],note:'Adriyatik mide içeriği çalışmasında gece ve erken sabah beslenmesi öne çıkıyor. Sonuç Trachurus mediterraneus için; yerel vuruş tahmini değil.',field:'Işık, sürü varlığı ve av derinliğini ayrıca gözle. Deniz yüzeyi sıcaklığı yem derinliği sıcaklığı değildir.'})
+});
+const PREFERENCES=Object.freeze({auto:'Türün başlangıç tercihi',all:'Saat ayrımı yapma',twilight:'Sabah / akşam suyu',night:'Gece',dawn:'Sabah suyu',evening:'Akşam / gece',day:'Gündüz'});
+const FILTERS=Object.freeze({all:'Tüm saatler',evening:'Akşam / gece',dawn:'Sabah suyu',day:'Gündüz'});
+const overlap=(a,b,c,d)=>Math.max(0,Math.min(b,d)-Math.max(a,c));
+function prepare(rows,key,now,limits,lat,lon,tz){
+ const [start,end]=C.bounds(key,tz),map=new Map(rows.filter(r=>C.finite(r.t)).map(r=>[r.t,r]));
+ const first=rows.find(r=>r.t>=start&&r.t<end),phase=first?((first.t%H)+H)%H:((start%H)+H)%H;
+ const solars=[key,C.nextDate(key)].flatMap(k=>C.astroDay(k,lat,lon,tz).solar);
+ const todaySunset=solars.find(e=>e.type==='sunset'&&e.t>=start&&e.t<end)?.t;
+ const windows=[];
+ for(let t=Math.ceil((start-phase)/H)*H+phase;t<end;t+=H){
+  const a=[map.get(t),map.get(t+H)],finish=t+2*H;
+  const alts=[.25,.75,1.25,1.75].map(x=>C.astronomy(t+x*H,lat,lon).sun.alt);
+  const nightFraction=alts.filter(x=>x<-.833).length/alts.length;
+  const dawnOverlap=Math.max(0,...solars.filter(e=>e.type==='sunrise').map(e=>overlap(t,finish,e.t-1.5*H,e.t+1.5*H)));
+  const twilightOverlap=Math.max(0,...solars.filter(e=>e.type==='sunrise'||e.type==='sunset').map(e=>overlap(t,finish,e.t-H,e.t+H)));
+  const evening=C.finite(todaySunset)&&t>=todaySunset-H&&t<end;
+  const missing=a.some(r=>!r||!['wind','gust','wave','rain','code'].every(k=>C.finite(r[k])&&r[k]>=0));
+  const warnings=[...new Set(a.filter(Boolean).flatMap(r=>C.hazards(r,limits)))];
+  const exposure=missing?null:Math.max(...a.flatMap(r=>[r.wind/limits.wind,r.gust/limits.gust,r.wave/limits.wave,r.rain/3]));
+  const mean=missing?null:a.reduce((v,r)=>v+C.comfort(r,limits),0)/a.length;
+  windows.push({start:t,end:finish,rows:a,nightFraction,dawnOverlap,twilightOverlap,evening,missing,warnings,exposure,mean,past:t<now,
+   light:nightFraction===1?'Gece':nightFraction===0?'Gündüz':'Işık geçişi'});
+ }
+ return {windows,start,end,key,now,tz};
+}
+function matches(w,p){
+ if(p==='all')return true;
+ if(p==='night')return w.nightFraction>=.5;
+ if(p==='nightMorning')return w.nightFraction>=.5||w.dawnOverlap>=H;
+ if(p==='twilight')return w.twilightOverlap>=H;
+ if(p==='dawn')return w.dawnOverlap>=H;
+ if(p==='evening')return w.evening;
+ if(p==='day')return w.nightFraction===0;
+ return false;
+}
+function plan(prepared,species,filter='all',preference='auto'){
+ const profile=Object.hasOwn(PROFILES,species)?PROFILES[species]:null;if(!profile)throw new TypeError('Bilinmeyen hedef tür');
+ if(!Object.hasOwn(FILTERS,filter))filter='all';
+ if(!Object.hasOwn(PREFERENCES,preference))preference='auto';
+ const effective=preference==='auto'?profile.preference:preference;
+ const cells=prepared.windows.map(w=>({...w,status:w.past?'past':!matches(w,filter)||!matches(w,effective)?'filtered':w.warnings.length?'blocked':w.missing?'missing':'ok'}));
+ const valid=cells.filter(w=>w.status==='ok').sort((a,b)=>a.exposure-b.exposure||b.mean-a.mean||a.start-b.start);
+ const selected=[];for(const w of valid){if(selected.every(x=>w.end<=x.start||w.start>=x.end))selected.push(w);if(selected.length===2)break;}
+ const active=cells.filter(w=>w.status!=='past'&&w.status!=='filtered');
+ let reason='ok';
+ if(!selected.length)reason=cells.every(w=>w.status==='past')?'elapsed':!active.length?'light':active.some(w=>w.status==='missing')?'missing':'blocked';
+ return {species,profile,preference,effective,filter,cells,windows:selected,reason,eligible:valid.length};
+}
+function planAll(rows,key,now,limits,lat,lon,tz,filter='all',preferences={}){
+ const prepared=prepare(rows,key,now,limits,lat,lon,tz);
+ return {prepared,plans:Object.keys(PROFILES).map(k=>plan(prepared,k,filter,preferences[k]))};
+}
+const api={PROFILES,PREFERENCES,FILTERS,prepare,matches,plan,planAll};
+if(typeof module==='object'&&module.exports)module.exports=api;else root.GBRPlanner=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script>
+<script id="gbr-gear">(function(root){
+'use strict';
+const DATA={
+ "cipura": {
+  "name": "Çipura",
+  "latin": "Sparus aurata",
+  "primary": "yemli",
+  "brief": "Yemli dip · sardalya / mamun",
+  "intro": "Kumluk veya taş–kum sınırında doğal yemi dipte sunarak başla. Bu, yönteme başlangıç önceliğidir; diğer türlerden daha çok çıkacağına dair bir yüzde değildir.",
+  "bait": "Sardalya şeridi veya mamun",
+  "habitat": "Kum–taş geçişi, kabuklu bulunan dip ve erişilebilir kanal kenarı. Zemini bilmiyorsan körlemesine ağır kurşunla uzak atış yerine dip yapısını gözle.",
+  "methods": [
+   {
+    "id": "yemli",
+    "name": "Yemli dip",
+    "rank": "Başlangıç seçimi",
+    "why": "Doğal yemi dipte tutmak ve yerel yem denemesi yapmak için. Rüzgâr değil, yeminin sürüklenmesi ve zemin seçimi belirler.",
+    "rig": "Ana misina → gezer kurşun → yumuşak boncuk → fırdöndü → 60–120 cm köstek → tek iğne. Kurşun ana beden üzerinde serbest ilerler.",
+    "line": "Başlangıç kösteği 0,28–0,35 mm mono veya fluorocarbon; keskin taşta 0,35–0,40 mm düşünülebilir. Bunlar öneri aralığıdır, kopma dayanımı garantisi değildir.",
+    "hook": "Yeme uygun güçlü, geniş açıklıklı tek J iğne; örnek başlangıç No. 2–1/0. Marka ve model numaraları eşdeğer değildir; yemi takınca uç ve açıklık kapanmamalı.",
+    "bait": "İlk karşılaştırma: sardalya şeridi ile mamun. Alternatif: sülünez veya taze karides; yengeç, kabukluyla beslenme gözlendiğinde ayrı bir deneme.",
+    "lure": "Büyük minnow veya hızlı metal jig bu dip sunumunun yerini otomatik tutmaz. Yapay yemle denemek için LRF alternatifine geç.",
+    "retrieve": "Dibi tutabilen en hafif kurşunu, kamışın toplam atar sınırında seç. Sardalyayı yem ipiyle yalnız tutunacak kadar sabitle; iğne ucunu açık bırak. Yem kayboluyorsa kontrol aralığını kısalt.",
+    "sources": [
+     21,
+     22,
+     26,
+     29
+    ]
+   },
+   {
+    "id": "lrf",
+    "name": "LRF",
+    "rank": "Koşula bağlı alternatif",
+    "why": "Sığ, kontrol edilebilir ve kabuklu bulunan taş–kum geçişinde aktif küçük yem denemesi. Yemliyle eşit verim iddiası yok.",
+    "rig": "İnce ana hat → aşınmaya dayanıklı lider → 2–5 g jighead veya takılma riskine uygun tek iğneli hafif kurulum.",
+    "line": "Yaklaşık 0,23–0,30 mm liderle başla; yapıya göre artır. Toplam jighead + silikon kütlesi kamış atarını aşmamalı.",
+    "hook": "Silikonun boyuna uygun tek iğne; kısa bir silikon için gereksiz büyük iğne kullanma.",
+    "bait": "Doğal yemle karşılaştırma yapmak için yemli düzene dön; küçük silikonla aynı deneme sonucunu bekleme.",
+    "lure": "3–6 cm karides, kurt veya küçük kabuklu profilli silikon. Bunlar denenebilir başlangıç boyları; yayınlanmış optimum değildir.",
+    "retrieve": "Dibe kontrollü iniş, kısa sürükleme ve duraklama. Sürekli takılıyorsa kayalıkta dip sürüklemeyi bırak; açık cebi hedefle.",
+    "sources": [
+     21,
+     22,
+     27
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "label": "Doğrudan takım / yem deneyi",
+    "text": "Ege dip paragatı deneyinde çipura için C tipi iğne–sardalya kombinasyonu öne çıktı. Bu sonuç kıyıdaki tek iğneli avın veya LRF–yemli karşılaştırmasının sonucu değildir.",
+    "sources": [
+     21
+    ]
+   },
+   {
+    "label": "Yem dayanıklılığı ayrı değişken",
+    "text": "Başka bir paragat deneyinde canlı mamun, test edilen kaplanmış / yapay yemlerden toplam avda daha başarılıydı. Bütün türlere ait toplamı çipura başarı yüzdesi diye kullanmıyoruz.",
+    "sources": [
+     22
+    ]
+   }
+  ],
+  "avoid": "Sardalyayı kocaman top yapıp iğne açıklığını kapatma. İki iğneli sardalya sunumu zorunlu değil; önce tek iğneyle düzgün sunumu kur. Yüzdürme ancak ot/yumuşak dipten uzak tutmak gibi gözlenen bir gerekçe varsa düşünülmeli."
+ },
+ "levrek": {
+  "name": "Levrek",
+  "latin": "Dicentrarchus labrax",
+  "primary": "spin",
+  "brief": "Spin · minnow / paddle tail",
+  "intro": "Aktif kıyı taraması için spin başlangıç seçimi. Sığ ve engelli kıyıda sahtenin çalıştığı derinliği, gözlenen yem balığına göre boyunu seç; gün batımı tek başına balık varlığı demek değil.",
+  "bait": "8–12 cm minnow veya 7–12 cm paddle tail",
+  "habitat": "Yem balığının görüldüğü sığ kıyı, taş–kum sınırı ve erişilebilir akıntı kenarı. Köpüklü su bulunması dalgaya yaklaşmak için güvenlik gerekçesi değildir.",
+  "methods": [
+   {
+    "id": "spin",
+    "name": "Spin",
+    "rank": "Başlangıç seçimi",
+    "why": "Bir noktada beklemek yerine su katmanını ve kıyı boyunca cepleri taramak için.",
+    "rig": "Ana örgü → 60–100 cm lider → uygun küçük bağlantı veya doğrudan düğüm → sahte. Su üstü, sığ dalarlı minnow ve ağırlıklı silikon aynı derinlikte çalışmaz.",
+    "line": "Başlangıç lideri 0,30–0,40 mm mono / fluorocarbon. Örgüyü üreticinin gerçek çekeri, kamış ve aşınma riskine göre seç; yalnız yazan çapa güvenme.",
+    "hook": "Sahteyle dengeli, keskin ve paslanmamış iğne kullan. Ağır iğneyle değişim yüzüşü / askıda kalışı değiştirebilir; su kenarında test et.",
+    "bait": "Doğal yem alternatifi taze karides veya sardalya şeridi; yasal ve yerel canlı yem uygulaması farklı bir yöntemdir.",
+    "lure": "Başlangıç kutusu: 8–12 cm sığ dalarlı / askıda kalan minnow, 7–12 cm paddle-tail silikon. Yüzeyde saldırı varsa 8–11 cm su üstü sahtesi alternatif.",
+    "retrieve": "Minnow: yavaş–orta sarım, kısa duraklama ve küçük kamış hareketi. Silikon: dibi taramak zorunda olmadan kontrollü iniş ve sabit sarım. İlk turda doğal ton, ikinci turda kontrast ton denemesi yapılabilir.",
+    "sources": [
+     28
+    ]
+   },
+   {
+    "id": "yemli",
+    "name": "Yemli",
+    "rank": "Noktasal alternatif",
+    "why": "Yemin geçtiği belirli bir hattı beklemek veya doğal yemle ayrı deneme yapmak için. Spin karşısında üstünlüğü ölçülmüş değildir.",
+    "rig": "Temiz dipte gezer kurşunlu tek iğne; sürüklenme ve takılmaya göre sunumu yeniden seç. Canlı yem kurulumu ve yerel mevzuat ayrı değerlendirilir.",
+    "line": "Yaklaşık 0,30–0,40 mm lider; dişli hedef dışı balık veya keskin yapı varsa standart lider yeterli sayılmaz.",
+    "hook": "Yemin gövdesine ve hedefe uygun tek iğne. Paragatta kullanılan 3/0–5/0 boyları bu kıyı rehberinin otomatik tavsiyesi değildir.",
+    "bait": "Taze karides / sardalya şeridi pratik seçenek. Çanakkale çalışmasındaki canlı Spicara maena sonucu yalnız test edilen paragat düzenine aittir; canlı yem temin ve kullanım koşullarını kontrol et.",
+    "lure": "Bu yöntem doğal yem içindir. Yapay balıkla aktif av için spin seçeneğini kullan.",
+    "retrieve": "Yemi dipte gereksiz uzun süre unutma; yem kontrolü yap. Sunum ve av süresini kaydet; yemi değiştirdiğinde diğer değişkenleri mümkün olduğunca sabit tut.",
+    "sources": [
+     23,
+     26
+    ]
+   },
+   {
+    "id": "lrf",
+    "name": "Hafif spin / LRF",
+    "rank": "Korunaklı kıyı alternatifi",
+    "why": "Küçük yem balığına yöneliş görüldüğünde ve balığı kontrol edebilecek açık kıyıda. Sert akıntı ve iri hedef için sırf ince takım uğruna tercih edilmez.",
+    "rig": "İnce ana hat → yaklaşık 0,23–0,30 mm lider → 2–5 g jighead + küçük silikon.",
+    "line": "Aşınma ve balığı yapıdan uzak tutma ihtiyacı liderin alt sınırını belirler. Kepçe erişimi olmadan hafif takım seçme.",
+    "hook": "Silikona uygun tek iğne; çok ince tel büyük balık ve kilitli kalamada açılabilir.",
+    "bait": "Sürüdeki küçük yem balığının boyuna uyan profil; bulunmayan avı taklit ederek başarı yüzdesi üretilemez.",
+    "lure": "4–7 cm ince shad veya küçük minnow; kütle ve dalış derinliği kamışa ve suya uygun olmalı.",
+    "retrieve": "Küçük hareketlerle yavaş sunum; kuvvetli akıntıda kontrol kayboluyorsa daha uygun güçlü yöntem veya korunaklı başka nokta seç.",
+    "sources": [
+     27,
+     28
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "label": "Yerel deney, farklı av yöntemi",
+    "text": "Çanakkale Boğazı paragat deneyinde canlı Spicara maena, test edilen diğer iki canlı yemden daha fazla levrek yakaladı. Çalışma spinle karşılaştırma yapmadı ve gece–gündüz deneyi değildi.",
+    "sources": [
+     23
+    ]
+   },
+   {
+    "label": "Teknik kaynak",
+    "text": "Minnow, silikon ve yüzey sahtesi ayrımı ile lider başlangıç aralığı üretici teknik rehberleriyle desteklenir. Marka rehberi hakemli av verimi deneyi değildir.",
+    "sources": [
+     28
+    ]
+   }
+  ],
+  "avoid": "Her Poyrazı iyi, her Lodosu kötü sayma. Aynı isimli rüzgâr farklı kıyılarda farklı esiş yapar. İncelenen kaynaklar evrensel sahte rengi veya “dolunay bonusu” doğrulamıyor."
+ },
+ "eskina": {
+  "name": "Eşkina",
+  "latin": "Sciaena umbra",
+  "primary": "yemli",
+  "brief": "Yemli dip · karides / mamun",
+  "intro": "Yapıya yakın, erişilebilir ve kontrol edilebilir bir dip sunumuyla başla. Gece saat kartı dolaylı bir davranış ipucudur; yuvanın / balığın o noktada bulunduğunu göstermez.",
+  "bait": "Taze karides veya mamun",
+  "habitat": "Kayalık sığınak çevresindeki açık cepler, taş–kum sınırı ve takımı geri alabileceğin yapı kenarı. Kayalıkta yürüyüş ve dalga riski önceliklidir.",
+  "methods": [
+   {
+    "id": "yemli",
+    "name": "Yemli dip",
+    "rank": "Başlangıç seçimi",
+    "why": "Kabuklu profilli doğal yemi sığınak çevresindeki açık dip cebinde sunmak için.",
+    "rig": "Temiz cepte gezer kurşun → boncuk → fırdöndü → 40–80 cm köstek → tek iğne. Takılan taşlık hattın üzerinden takımı sürekli sürükleme.",
+    "line": "Yaklaşık 0,28–0,35 mm köstek; keskin taş varsa aşınma payı artırılabilir. Lideri her sürtünmeden sonra elle ve gözle kontrol et.",
+    "hook": "Yeme göre No. 4–1/0 aralığında, yeterli açıklıklı tek iğne bir başlangıç örneğidir; numara markalar arasında doğrudan kıyas değildir.",
+    "bait": "İlk deneme taze karides veya mamun; sülünez / küçük sardalya şeridi farklı sunum alternatifi. Kabuklu diyet bulgusu, “karides en çok yakalar” deneyi değildir.",
+    "lure": "Sahteyle deneme için küçük karides / kurt silikonu; detay LRF seçeneğinde.",
+    "retrieve": "Yemi açık cepte sun, ara sıra durumunu kontrol et. Takımı mağara içine kilitleyecek kadar bırakmak yerine vuruşu takip edebileceğin gerginliği koru.",
+    "sources": [
+     24,
+     26
+    ]
+   },
+   {
+    "id": "lrf",
+    "name": "LRF",
+    "rank": "Sakin su alternatifi",
+    "why": "Sığ yapının açık ceplerinde küçük dip yemi taklidi. Kontrol edilemeyen akıntıda başlangıç seçimi değil.",
+    "rig": "Ana hat → 0,23–0,30 mm lider → 2–5 g jighead + tek küçük silikon. Ot/engel varsa iğne saklayan bir kurulum ayrı denemedir.",
+    "line": "Kayalık için aşınma toleransını artır; LRF diye otomatik en ince lideri kullanma.",
+    "hook": "3–6 cm silikona uygun tek iğne. Silikon düz oturmalı, iğne açıklığı çalışmalı.",
+    "bait": "Doğal karides / mamunla karşılaştırma yapacaksan ayrı seans veya süre kaydı tut.",
+    "lure": "3–6 cm karides, kurt veya küçük creature profilli silikon; kısa ve yumuşak sunum için.",
+    "retrieve": "Kısa dip dokunuşu, bekleme ve küçük sıçratma. Her atışta takılıyorsa zemin seçimini değiştir; daha ağır kafayla aynı yere zorlamak çözüm değildir.",
+    "sources": [
+     24,
+     27
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "label": "Diyet bulgusu → sunum çıkarımı",
+    "text": "Güneydoğu Karadeniz mide içeriği çalışmasında kabuklular başlıca besin grubuydu. Karides / kabuklu profili önerisi bu bulgudan yapılan çıkarımdır; yem yarışı sonucu değildir.",
+    "sources": [
+     24
+    ]
+   },
+   {
+    "label": "Mera sadakati",
+    "text": "Telemetri çalışmaları yüksek alan sadakati ve bireyler arası farklar gösteriyor. Aynı noktadaki av baskısı ve gerçek yapı gözlemi, sadece saat seçmekten ayrı değerlendirilir.",
+    "sources": [
+     9,
+     19
+    ]
+   }
+  ],
+  "avoid": "Eşkina (Sciaena umbra) ile minekop veya Argyrosomus regius verilerini karıştırma. Daha fazla balık almak için sürekli aynı sığınak grubuna yüklenmeyi öneri olarak üretmiyoruz."
+ },
+ "karagoz": {
+  "name": "Karagöz",
+  "latin": "Diplodus vulgaris",
+  "primary": "yemli",
+  "brief": "Yemli / şamandıra · küçük kabuklu yem",
+  "intro": "Küçük, düzgün sunulmuş doğal yemle taş–kum geçişinde başla. Açık dipte yemli, takılmalı sığ yapıda dip üstü şamandıra pratik alternatiflerdir.",
+  "bait": "Mamun veya küçük karides parçası",
+  "habitat": "Taş–kum geçişi ve yemin sunulabileceği açık dip cepleri. Tür teşhisi önemli: bu kart Diplodus vulgaris içindir.",
+  "methods": [
+   {
+    "id": "yemli",
+    "name": "Yemli dip",
+    "rank": "Başlangıç seçimi",
+    "why": "Küçük kabuklu / doğal yem sunumu ve hassas vuruş takibi için.",
+    "rig": "Açık dipte hafif gezer kurşun → boncuk → fırdöndü → 50–100 cm köstek → tek iğne.",
+    "line": "Yaklaşık 0,23–0,30 mm lider; keskin taşta 0,30–0,35 mm düşünülebilir. Gündüz olduğu için otomatik en ince misinaya inilmez.",
+    "hook": "Küçük yeme uygun No. 6–2 tek iğne bir başlangıç aralığıdır; balık boyu seçiciliği garantisi değildir.",
+    "bait": "Mamun / küçük karides parçası ile başla; sülünez ve yasal temin edilen kabuklu eti ayrı alternatif. Yemi iğneden çok daha büyük top haline getirme.",
+    "lure": "LRF için 3–5 cm kurt / karides profili ayrı denenebilir. Büyük hızlı minnow bu kartın ilk seçimi değil.",
+    "retrieve": "Yemi dipte sun, çalınmış yemle uzun süre bekleme. Köstek dolaşıyorsa kısalt; veriyi yeni bir takım denemesi diye kaydet.",
+    "sources": [
+     22,
+     26
+    ]
+   },
+   {
+    "id": "samandira",
+    "name": "Şamandıra",
+    "rank": "Takılmalı kıyı alternatifi",
+    "why": "Sığ yapıda yemi dibe gömmek yerine dipten biraz yukarı geçirmek için.",
+    "rig": "Derinliğe uygun sabit / gezer şamandıra → dengeli küçük ağırlıklar → kısa lider → tek küçük iğne. Yem derinliği gözlemle ayarlanır.",
+    "line": "Yaklaşık 0,20–0,28 mm lider; yapı ve hedef boyuna göre ayarla.",
+    "hook": "Küçük yeme uygun tek iğne; numaradan önce açıklık ve tel dayanımını değerlendir.",
+    "bait": "Küçük karides, mamun parçası veya sülünez.",
+    "lure": "Bu düzen doğal yem içindir; yapay yemli LRF aynı kurulum değildir.",
+    "retrieve": "Yemi kayalığa sürtmeden hafif akışa bırak; şamandıra hattı dipte sürükleniyorsa derinliği azalt.",
+    "sources": [
+     26
+    ]
+   },
+   {
+    "id": "lrf",
+    "name": "LRF",
+    "rank": "Aktif deneme",
+    "why": "Sakin, sığ yapıda küçük dip profiliyle deneme; doğal yemle ölçülmüş eşitlik yok.",
+    "rig": "Ana hat → 0,20–0,28 mm lider → 1–4 g jighead + küçük silikon.",
+    "line": "Keskin taş varsa aşınma nedeniyle bu aralığı artırmak gerekebilir.",
+    "hook": "Silikon boyuna uygun küçük tek iğne.",
+    "bait": "Kabuklu / kurt profiline benzeyen küçük sunum.",
+    "lure": "3–5 cm kurt, karides veya kısa creature silikon.",
+    "retrieve": "Kısa sürükleme, duraklama ve çok küçük sıçratma. Sürekli hızlı orta su sarımı yerine dip ceplerini kontrollü incele.",
+    "sources": [
+     22,
+     27
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "label": "Tür ile yöntem sınırı",
+    "text": "D. vulgaris, mamun ve alternatif yemlerin karşılaştırıldığı paragat deneyinin av kompozisyonunda yer aldı. Toplam yem başarısını tür için ayrı etki büyüklüğü gibi kullanmıyoruz.",
+    "sources": [
+     22
+    ]
+   },
+   {
+    "label": "Saat ayrımı yok",
+    "text": "İncelenen hareket çalışması net bir günlük tespit örüntüsü göstermedi. Şamandıra / LRF sıralaması bu makalenin ölçtüğü bir sonuç değil, uygulama sentezidir.",
+    "sources": [
+     8
+    ]
+   }
+  ],
+  "avoid": "Karagöz ile sargoz (Diplodus sargus) çalışmalarını aynı türmüş gibi birleştirme. Her küçük iğne daha iyi av demek değildir; küçük / hedef dışı balık artarsa boy ve sunumu değiştir."
+ },
+ "melanur": {
+  "name": "Melanur",
+  "latin": "Oblada melanura",
+  "primary": "samandira",
+  "brief": "Hafif şamandıra / LRF · küçük yem",
+  "intro": "Görülen sürü su kolonundaysa küçük yemi o seviyede sunmak başlangıç yaklaşımıdır. Balığı görmeden bütün günü yalnız yüzeyde veya yalnız dipte geçirmek yerine katman ara.",
+  "bait": "Küçük karides / ince sardalya şeridi",
+  "habitat": "Yapı çevresindeki açık su ve görülen sürü seviyesi. Dipteki bir sıcaklık veya sürü derinliği modelden varsayılmaz.",
+  "methods": [
+   {
+    "id": "samandira",
+    "name": "Hafif şamandıra",
+    "rank": "Görülen sürüde başlangıç",
+    "why": "Küçük doğal yemi sürünün bulunduğu seviyede yavaş sunmak için.",
+    "rig": "Hafif şamandıra → dengeli küçük ağırlık → 40–80 cm lider → tek küçük iğne. Sabit / gezer seçimi derinlik ve atış kontrolüne bağlıdır.",
+    "line": "Açık suda yaklaşık 0,18–0,25 mm lider; yapı sürtünmesinde daha kalın seçilebilir.",
+    "hook": "Yeme göre No. 8–4 ince ama dayanımı yeterli tek iğne başlangıç örneğidir.",
+    "bait": "Küçük karides veya ince sardalya şeridi. Ekmek / hamur ancak yerel gözlemde alınıyorsa alternatif denemedir; diyet makalesi ekmeği en iyi yem olarak göstermiyor.",
+    "lure": "Aynı su seviyesinde aktif arama için küçük silikon / minnow ile LRF.",
+    "retrieve": "Şamandıra derinliğini kademeli değiştir; temas geldiği katmanı tekrar et. İğneyi örten büyük bir yem topu yerine küçük düzgün parça sun.",
+    "sources": [
+     7,
+     25,
+     26
+    ]
+   },
+   {
+    "id": "lrf",
+    "name": "LRF",
+    "rank": "Aktif katman arama",
+    "why": "Küçük yem balığı / omurgasız profiliyle farklı su katmanlarını denemek için.",
+    "rig": "Ana hat → 0,18–0,25 mm lider → 1–3 g jighead + küçük silikon veya hafif küçük minnow.",
+    "line": "Takımın sürtündüğü yapıya göre lideri kalınlaştır. Toplam ağırlığı LRF kamışına göre sınırla.",
+    "hook": "Kısa profile uygun küçük tek iğne; silikonun kuyruk hareketini iğne gövdesiyle kilitleme.",
+    "bait": "2–5 cm küçük kurt / ince shad profili, görülen yem boyuna göre.",
+    "lure": "2–5 cm silikon veya 3–5 cm minnow. Dip taklidi şart değil; sürü orta sudaysa orayı tara.",
+    "retrieve": "Yavaş sabit sarım ve küçük duraklamalar; her atışta aynı bekleme sayısıyla denenen derinliği karşılaştır.",
+    "sources": [
+     7,
+     25,
+     27
+    ]
+   },
+   {
+    "id": "yemli",
+    "name": "Yemli dip",
+    "rank": "Dipte temas varsa",
+    "why": "Dipte vuruş gözleniyorsa denenebilir; su kolonundaki sürü için kör varsayım değildir.",
+    "rig": "Hafif gezer kurşunlu tek iğne ve 50–100 cm lider.",
+    "line": "Yaklaşık 0,20–0,28 mm; zemine göre değiştir.",
+    "hook": "Küçük parçaya uyan tek iğne.",
+    "bait": "Karides veya küçük sardalya şeridi.",
+    "lure": "Dipte yapay yem denemesi LRF seçeneğidir.",
+    "retrieve": "Dibe mi orta suya mı temas geldiğini not et; hareketli sürünün yerini sabit dip takımı bulamayabilir.",
+    "sources": [
+     7,
+     25,
+     26
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "label": "Diyet, boy ve habitat farkı",
+    "text": "Adriyatik çalışması küçük balıklarda planktonik avı, Sicilya’daki yetişkin örneklemi ise balık ağırlıklı beslenmeyi öne çıkarıyor. Bu farklılık tek bir yem profilini bütün melanurlara dayatmamak için önemli.",
+    "sources": [
+     7,
+     25
+    ]
+   }
+  ],
+  "avoid": "Melanur için otomatik “sabah kesin iyi” veya yalnız ekmek önerisi üretme. Sürü seviyesi ve yem boyu değişimini kaydet."
+ },
+ "istavrit": {
+  "name": "İstavrit",
+  "latin": "Trachurus mediterraneus",
+  "primary": "lrf",
+  "brief": "LRF / çapari · ince silikon / mikro jig",
+  "intro": "Önce sürünün su katmanını bul. Korunaklı kıyıda hafif jighead ile LRF; sürü belirginse ve uygun ekipman varsa çapari alternatif başlangıçtır.",
+  "bait": "2–5 cm ince silikon veya mikro jig",
+  "habitat": "Görülen sürü, yem balığı ve kontrol edilebilir açık su katmanı. Aydınlık bir liman olması balığın her zaman orada bulunduğunu göstermez.",
+  "methods": [
+   {
+    "id": "lrf",
+    "name": "LRF / ajing",
+    "rank": "Korunaklı kıyıda başlangıç",
+    "why": "Küçük profili sürünün bulunduğu derinlikte tutmak ve ince temasları izlemek için.",
+    "rig": "İnce ana hat → 0,16–0,23 mm lider → 0,8–3 g jighead + küçük silikon. Akıntı / derinlik bu düzeni kontrol dışına çıkarabilir.",
+    "line": "Yapıya sürtünmede yaklaşık 0,25 mm veya uygun daha dayanıklı lider gerekebilir. Her çapın gerçek çekeri aynı değildir.",
+    "hook": "2–5 cm silikona uygun küçük tek jighead iğnesi. No. 8–4 yalnız örnek spor iğne boylarıdır; modele göre açıklığı karşılaştır.",
+    "bait": "İnce kurt, iğne kuyruk / küçük karides profilli silikon. Doğal yem denemesinde çok küçük sardalya şeridi ayrı kuruluma alınabilir.",
+    "lure": "2–5 cm ince silikon; kontrol gerekiyorsa kamışa uygun 3–7 g mikro jig alternatif. Kafa veya jig ağırlığı sabit “ideal” değil.",
+    "retrieve": "Atıştan sonra sayarak indir; yavaş sarım ve küçük kaldır–bırak. Vuruşun geldiği bekleme sayısını tekrarla; bir katmanda temas yoksa diğer katmanı dene.",
+    "sources": [
+     10,
+     27
+    ]
+   },
+   {
+    "id": "capari",
+    "name": "Çapari",
+    "rank": "Sürüde alternatif",
+    "why": "Birden fazla derinliği kısa denemelerle taramak için; iğne sayısı arttıkça takılma ve hedef dışı av da ayrıca düşünülür.",
+    "rig": "Ana hat → uygun hazır küçük çapari → kamışa uygun kurşun. Örnek sade kurulum 3–5 köstekli; yasal izin / sayı otomatik olarak doğrulanmış değildir.",
+    "line": "Hazır takım beden / köstek çekerini toplam kurşun ve atış biçimine göre seç. İnce çapariyi ağır kurşunla zorlayarak atma.",
+    "hook": "Küçük balık siluetine uygun, köstekleri dolaşmayan çapari. Bir üreticinin iğne numarası diğerine doğrudan çevrilmez.",
+    "bait": "Tüy / sim profilli hazır çapari; yemli kullanım yapılacaksa kurulumun dengesini bozmayan küçük parçalar ayrı deneme.",
+    "lure": "Sade açık / koyu profili aynı katmanda karşılaştır; tek bir tüy rengine evrensel üstünlük vermiyoruz.",
+    "retrieve": "Sürü seviyesine indir, kısa ve kontrollü kaldır–bırak yap; balık alınan katmanı koru. Kıyıda çevrendeki insan ve takımlar nedeniyle atış alanını kontrol et.",
+    "sources": [
+     10
+    ]
+   },
+   {
+    "id": "samandira",
+    "name": "Şamandıralı küçük yem",
+    "rank": "Görülen sürü alternatifi",
+    "why": "Küçük doğal yemi belirli bir seviyede sunmak için.",
+    "rig": "Hafif şamandıra → küçük ağırlıklar → ince lider → tek küçük iğne.",
+    "line": "Yaklaşık 0,16–0,23 mm lider; sürtünmede daha dayanıklı seçim.",
+    "hook": "Küçük yem parçasına uygun tek iğne; büyük yem yumağı kullanma.",
+    "bait": "Çok küçük sardalya şeridi veya karides parçası.",
+    "lure": "Silikonla aktif arama için LRF seçeneğini kullan.",
+    "retrieve": "Derinliği kademeli değiştir; balığın bulunduğu seviyede hafif akışa bırak.",
+    "sources": [
+     10,
+     26
+    ]
+   }
+  ],
+  "evidence": [
+   {
+    "label": "Beslenme zamanı ve av profili",
+    "text": "Adriyatik T. mediterraneus örnekleminde gece / erken sabah beslenmesi; küçük kabuklular ve balıklar öne çıkıyor. LRF, renk veya gramaj üstünlüğü bu çalışmada test edilmedi.",
+    "sources": [
+     10
+    ]
+   },
+   {
+    "label": "Teknik başlangıç aralığı",
+    "text": "Hafif başlık ve küçük silikon seçimi rockfishing teknik rehberleriyle desteklenen bir sunum önerisidir. Yerel sürü bulunmadan tek başına verim sağlamaz.",
+    "sources": [
+     27
+    ]
+   }
+  ],
+  "avoid": "İstavriti sürekli dipte sabit yemle beklemek zorunda değilsin. Bu kart Trachurus mediterraneus içindir; başka Trachurus türlerinin bütün sonuçları aynı kabul edilmez."
+ }
+};
+const CONTEXT=Object.freeze({bottom:{unknown:'Zemin bilinmiyor',sand:'Kum / temiz dip',mixed:'Taş–kum karışık',rock:'Kayalık / takılmalı'},depth:{unknown:'Derinlik bilinmiyor',shallow:'Sığ · yaklaşık 0–3 m',middle:'Orta · yaklaşık 3–8 m',deep:'Derin · yaklaşık 8 m üzeri'},clarity:{unknown:'Berraklık bilinmiyor',clear:'Berrak',mild:'Hafif bulanık',turbid:'Çok bulanık'},current:{unknown:'Yerel akıntı bilinmiyor',weak:'Zayıf / kontrol edilebilir',medium:'Belirgin akıntı',strong:'Kuvvetli / kontrol zor'}});
+function normalizeContext(raw){return Object.fromEntries(Object.entries(CONTEXT).map(([k,v])=>[k,raw&&Object.hasOwn(v,raw[k])?raw[k]:'unknown']));}
+function get(species,method){if(!Object.hasOwn(DATA,species))throw new TypeError('Bilinmeyen tür');const d=DATA[species];return {species:d,method:d.methods.find(m=>m.id===method)||d.methods.find(m=>m.id===d.primary)};}
+function adapt(species,method,raw){
+ const choice=get(species,method),c=normalizeContext(raw),notes=[];
+ if(c.bottom==='unknown')notes.push('Zemin seçilmedi: kumluk veya kayalık varsayılmadı. Takım önerisini mera gözlemiyle daralt.');
+ if(c.bottom==='rock')notes.push('Kayalık: açık cepleri hedefle; lider sürtünmesini kontrol et. Takılan düzeni ağırlaştırarak aynı hatta zorlamaktansa sunum / konum değiştir.');
+ if(c.bottom==='mixed')notes.push('Taş–kum: temiz cebi ve geçiş sınırını hedefle; kurşunu kayalık üzerinden uzun sürükleme.');
+ if(c.bottom==='sand'&&choice.method.id==='yemli')notes.push('Temiz dip: gezer tek iğneli düzen başlangıç için uygun bir uygulama seçimi; dibi tutan en hafif ve kamışa uygun kurşunla başla.');
+ if(c.depth==='deep'||c.current==='strong')notes.push(choice.method.id==='lrf'?'Derin / akıntılı gözlem: hafif kafa hedef katmanı kontrol edemeyebilir. Daha ağır ekipmana uygun yöntem veya daha korunaklı nokta seç; kamış atarını aşma.':'Derinlik / akıntı artıyor: sunumun hedef katmanda kalıp kalmadığını gözle. Yalnız yüzey modeliyle kurşun gramı hesaplanamaz.');
+ if(c.depth==='shallow'&&choice.method.id==='spin')notes.push('Sığ su: yüzeye yakın veya sığ dalarlı sahteyle başla; minnow dalış derinliğini üretici bilgisinden kontrol et.');
+ if(c.clarity==='clear')notes.push('Berraklık gözlemi: doğal / yarı saydam profil ve yavaş sunum ilk deneme olabilir. Bu bir A/B deneme önerisi; kanıtlanmış renk üstünlüğü değil.');
+ if(c.clarity==='mild'||c.clarity==='turbid')notes.push('Bulanıklık gözlemi: belirgin siluet veya titreşimli profil ayrı deneme olabilir. Renk ve titreşim otomatik başarı bonusu üretmez; yağmur / deşarj kirliliği belirsizdir.');
+ if(c.current==='weak'&&choice.method.id==='lrf')notes.push('Kontrol edilebilir akıntı: önerilen hafif başlık aralığının altından başla; önce ipin ve yemin gerçekten kontrol edilebildiğini dene.');
+ return {context:c,notes,method:choice.method.id};
+}
+function loadCheck(total,max){
+ if(!Number.isFinite(total)||!Number.isFinite(max)||total<=0||max<=0)return {state:'unknown',text:'Toplam takım ağırlığı ve kamışın üst atarı girilmeden karşılaştırma yapılamaz.'};
+ if(total>max)return {state:'over',text:'Üst atar aşılıyor. Bu toplam ağırlığı bu kamışla atma; uygun ekipman seç.'};
+ if(total===max)return {state:'edge',text:'Üst sınıra eşit. Düğüm, yem / su tutma ve atış yükü ayrıca değerlendirilmeli; güvenlik onayı değil.'};
+ return {state:'within',text:'Girilen toplam üst atarın altında. Bu yalnız sayısal kontrol; alt atar, hat, düğüm, kamış durumu ve atış tekniği de önemlidir.'};
+}
+const api={DATA,CONTEXT,normalizeContext,get,adapt,loadCheck};
+if(typeof module==='object'&&module.exports)module.exports=api;else root.GBRGear=api;
+})(typeof globalThis!=='undefined'?globalThis:this);
+</script>
 <script id="gbr-app">(function(){
 'use strict';
 const C=GBRCore, H=C.H;
@@ -324,10 +999,10 @@ function renderTimeline(){
  $('#selectedTime').textContent=time(state.selected);
  $('#selectedDate').textContent=readableDate(state.day)+' · '+(state.selected<Date.now()?'geçmiş/süren saat':'tahmin saati');
  $('#hourLabels').innerHTML=[0,Math.floor((hours.length-1)/4),Math.floor((hours.length-1)/2),Math.floor((hours.length-1)*3/4),hours.length-1].map(i=>`<span>${time(hours[i])}</span>`).join('');
- const r=currentRow(),hz=C.hazards(r,state.limits),missing=['wind','gust','wave','code'].filter(k=>!C.finite(r[k]));
+ const r=currentRow(),hz=C.hazards(r,state.limits),missing=['wind','gust','wave','rain','code'].filter(k=>!C.finite(r[k]));
  const el=$('#hazardNotice');el.hidden=false;
  if(hz.length){el.className='notice danger';el.textContent=`Dikkat · ${hz.join(' / ')}. Bu saat karşılaştırmalı pencere önerisinden çıkarılır. Resmî hava uyarılarını ve sahadaki koşulları kontrol et.`;}
- else if(missing.length){el.className='notice warning';el.textContent='Risk değerlendirmesi eksik: rüzgâr, hamle, dalga veya hava kodunun en az biri yok. Eksik veri “sakin hava” sayılmaz.';}
+ else if(missing.length){el.className='notice warning';el.textContent='Risk değerlendirmesi eksik: rüzgâr, hamle, dalga, yağış veya hava kodunun en az biri yok. Eksik veri “sakin hava” sayılmaz.';}
  else{el.className='notice';el.textContent='Seçili saatte tanımlı dikkat eşikleri aşılmıyor. Bu, kıyının veya teknenin güvenli olduğu anlamına gelmez; yerel gözlem ve resmî uyarıların yerini tutmaz.';}
 }
 function compass(from){
@@ -336,7 +1011,7 @@ function compass(from){
 }
 function renderWind(){
  const r=currentRow();$('#windValue').innerHTML=fmtSpeed(r.wind)+` <span>${unit()}</span>`;$('#windGust').innerHTML=`Hamle <strong>${fmtSpeed(r.gust)} ${unit()}</strong>`;$('#windCompass').innerHTML=compass(r.windDir);
- $('#windFrom').textContent=C.finite(r.windDir)?`${C.dir(r.windDir)} · ${num(C.wrap(r.windDir),0)}°`:'—';
+ $('#windFrom').innerHTML=C.finite(r.windDir)?`${esc(C.windName(r.windDir))}<span class="wind-from-details">${C.dir(r.windDir)} · ${num(C.wrap(r.windDir),0)}°</span>`:'—';renderWindNames();
  const old=state.rows.find(x=>x.t===r.t-3*H),turn=C.finite(r.windDir)&&C.finite(old?.windDir)&&r.wind>=3&&old.wind>=3?C.angleDiff(r.windDir,old.windDir):null;
  $('#windTurn').textContent=C.finite(turn)?signed(turn,0)+'°':'—';
  const coast=C.coast(r.wind,r.windDir,state.coast);$('#coastLabel').textContent=coast?(Math.abs(coast.onshore)<Math.max(1,r.wind*.2)?'Kıyıya paralel':coast.onshore>0?'Denizden kıyıya':'Karadan denize'):'Yön girilmedi';
@@ -371,7 +1046,7 @@ function renderCharts(){
 }
 const EVENT_NAMES={upper:'Üst meridyen',lower:'Alt meridyen',moonrise:'Ay doğuşu',moonset:'Ay batışı'};
 function solunarAt(t,astro){const hits=astro.events.filter(e=>Math.abs(t-e.t)<=e.half);return hits.some(e=>e.kind==='major')?'Majör':hits.length?'Minör':'—';}
-function moonSvg(illum,phase){const r=26,cx=30,cy=30,pts=[],flip=phase>.5?-1:1;for(let j=0;j<=60;j++){const yy=-1+j/30,xx=(1-2*illum)*Math.sqrt(Math.max(0,1-yy*yy));pts.push([cx+flip*r*xx,cy+r*yy]);}for(let j=60;j>=0;j--){const yy=-1+j/30,xx=Math.sqrt(Math.max(0,1-yy*yy));pts.push([cx+flip*r*xx,cy+r*yy]);}return `<svg class="moonface" viewBox="0 0 60 60" role="img" aria-label="Ay diski yaklaşık yüzde ${Math.round(illum*100)} aydınlık"><circle cx="30" cy="30" r="26" fill="#203541" stroke="var(--line)"/><polygon points="${pts.map(p=>p.join(',')).join(' ')}" fill="#ecf0de"/></svg>`;}
+function moonSvg(illum,phase){const r=26,cx=30,cy=30,pts=[],flip=phase>.5?-1:1;for(let j=0;j<=60;j++){const yy=-1+j/30,xx=(1-2*illum)*Math.sqrt(Math.max(0,1-yy*yy));pts.push([cx+flip*r*xx,cy+r*yy]);}for(let j=60;j>=0;j--){const yy=-1+j/30,xx=Math.sqrt(Math.max(0,1-yy*yy));pts.push([cx+flip*r*xx,cy+r*yy]);}return `<svg class="moonface" viewBox="0 0 60 60" role="img" aria-label="Ay diski yaklaşık yüzde ${Math.round(illum*100)} aydınlık"><circle cx="30" cy="30" r="26" fill="#183f3e" stroke="var(--line)"/><polygon points="${pts.map(p=>p.join(',')).join(' ')}" fill="#ffe0c5"/></svg>`;}
 function renderAstronomy(){
  const astro=dayAstro(),a=C.astronomy(state.selected,state.location.latitude,state.location.longitude);$('#moonFace').innerHTML=moonSvg(a.illumination,a.phase);$('#moonPhase').textContent=C.phaseName(a.phase);$('#moonLight').textContent=`%${num(a.illumination*100,1)} aydınlık · ${a.moon.alt>0?'ufkun üstünde':'ufkun altında'}`;
  const solar=type=>astro.solar.find(e=>e.type===type)?.t;
@@ -392,7 +1067,7 @@ function renderMarine(){
  $('#marineNote').innerHTML=`Akıntı/gelgit modeli yaklaşık 8 km ölçeğindedir; kıyıdaki doğruluğu sınırlıdır. Dalga modellerinin çözünürlükleri farklıdır. ${C.finite(offset)?`Seçilen akıntı model hücresi konumdan yaklaşık ${num(offset)} km uzakta.`:''} Akıntının <strong>aktığı</strong>, rüzgâr ve dalganın <strong>geldiği</strong> yön gösterilir. Boğaz’daki dip akıntısı bu yüzey değerinden çıkarılamaz. Seyir için kullanma. <a href="#src-4" class="research-link">[4]</a> <a href="#src-12" class="research-link">[12]</a>`;
 }
 function renderTable(){
- const astro=dayAstro();$('#hourTable').innerHTML=dayTimes().map(t=>{const r=state.rows.find(x=>x.t===t)||{t},hz=C.hazards(r,state.limits),sl=solunarAt(t,astro);return `<tr class="${t===state.selected?'selected':t<Date.now()?'past':''}"><td><button data-select="${t}" aria-label="${time(t)} saatini seç">${time(t)}</button></td><td class="num">${fmtSpeed(r.wind)} <span class="muted">/</span> <span class="amber">${fmtSpeed(r.gust)}</span></td><td>${C.finite(r.windDir)?`<span aria-hidden="true" style="display:inline-block;transform:rotate(${C.wrap(r.windDir+180)}deg)">↑</span> ${C.dir(r.windDir)} ${num(C.wrap(r.windDir),0)}°`:'—'}</td><td class="num">${num(r.pressure)}</td><td class="num ${C.pressureDelta(state.rows,t,3)<0?'amber':'blue'}">${signed(C.pressureDelta(state.rows,t,3))}</td><td>${num(r.wave)} m</td><td>${num(r.rain)} mm</td><td>${sl==='—'?'—':`<span class="badge ${sl==='Majör'?'good':'blue'}">${sl}</span>`}</td><td>${hz.length?`<span class="bad">${esc(hz.join(' · '))}</span>`:!['wind','gust','wave','code'].every(k=>C.finite(r[k]))?'<span class="muted">Eksik veri</span>':'Eşik aşımı yok'}</td></tr>`;}).join('');
+ const astro=dayAstro();$('#hourTable').innerHTML=dayTimes().map(t=>{const r=state.rows.find(x=>x.t===t)||{t},hz=C.hazards(r,state.limits),sl=solunarAt(t,astro);return `<tr class="${t===state.selected?'selected':t<Date.now()?'past':''}"><td><button data-select="${t}" aria-label="${time(t)} saatini seç">${time(t)}</button></td><td class="num">${fmtSpeed(r.wind)} <span class="muted">/</span> <span class="amber">${fmtSpeed(r.gust)}</span></td><td>${C.finite(r.windDir)?`<span aria-hidden="true" style="display:inline-block;transform:rotate(${C.wrap(r.windDir+180)}deg)">↑</span> ${C.windName(r.windDir)} · ${C.dir(r.windDir)} ${num(C.wrap(r.windDir),0)}°`:'—'}</td><td class="num">${num(r.pressure)}</td><td class="num ${C.pressureDelta(state.rows,t,3)<0?'amber':'blue'}">${signed(C.pressureDelta(state.rows,t,3))}</td><td>${num(r.wave)} m</td><td>${num(r.rain)} mm</td><td>${sl==='—'?'—':`<span class="badge ${sl==='Majör'?'good':'blue'}">${sl}</span>`}</td><td>${hz.length?`<span class="bad">${esc(hz.join(' · '))}</span>`:!['wind','gust','wave','rain','code'].every(k=>C.finite(r[k]))?'<span class="muted">Eksik veri</span>':'Eşik aşımı yok'}</td></tr>`;}).join('');
 }
 function sourceInfo(obj,label){if(!obj)return `${label}: yanıt yok`;return `${label}: ${num(obj.latitude,4)}°, ${num(obj.longitude,4)}° · seçili konuma ${num(C.distance(state.location,obj))} km`;}
 function renderData(){
@@ -401,7 +1076,7 @@ function renderData(){
  const errors=Object.entries(state.errors).map(([k,v])=>`${k}: ${v}`).join(' | ');
  $('#dataDetailsContent').innerHTML=`<div class="data-card"><strong>${state.demo?'Sentetik örnek veri':state.cache?'Önbellekten model serisi':'Open-Meteo model serisi'}</strong><p>Tarayıcıya alınma: ${esc(fetched)}${C.finite(age)?` · ${age} dk önce`:''}</p><p>Bu tarih modelin üretim/koşum zamanı değildir. API’nin hesaplama süresi de model yaşı sayılmaz. Geçmiş bölüm gözlem olarak etiketlenmez.</p></div><div class="data-card"><strong>Izgara ve kapsam</strong><p>${esc(sourceInfo(state.weather,'Hava'))}</p><p>${esc(sourceInfo(state.waves,'Dalga'))}</p><p>${esc(sourceInfo(state.ocean,'Akıntı / SST'))}</p><p>Alan bulunması, balık tahmininin doğrulandığı anlamına gelmez.</p></div><div class="data-card"><strong>Hesaplama ayarları</strong><p>Rüzgâr ≥ ${num(state.limits.wind,0)} km/sa; hamle ≥ ${num(state.limits.gust,0)} km/sa; dalga ≥ ${num(state.limits.wave)} m: pencere dışında. Gök gürültülü hava kodu da dışlanır.</p><p>Basınç durağan bandı: |Δ3s| &lt; 0,5 hPa; belirgin değişim: |Δ3s| ≥ 2 hPa. Bunlar arayüz sınıflarıdır, biyolojik eşik değildir.</p></div><div class="data-card"><strong>Eksikler ve bağımlılıklar</strong><p>${errors?esc(errors):'Bu yüklemede API hata mesajı yok. Tek tek saatlerde boş alan bulunabilir.'}</p><p>Canlı veri için internet gerekir. HTML, grafikler ve astronomi harici JavaScript kütüphanesi kullanmaz. Saklama hatası: ${storageWarning?'Var; yedek al.':'tespit edilmedi.'}</p></div>`;
 }
-function renderAll(){renderLocation();renderDays();renderSpecies();renderBest();renderTimeline();renderWind();renderPressure();renderCharts();renderAstronomy();renderMarine();renderTable();renderData();}
+function renderAll(){renderLocation();renderDays();renderSpecies();renderBest();renderTimeline();renderWind();renderPressure();renderCharts();renderAstronomy();renderMarine();renderTable();renderData();renderFishPlan();renderGear();}
 function selectTime(t){if(!C.finite(t))return;state.selected=t;state.day=C.dateKey(t,state.tz);renderAll();}
 function emptyFields(t){return {t,wind:null,gust:null,windDir:null,pressure:null,rain:null,cloud:null,code:null,air:null,visibility:null,wave:null,period:null,waveDir:null,current:null,currentDir:null,sst:null};}
 function indexResponse(x){const out=new Map();if(!Array.isArray(x?.hourly?.time))return out;for(let i=0;i<x.hourly.time.length;i++){const sec=x.hourly.time[i];if(!C.finite(sec))continue;const r={};for(const [k,v] of Object.entries(x.hourly))if(k!=='time')r[k]=Array.isArray(v)&&C.finite(v[i])?v[i]:null;out.set(sec*1000,r);}return out;}
@@ -457,12 +1132,13 @@ function renderJournal(){
 }
 function saveLog(event){event.preventDefault();if(!$('#journalForm').reportValidity())return;const d=$('#logDate').value,tm=$('#logTime').value,t=C.wallTime(d,+tm.slice(0,2),+tm.slice(3),state.tz);if(t>Date.now()+60000){toast('Gelecekteki bir seansı gerçekleşmiş av olarak kaydedemezsin.');return;}const id=globalThis.crypto?.randomUUID?crypto.randomUUID():Date.now().toString(36)+Math.random().toString(36).slice(2);const row={id,date:d,time:tm,tz:state.tz,hours:+$('#logHours').value,anglers:+$('#logAnglers').value,count:+$('#logCount').value,species:$('#logSpecies').value,place:$('#logPlace').value.trim(),note:$('#logNote').value.trim(),bait:$('#logBait').value.trim(),method:$('#logMethod').value,latitude:state.location.latitude,longitude:state.location.longitude,isDemo:state.demo,createdAt:Date.now()};try{const valid=validateLogs([row]);if(state.logs.length>=5000)throw new Error('5.000 kayıt sınırı doldu. Yedek alıp eski kayıtları temizle.');state.logs.push(valid[0]);const ok=store.set('gbr-v3-journal',state.logs);renderJournal();toast(ok?'Seans kaydedildi.':'Tarayıcı kalıcı saklamayı engelledi. JSON yedeğini hemen al.');}catch(e){toast(e.message);}}
 function exportLogsCsv(){const cols=['tarih','saat','saat_dilimi','mera','enlem','boylam','hedef_tur','sure_saat','avci','adet','balik_avci_saat','yontem','yem','not','ornek_veri'];const rows=state.logs.map(r=>[r.date,r.time,r.tz,r.place,r.latitude,r.longitude,SPECIES[r.species].name,r.hours,r.anglers,r.count,r.count/(r.hours*r.anglers),r.method,r.bait,r.note,r.isDemo]);downloadFile('av-gunlugu.csv','\ufeff'+[cols,...rows].map(a=>a.map(C.csvCell).join(';')).join('\r\n'),'text/csv;charset=utf-8');}
-function exportForecast(){const [start,end]=C.bounds(state.day,state.tz);const cols=['tarih_saat_UTC','yerel_saat','saat_dilimi','konum','veri_tipi','alinma_UTC','ruzgar_kmsa','hamle_kmsa','ruzgar_geldigi_derece','basinc_hPa','basinc_onceki_3s_hPa','basinc_sonraki_3s_hPa','dalga_m','yagis_mm'];const rows=state.rows.filter(r=>r.t>=start&&r.t<end).map(r=>[new Date(r.t).toISOString(),C.dateKey(r.t,state.tz)+' '+time(r.t),state.tz,state.location.name,state.demo?'SENTETIK_ORNEK':state.cache?'ONBELLEK_MODEL':'MODEL',state.fetchedAt?new Date(state.fetchedAt).toISOString():'',r.wind,r.gust,r.windDir,r.pressure,C.pressureDelta(state.rows,r.t,3),C.pressureNext(state.rows,r.t,3),r.wave,r.rain]);if(!rows.length){toast('Dışa aktarılacak tahmin verisi yok.');return;}downloadFile('tahmin-'+state.day+'.csv','\ufeff'+[cols,...rows].map(a=>a.map(C.csvCell).join(';')).join('\r\n'),'text/csv;charset=utf-8');}
-async function copySummary(){const r=currentRow(),text=`${state.demo?'[ÖRNEK VERİ — GERÇEK TAHMİN DEĞİL]\n':''}${state.cache?'[ÖNBELLEK — GÜNCEL OLMAYABİLİR]\n':''}${state.location.name}\n${readableDate(state.day,true)}, ${time(r.t)} (${state.tz})\nRüzgâr: ${fmtSpeed(r.wind)} ${unit()} ${C.windName(r.windDir)}; hamle ${fmtSpeed(r.gust)} ${unit()}\nBasınç: ${num(r.pressure)} hPa; önceki 3s ${signed(C.pressureDelta(state.rows,r.t,3))}; sonraki 3s ${signed(C.pressureNext(state.rows,r.t,3))}\nDalga: ${num(r.wave)} m; yüzey suyu ${num(r.sst)} °C\n${state.windows?.[0]?'Göreli konfor penceresi: '+time(state.windows[0].start)+'–'+time(state.windows[0].end)+'\n':''}Model verisidir. Av olasılığı veya güvenlik garantisi değildir.`;try{await navigator.clipboard.writeText(text);toast('Özet kopyalandı.');}catch{downloadFile('balik-raporu-ozeti.txt',text,'text/plain;charset=utf-8');toast('Pano izni yok; metin dosyası oluşturuldu.');}}
+function exportForecast(){const [start,end]=C.bounds(state.day,state.tz);const cols=['tarih_saat_UTC','yerel_saat','saat_dilimi','konum','veri_tipi','alinma_UTC','ruzgar_kmsa','hamle_kmsa','ruzgar_geldigi_derece','ruzgar_adi','basinc_hPa','basinc_onceki_3s_hPa','basinc_sonraki_3s_hPa','dalga_m','yagis_mm'];const rows=state.rows.filter(r=>r.t>=start&&r.t<end).map(r=>[new Date(r.t).toISOString(),C.dateKey(r.t,state.tz)+' '+time(r.t),state.tz,state.location.name,state.demo?'SENTETIK_ORNEK':state.cache?'ONBELLEK_MODEL':'MODEL',state.fetchedAt?new Date(state.fetchedAt).toISOString():'',r.wind,r.gust,r.windDir,C.windName(r.windDir),r.pressure,C.pressureDelta(state.rows,r.t,3),C.pressureNext(state.rows,r.t,3),r.wave,r.rain]);if(!rows.length){toast('Dışa aktarılacak tahmin verisi yok.');return;}downloadFile('tahmin-'+state.day+'.csv','\ufeff'+[cols,...rows].map(a=>a.map(C.csvCell).join(';')).join('\r\n'),'text/csv;charset=utf-8');}
+async function copySummary(){const r=currentRow(),fishSummary=(state.fishPlans||[]).map(p=>p.profile.name+': '+(p.windows[0]?planTime(p.windows[0]):'Aralık yok')).join('\n'),text=`${state.demo?'[ÖRNEK VERİ — GERÇEK TAHMİN DEĞİL]\n':''}${state.cache?'[ÖNBELLEK — GÜNCEL OLMAYABİLİR]\n':''}${state.location.name}\n${readableDate(state.day,true)}, ${time(r.t)} (${state.tz})\nRüzgâr: ${fmtSpeed(r.wind)} ${unit()} ${C.windName(r.windDir)}; hamle ${fmtSpeed(r.gust)} ${unit()}\nBasınç: ${num(r.pressure)} hPa; önceki 3s ${signed(C.pressureDelta(state.rows,r.t,3))}; sonraki 3s ${signed(C.pressureNext(state.rows,r.t,3))}\nDalga: ${num(r.wave)} m; yüzey suyu ${num(r.sst)} °C\n${state.windows?.[0]?'Göreli konfor penceresi: '+time(state.windows[0].start)+'–'+time(state.windows[0].end)+'\n':''}${fishSummary?'\nTür planı (av garantisi değil):\n'+fishSummary+'\n':''}Model verisidir. Av olasılığı veya güvenlik garantisi değildir.`;try{await navigator.clipboard.writeText(text);toast('Özet kopyalandı.');}catch{downloadFile('balik-raporu-ozeti.txt',text,'text/plain;charset=utf-8');toast('Pano izni yok; metin dosyası oluşturuldu.');}}
 function bind(){
+ document.addEventListener('change',e=>{const select=e.target.closest('[data-plan-preference]');if(!select)return;const key=select.dataset.planPreference;if(!Object.hasOwn(P.PROFILES,key)||!Object.hasOwn(P.PREFERENCES,select.value))return;state.planPreferences[key]=select.value;savePlan();renderFishPlan();$('#pref-'+key)?.focus({preventScroll:true});});
  $$('.nav button').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
  $('.nav').addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();const buttons=$$('.nav button'),i=buttons.indexOf(document.activeElement),n=e.key==='Home'?0:e.key==='End'?2:(i+(e.key==='ArrowRight'?1:-1)+3)%3;buttons[n].focus();setView(buttons[n].dataset.view);});
- document.addEventListener('click',e=>{const link=e.target.closest('.research-link');if(link){e.preventDefault();navigateResearch(link.getAttribute('href'));return;}const day=e.target.closest('[data-day]');if(day){state.day=day.dataset.day;const h=+C.parts(state.selected,state.tz).hour;state.selected=C.wallTime(state.day,h,0,state.tz);renderAll();return;}const sp=e.target.closest('[data-species]');if(sp){state.species=sp.dataset.species;store.set('gbr-species',state.species);renderSpecies();$('#logSpecies').value=state.species;return;}const sel=e.target.closest('[data-select]');if(sel){selectTime(+sel.dataset.select);return;}const result=e.target.closest('[data-result]');if(result){const r=state.searchResults?.[+result.dataset.result];if(r)moveLocation({name:r.name,latitude:r.latitude,longitude:r.longitude,timezone:r.timezone});return;}const del=e.target.closest('[data-delete]');if(del&&confirm('Bu av seansı silinsin mi?')){state.logs=state.logs.filter(r=>r.id!==del.dataset.delete);store.set('gbr-v3-journal',state.logs);renderJournal();}});
+ document.addEventListener('click',e=>{const period=e.target.closest('[data-plan-period]');if(period){state.planFilter=period.dataset.planPeriod;savePlan();renderFishPlan();return;}const fishSlot=e.target.closest('[data-plan-select]');if(fishSlot){if(Object.hasOwn(SPECIES,fishSlot.dataset.planSpecies)){state.species=fishSlot.dataset.planSpecies;store.set('gbr-species',state.species);$('#logSpecies').value=state.species;}selectTime(+fishSlot.dataset.planSelect);$('.timeline-control').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});return;}const link=e.target.closest('.research-link');if(link){e.preventDefault();navigateResearch(link.getAttribute('href'));return;}const day=e.target.closest('[data-day]');if(day){state.day=day.dataset.day;const h=+C.parts(state.selected,state.tz).hour;state.selected=C.wallTime(state.day,h,0,state.tz);renderAll();return;}const sp=e.target.closest('[data-species]');if(sp){state.species=sp.dataset.species;store.set('gbr-species',state.species);renderSpecies();updatePlanSelection();renderGear();$('#logSpecies').value=state.species;return;}const sel=e.target.closest('[data-select]');if(sel){selectTime(+sel.dataset.select);return;}const result=e.target.closest('[data-result]');if(result){const r=state.searchResults?.[+result.dataset.result];if(r)moveLocation({name:r.name,latitude:r.latitude,longitude:r.longitude,timezone:r.timezone});return;}const del=e.target.closest('[data-delete]');if(del&&confirm('Bu av seansı silinsin mi?')){state.logs=state.logs.filter(r=>r.id!==del.dataset.delete);store.set('gbr-v3-journal',state.logs);renderJournal();}});
  $('#toggleSearch').addEventListener('click',()=>{const el=$('#locationEditor');el.hidden=!el.hidden;$('#toggleSearch').setAttribute('aria-expanded',String(!el.hidden));});
  $('#searchForm').addEventListener('submit',searchLocation);$('#homeBtn').addEventListener('click',()=>moveLocation({...DEFAULT}));
  $('#gpsBtn').addEventListener('click',()=>{if(!navigator.geolocation){toast('Tarayıcı konum özelliğini desteklemiyor.');return;}$('#gpsBtn').disabled=true;navigator.geolocation.getCurrentPosition(p=>{$('#gpsBtn').disabled=false;moveLocation({name:'GPS konumum',latitude:p.coords.latitude,longitude:p.coords.longitude,timezone:state.tz});},()=>{$('#gpsBtn').disabled=false;toast('Konum izni alınamadı. HTTPS üzerinden aç veya koordinat gir.');},{enableHighAccuracy:true,timeout:12000,maximumAge:60000});});
@@ -470,17 +1146,134 @@ function bind(){
  $('#timezoneBtn').addEventListener('click',()=>{const tz=$('#timezoneInput').value.trim();if(!validZone(tz)){toast('Geçerli IANA saat dilimi gir. Örnek: Europe/Istanbul');return;}state.tz=tz;state.location.timezone=tz;store.set('gbr-location',state.location);state.day=C.dateKey(state.selected,tz);renderAll();renderJournal();toast('Saat dilimi uygulandı; yeni canlı yanıt otomatik günceller.');});
  $('#mapBtn').addEventListener('click',()=>{const l=state.location,x=l.longitude,y=l.latitude;const box=[Math.max(-180,x-.025),Math.max(-90,y-.018),Math.min(180,x+.025),Math.min(90,y+.018)].join(',');$('#mapFrame').src='https://www.openstreetmap.org/export/embed.html?'+new URLSearchParams({bbox:box,layer:'mapnik',marker:y+','+x});$('#mapFrame').hidden=false;});
  $('#refreshBtn').addEventListener('click',load);$('#demoBtn').addEventListener('click',()=>{state.demo=true;load();});$('#exitDemo').addEventListener('click',()=>{state.demo=false;try{const u=new URL(location.href);u.searchParams.delete('demo');history.replaceState({},'',u);}catch{}load();});
- $('#hourSlider').addEventListener('input',e=>{state.selected=dayTimes()[+e.target.value];renderTimeline();renderWind();renderPressure();renderCharts();renderAstronomy();renderMarine();renderTable();});
+ $('#hourSlider').addEventListener('input',e=>{state.selected=dayTimes()[+e.target.value];renderTimeline();renderWind();renderPressure();renderCharts();renderAstronomy();renderMarine();renderTable();renderPlanWeather();renderGearWeather();});
  $('#nowBtn').addEventListener('click',()=>selectTime(Math.floor(Date.now()/H)*H));$('#unitSelect').addEventListener('change',e=>{state.unit=e.target.value;settingsSave();renderAll();});$('#lightFilter').addEventListener('change',e=>{state.filter=e.target.value;settingsSave();renderBest();});
  for(const selector of ['#windChart','#pressureChart'])$(selector).addEventListener('click',e=>{const svg=e.target.closest('svg[data-chart-start]');if(!svg)return;const b=svg.getBoundingClientRect(),pixel=(e.clientX-b.left)/b.width*(+svg.dataset.chartWidth),x=C.clamp((pixel-(+svg.dataset.plotLeft))/(+svg.dataset.plotWidth),0,1),t=(+svg.dataset.chartStart)+x*((+svg.dataset.chartEnd)-(+svg.dataset.chartStart));const nearest=state.rows.reduce((best,r)=>!best||Math.abs(r.t-t)<Math.abs(best.t-t)?r:best,null);if(nearest)selectTime(nearest.t);});
  $('#shareBtn').addEventListener('click',copySummary);$('#forecastCsv').addEventListener('click',exportForecast);$('#journalForm').addEventListener('submit',saveLog);$('#logCsv').addEventListener('click',exportLogsCsv);$('#exportLog').addEventListener('click',()=>downloadFile('av-gunlugu-yedek.json',JSON.stringify({schemaVersion:3,exportedAt:new Date().toISOString(),logs:state.logs},null,2),'application/json'));
  $('#importLog').addEventListener('click',()=>$('#importFile').click());$('#importFile').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>8*1024*1024)throw new Error('Dosya 8 MB sınırını aşıyor.');const json=JSON.parse(await file.text());if(json.schemaVersion!==3)throw new Error('Yalnız şema sürümü 3 kabul edilir; eski/yeni sürüm otomatik çevrilmez.');const rows=validateLogs(json.logs),ids=new Set(state.logs.map(r=>r.id)),newRows=[];for(const r of rows)if(!ids.has(r.id)){ids.add(r.id);newRows.push(r);}if(state.logs.length+newRows.length>5000)throw new Error('Toplam 5.000 kayıt sınırı aşıldı.');if(newRows.length&&!confirm(`${newRows.length} seans mevcut kayıtlar korunarak eklensin mi?`))return;state.logs.push(...newRows);store.set('gbr-v3-journal',state.logs);renderJournal();toast(`${newRows.length} seans eklendi.`);}catch(err){toast(err.message);}finally{e.target.value='';}});
 }
+const P=GBRPlanner;
+const savedPlan=store.get('gbr-v31-planner',{})||{};
+state.planFilter=Object.hasOwn(P.FILTERS,savedPlan.filter)?savedPlan.filter:'all';
+state.planPreferences=Object.fromEntries(Object.keys(P.PROFILES).map(k=>[k,Object.hasOwn(P.PREFERENCES,savedPlan.preferences?.[k])?savedPlan.preferences[k]:'auto']));
+let planCache=null;
+function savePlan(){store.set('gbr-v31-planner',{filter:state.planFilter,preferences:state.planPreferences});}
+function planTime(w){return `${time(w.start)}–${time(w.end)}${C.dateKey(w.end,state.tz)!==state.day?' +1':''}`;}
+function planPrepared(){
+ const key=[state.day,state.tz,state.location.latitude,state.location.longitude,state.limits.wind,state.limits.gust,state.limits.wave,Math.floor(Date.now()/60000)].join('|');
+ if(!planCache||planCache.rows!==state.rows||planCache.key!==key)planCache={rows:state.rows,key,prepared:P.prepare(state.rows,state.day,Date.now(),state.limits,state.location.latitude,state.location.longitude,state.tz)};
+ return planCache.prepared;
+}
+function updatePlanSelection(){
+ $$('#fishCards .fish-card').forEach(c=>c.dataset.active=String(c.dataset.fish===state.species));
+}
+function renderPlanWeather(){
+ const r=currentRow(),delta=C.pressureDelta(state.rows,r.t,3),a=dayAstro(),solar=k=>a.solar.find(e=>e.type===k)?.t;
+ $('#planWeatherStrip').innerHTML=`<div><small>Seçili saat ${time(r.t)} · rüzgâr</small><strong class="strip-name">${esc(C.finite(r.wind)&&r.wind<3?'Zayıf rüzgâr':C.windName(r.windDir))}</strong><span>${fmtSpeed(r.wind)} ${unit()} · hamle ${fmtSpeed(r.gust)} ${unit()}</span></div><div><small>Basınç · önceki 3 saat farkı</small><strong>${num(r.pressure)} <small style="display:inline;font-size:12px">hPa</small></strong><span>${signed(delta)} hPa · ${esc(C.pressureLabel(delta))}</span></div><div><small>Güneş doğuş / batış</small><strong>${time(solar('sunrise'))} / ${time(solar('sunset'))}</strong><span>${esc(state.tz)} · seçili gün</span></div>`;
+}
+function renderFishPlan(){
+ const open=new Set($$('#fishCards details[open]').map(el=>el.dataset.fishDetails));
+ const prepared=planPrepared(),plans=Object.keys(P.PROFILES).map(k=>P.plan(prepared,k,state.planFilter,state.planPreferences[k]));
+ state.fishPlans=plans;
+ $('#fishPlanDate').textContent=`${readableDate(state.day,true)} · ${state.tz} · 2 saatlik aralıklar`;
+ $('#planDataBadge').textContent=state.loading?'Veri alınıyor':state.demo?'Örnek plan':state.cache?'Önbellek':state.rows.length?'Model verisi':'Veri yok';
+ $('#planPeriod').innerHTML=Object.entries(P.FILTERS).map(([key,label])=>`<button data-plan-period="${key}" aria-pressed="${state.planFilter===key}">${esc(label)}</button>`).join('');
+ const available=plans.filter(p=>p.windows.length).length,el=$('#planStatus');
+ el.hidden=true;
+ if(state.loading){el.textContent='Veriler güncelleniyor; saat aralıkları yanıt geldiğinde yeniden hesaplanır.';el.hidden=false;}
+ else if(state.cache||state.fetchedAt&&Date.now()-state.fetchedAt>2*H&&!state.demo){el.textContent='Bu plan eski model serisine dayanıyor. Yola çıkmadan önce verileri yenile ve resmî uyarıları kontrol et.';el.hidden=false;}
+ else if(!available){el.textContent='Seçili gün ve tercihlerle, eksiksiz verisi olan ve dikkat eşiklerini aşmayan iki saatlik aralık bulunamadı. Bu, balık olmadığı anlamına gelmez.';el.hidden=false;}
+ const reasonText={elapsed:['Bugün süre kalmadı','Başlamamış aralık yok; yarına bak.'],light:['Tercihe uyan saat yok','Zaman filtresini veya tür tercihini değiştir.'],missing:['Veri eksik','Hava / dalga olmadan aralık önerilmez.'],blocked:['Dikkat eşikleri aşılıyor','Bu tercihteki saatler plan dışında.']};
+ $('#fishCards').innerHTML=plans.map(p=>{
+  const k=p.species,s=SPECIES[k],w=p.windows[0],other=p.windows[1],custom=p.preference!=='auto';
+  const max=key=>Math.max(...w.rows.map(r=>r[key]));
+  const worst=w?w.rows.reduce((a,b)=>(b.wind??-1)>(a.wind??-1)?b:a):null;
+  const prefLabel=custom?P.PREFERENCES[p.preference]:p.profile.label;
+  const reason=reasonText[p.reason]||['Veri bekleniyor',''];
+  return `<article class="fish-card" data-fish="${k}" data-active="${state.species===k}">
+   <div class="fish-card-heading"><h3>${s.name}</h3><span>${custom?'Kişisel tercih':'Tür planı'}</span></div>
+   <div class="basis">${esc(custom?'Kişisel tercih':p.profile.basis)}</div>
+   ${w?`<button class="fish-slot" data-plan-species="${k}" data-plan-select="${w.start}" aria-label="${s.name}: ${esc(planTime(w))} aralığını seç"><strong>${time(w.start)}–${time(w.end)}${C.dateKey(w.end,state.tz)!==state.day?' <small class="nextday">+1</small>':''}</strong><span>${esc(w.light)} · ${state.demo?'örnek aralık':'2 saatlik plan'} ↘</span></button>`:`<div class="fish-empty">${state.loading?'Veri alınıyor…':reason[0]}<span>${state.loading?'Aralıklar güncellenecek.':reason[1]}</span></div>`}
+   <div class="fish-weather">${w?`<span><b>${esc(C.windName(worst.windDir))}</b> · en çok ${fmtSpeed(max('wind'))} ${unit()}</span><span>Hamle ${fmtSpeed(max('gust'))} · dalga ${num(max('wave'))} m</span>`:'<span>— Rüzgâr / hamle / dalga</span><span>Eksik veya aşılmış eşik filtrelenir.</span>'}</div>
+   <div class="fish-gear-brief"><strong>${esc(G.DATA[k].brief)}</strong><button data-gear-open="${k}" aria-label="${s.name} takım, yem ve sahte rehberini aç">Takım / yem / sahte ↗</button></div>
+   <details class="fish-details" data-fish-details="${k}" ${open.has(k)?'open':''}><summary>Neden bu saat? / tercihi değiştir</summary><div class="fish-alternative">${other?`<button data-plan-species="${k}" data-plan-select="${other.start}">Diğer aralık: ${esc(planTime(other))} ↗</button>`:'Çakışmayan ikinci aralık yok.'}</div><p class="preference-label">${esc(prefLabel)}</p><p class="latin">${s.latin}</p><p>${esc(p.profile.note)} <span class="source-links">${p.profile.sources.map(n=>`<a href="#src-${n}" class="research-link">[${n}]</a>`).join('')}</span></p><p>${esc(p.profile.field)}</p><label for="pref-${k}">Bu tür için saat tercihin</label><select id="pref-${k}" data-plan-preference="${k}">${Object.entries(P.PREFERENCES).map(([v,label])=>`<option value="${v}" ${p.preference===v?'selected':''}>${esc(label)}</option>`).join('')}</select><p class="note">Bu seçim biyolojik kanıtı değiştirmez. Üstteki zaman filtresi de ayrıca uygulanır.</p></details>
+  </article>`;
+ }).join('');
+ const cellTitle={past:'Geçmiş / başlamış aralık',filtered:'Saat tercihinin dışında',missing:'Veri eksik',blocked:'Dikkat eşiği aşılmış',ok:'Tercihe ve eşiklere uyuyor'};
+ const oldScroll=$('#fishMatrix').scrollLeft;
+ $('#fishMatrix').innerHTML=`<table aria-label="Türlere göre iki saatlik av planları"><thead><tr><th>Başlangıç</th>${prepared.windows.map(w=>`<th scope="col">${time(w.start)}</th>`).join('')}</tr></thead><tbody>${plans.map(p=>`<tr><th scope="row">${p.profile.name}</th>${p.cells.map(w=>{const chosen=p.windows.some(x=>x.start===w.start);const cls=chosen?'pick':w.status,sign=chosen?'★':w.status==='ok'?'✓':w.status==='blocked'?'!':w.status==='missing'?'?':'·';return `<td><button class="slot-${cls}" data-plan-species="${p.species}" data-plan-select="${w.start}" title="${esc(p.profile.name+' '+planTime(w)+': '+cellTitle[w.status]+(w.warnings.length?' · '+w.warnings.join(', '):''))}" aria-label="${esc(p.profile.name+' '+planTime(w)+': '+cellTitle[w.status])}">${sign}</button></td>`;}).join('')}</tr>`).join('')}</tbody></table>`;
+ $('#fishMatrix').scrollLeft=oldScroll;
+ renderPlanWeather();
+}
+function renderWindNames(){
+ const r=currentRow(),quiet=C.finite(r.wind)&&r.wind<3;
+ $('#windNameHeading').textContent=quiet?'Zayıf rüzgâr':C.windName(r.windDir);
+ $('#windNames').innerHTML=Array.from({length:8},(_,i)=>{const d=i*45;return `<div data-current="${!quiet&&C.finite(r.windDir)&&C.dir(d)===C.dir(r.windDir)}"><b>${C.windName(d)}</b><span>${C.dir(d)} · ${d}°</span></div>`;}).join('');
+ const next=Array.from({length:6},(_,i)=>state.rows.find(x=>x.t===r.t+i*3*H)).filter(Boolean);
+ $('#windProgress').innerHTML=next.length?next.map(x=>`<button data-select="${x.t}" aria-label="${time(x.t)}: ${C.windName(x.windDir)}"><small>${time(x.t)}${C.dateKey(x.t,state.tz)!==state.day?' +1':''}</small><b>${esc(C.finite(x.wind)&&x.wind<3?'Zayıf':C.windName(x.windDir))}</b><span>${fmtSpeed(x.wind)} ${unit()}</span></button>`).join(''):'<span class="note">Saatlik rüzgâr serisi yok.</span>';
+}
+
+const G=GBRGear;
+const savedGear=store.get('gbr-v31-gear',{})||{};
+state.gearContext=G.normalizeContext(savedGear.context);
+state.gearMethods=Object.fromEntries(Object.keys(G.DATA).map(k=>[k,G.get(k,savedGear.methods?.[k]).method.id]));
+function saveGear(){store.set('gbr-v31-gear',{context:state.gearContext,methods:state.gearMethods});}
+function sourceLinks(ns){return ns.map(n=>`<a class="research-link" href="#src-${n}">[${n}]</a>`).join(' ');}
+function renderGearWeather(){
+ const r=currentRow(),problems=C.hazards(r,state.limits),has=['wind','gust','wave','rain','code'].every(k=>C.finite(r[k]));
+ const el=$('#gearWeather');
+ el.className='gear-weather '+(problems.length?'risk':!has?'unknown':'');
+ el.innerHTML=`<strong>${time(r.t)} · ${esc(state.demo?'Örnek veri':state.cache?'Önbellek model':'Seçili model saati')}</strong> ${problems.length?'Plan dışında: '+esc(problems.join(' · '))+'. Rehber, bu koşulda ava çıkma önerisi değildir.':!has?'Hava / deniz verisi eksik; takım rehberi kullanılabilir, bu saatin koşulları onaylanamaz.':'Rüzgâr '+esc(C.windName(r.windDir))+' '+fmtSpeed(r.wind)+' '+unit()+', hamle '+fmtSpeed(r.gust)+', dalga '+num(r.wave)+' m. Kişisel eşikler aşılmıyor; yerel güvenlik onayı değil.'}`;
+}
+function renderGear(){
+ const choice=G.get(state.species,state.gearMethods[state.species]),d=choice.species,m=choice.method;
+ $('#gearSummarySpecies').textContent=d.name+' · '+m.name;
+ $('#gearSpeciesTabs').innerHTML=Object.entries(G.DATA).map(([k,v])=>`<button data-gear-species="${k}" aria-pressed="${k===state.species}">${v.name}</button>`).join('');
+ $('#gearTitle').textContent=d.name+' · '+d.latin;
+ $('#gearIntro').textContent=d.intro;
+ $('#gearMethods').innerHTML=d.methods.map(x=>`<button data-gear-method="${x.id}" aria-pressed="${x.id===m.id}"><b>${esc(x.name)}</b><small>${esc(x.rank)}</small></button>`).join('');
+ $('#gearMethodReason').textContent=m.why;
+ $('#gearContext').innerHTML=Object.entries(G.CONTEXT).map(([k,options])=>`<div><label for="gear-${k}">${{bottom:'Zemin',depth:'Derinlik',clarity:'Berraklık',current:'Yerel akıntı'}[k]}</label><select id="gear-${k}" data-gear-context="${k}">${Object.entries(options).map(([v,label])=>`<option value="${v}" ${state.gearContext[k]===v?'selected':''}>${esc(label)}</option>`).join('')}</select></div>`).join('');
+ $('#gearHabitat').textContent=d.habitat;
+ const keys=[['rig','Takımın kurulumu'],['line','Köstek / lider'],['hook','İğne seçimi'],['bait','Doğal yem'],['lure','Sahte / silikon'],['retrieve','Sunum ve aksiyon']];
+ $('#gearMethodGrid').innerHTML=keys.map(([k,label])=>`<section class="gear-cell"><h4>${label}</h4><p>${esc(m[k])}</p></section>`).join('');
+ $('#gearSources').innerHTML=`Teknik dayanak ${sourceLinks(m.sources)} · Boy, gramaj ve sıralama uygulama başlangıcıdır; makaleden hesaplanmış optimum veya av yüzdesi değildir.`;
+ $('#gearContextNotes').innerHTML=G.adapt(state.species,m.id,state.gearContext).notes.map(t=>`<p>${esc(t)}</p>`).join('');
+ $('#gearEvidence').innerHTML=d.evidence.map(e=>`<div><h4>${esc(e.label)}</h4><p>${esc(e.text)} ${sourceLinks(e.sources)}</p></div>`).join('');
+ $('#gearAvoid').textContent=d.avoid;
+ renderGearWeather();
+}
+function openGear(species){
+ if(!Object.hasOwn(G.DATA,species))return;
+ state.species=species;store.set('gbr-species',species);$('#logSpecies').value=species;
+ renderSpecies();updatePlanSelection();renderGear();
+ $('#gearPanel').open=true;
+ $('#gearPanel').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
+ $('#gearTitle').focus({preventScroll:true});
+}
+function bindGear(){
+ document.addEventListener('click',e=>{
+  const card=e.target.closest('[data-gear-open]');if(card){openGear(card.dataset.gearOpen);return;}
+  const sp=e.target.closest('[data-gear-species]');if(sp){state.species=sp.dataset.gearSpecies;store.set('gbr-species',state.species);$('#logSpecies').value=state.species;renderSpecies();updatePlanSelection();renderGear();return;}
+  const method=e.target.closest('[data-gear-method]');if(method){const v=G.get(state.species,method.dataset.gearMethod).method.id;state.gearMethods[state.species]=v;saveGear();renderGear();return;}
+ });
+ document.addEventListener('change',e=>{const input=e.target.closest('[data-gear-context]');if(!input)return;const k=input.dataset.gearContext;state.gearContext=G.normalizeContext({...state.gearContext,[k]:input.value});saveGear();renderGear();$('#gear-'+k)?.focus({preventScroll:true});});
+ $('#gearClearContext').addEventListener('click',()=>{state.gearContext=G.normalizeContext({});saveGear();renderGear();toast('Mera gözlemleri temizlendi.');});
+ $('#weightCheckForm').addEventListener('submit',e=>{e.preventDefault();const total=$('#rigWeight').value.trim(),max=$('#rodMax').value.trim();const result=G.loadCheck(total===''?null:+total,max===''?null:+max);$('#weightResult').textContent=result.text;$('#weightResult').className='note '+(['over','edge'].includes(result.state)?'bad':'');});
+ $('#gearJournalBtn').addEventListener('click',()=>{
+  const {species:d,method:m}=G.get(state.species,state.gearMethods[state.species]);setView('journal');
+  $('#logSpecies').value=state.species;$('#logBait').value=(['lrf','spin'].includes(m.id)?m.lure:m.bait).slice(0,120);
+  const methodLabel={yemli:'Yemli / surf',spin:'Spin',lrf:'LRF',samandira:'Şamandıralı / yemli',capari:'Çapari'}[m.id]||'Diğer';
+  $('#logMethod').value=methodLabel;$('#logBait').focus();
+  toast('Tür, yöntem ve yem alanları dolduruldu. Seans kaydedilmedi; gerçek avını tamamlayıp süre ve sonucu gir.');
+ });
+}
+
 $('#logSpecies').innerHTML=Object.entries(SPECIES).map(([k,s])=>`<option value="${k}">${s.name}</option>`).join('');$('#logSpecies').value=state.species;$('#logDate').value=C.dateKey(Date.now(),state.tz);$('#logPlace').value=state.location.name;
 let resizeTimer;window.addEventListener('resize',()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(state.view==='forecast'){renderCharts();renderAstronomy();}},120);});
-bind();renderAll();load();if(/^#(?:research|src-|sources)/.test(location.hash))navigateResearch(location.hash);
-setInterval(()=>{if(state.fetchedAt&&Date.now()-state.fetchedAt>2*H&&!state.demo&&!state.loading)status('Gösterilen seri iki saatten uzun süredir yenilenmedi. Yeni plan yapmadan önce verileri yenile.','warning');},60000);
-window.GBRTest={state,normalize,forecastUrl,validateLogs,renderAll,load,selectTime,makeDemo};
+bind();bindGear();renderAll();load();if(/^#(?:research|src-|sources)/.test(location.hash))navigateResearch(location.hash);
+setInterval(()=>{if(state.view==='forecast'&&!state.loading)renderFishPlan();if(state.fetchedAt&&Date.now()-state.fetchedAt>2*H&&!state.demo&&!state.loading)status('Gösterilen seri iki saatten uzun süredir yenilenmedi. Yeni plan yapmadan önce verileri yenile.','warning');},60000);
+window.GBRTest={state,normalize,forecastUrl,validateLogs,renderAll,load,selectTime,makeDemo,renderFishPlan,renderPlanWeather,renderWindNames,exportForecast,renderGear,openGear};
 })();
 </script>
 </body></html>
